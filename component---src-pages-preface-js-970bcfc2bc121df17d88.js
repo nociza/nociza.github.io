@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknociza_github_io=self.webpackChunknociza_github_io||[]).push([[199],{167:function(e,t,a){a.r(t);var n=a(7294),l=(a(5444),a(6030),a(8739));t.default=function(){return n.createElement("main",{style:l.pageStyles},n.createElement("h1",{styles:l.headingNormalStyles},"Preface"),n.createElement("p",null,"Congradulations! You have found the Preface. So this website isn't a hoax after all. "))}}}]);
+//# sourceMappingURL=component---src-pages-preface-js-970bcfc2bc121df17d88.js.map
