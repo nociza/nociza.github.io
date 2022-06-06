@@ -102,7 +102,9 @@ const IndexPage = () => {
       <Paper />
       <title>Book of Me</title>
       <h1>
-        <span style={headingNormalStyles}>{wordHoverableSentence(bookTitle, (w) => setHovered(w))}</span>
+        <span style={headingNormalStyles}>
+          {wordHoverableSentence(bookTitle, (w) => setHovered(w))}
+        </span>
         <Link
           to="/preface"
           style={headingAccentStyles}
