@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknociza_github_io=self.webpackChunknociza_github_io||[]).push([[470],{2976:function(i,u,c){c.r(u);c.p,c(7294)}}]);
-//# sourceMappingURL=component---src-pages-my-gf-js-519f1369c618b2e844cc.js.map
