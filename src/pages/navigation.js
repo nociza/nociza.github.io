@@ -12,7 +12,7 @@ const bodyStyles = {
     fontSize: "1em",
 };
 
-const Preface = () => {
+const Navigation = () => {
     return (
         <main style={pageStyles}>
             <Paper />
@@ -24,18 +24,16 @@ const Preface = () => {
             <p style={bodyStyles}>
                 Congradulations! You have found the Preface. So this website isn't a hoax after all.
                 For the impatient reader, and those who are in need of a blatant overview of my experiences,
-                I'll show you how to {" "}
+                I'll show you how to 
                 <Link
-                    to="/navigation"
+                    to="/"
                     style={{ color: "rgba(255, 168, 68, 0.7)", textDecoration: "none", fontWeight: "bold" }}
                 >
                     Navigate
-                </Link>.<br/><br/>
-                Otherwise, let's dig deeper into why would this particular person build such a weird website.
-
+                </Link>
             </p>
         </main>
     );
 };
 
-export default Preface;
+export default Navigation;
