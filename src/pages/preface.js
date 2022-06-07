@@ -8,11 +8,19 @@ import Paper from "@mui/material/Paper";
 const bodyStyles = {
     color: "rgba(68, 68, 68, 0.7)",
     maxWidth: "68%",
-    fontFamily: "Trattatello, fantasy",
+    fontFamily: "Chalkduster, fantasy",
     fontSize: "1em",
+    textDecoration: "none",
 };
 
+const bodyRefs = {
+    color: "rgba(255, 168, 68, 0.7)",
+    textDecoration: "none",
+    fontWeight: "bold",
+}
+
 const Preface = () => {
+    const [Hovered, setHovered] = useState("");
     return (
         <main style={pageStyles}>
             <Paper />
@@ -24,14 +32,22 @@ const Preface = () => {
             <p style={bodyStyles}>
                 Congradulations! You have found the Preface. So this website isn't a hoax after all.
                 For the impatient reader, and those who are in need of a blatant overview of my experiences,
-                I'll show you how to {" "}
+                here is how you can {" "}
                 <Link
                     to="/navigation"
-                    style={{ color: "rgba(255, 168, 68, 0.7)", textDecoration: "none", fontWeight: "bold" }}
+                    style={bodyRefs}
                 >
                     Navigate
-                </Link>.<br/><br/>
-                Otherwise, let's dig deeper into why would this particular person build such a weird website.
+                </Link>.<br /><br />
+                Otherwise, we shall indulge in a deeper discussion of how a
+                <Link
+                    to="/my-gf"
+                    style={Hovered == "carol" ? bodyRefs : bodyStyles}
+                    onMouseEnter={() => setHovered("carol")}
+                    onMouseLeave={() => setHovered("")}
+                >
+                    carol
+                </Link>ogy changes our perspective of the world.
 
             </p>
         </main>
