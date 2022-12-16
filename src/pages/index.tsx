@@ -2,7 +2,6 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
-import Paper from "@mui/material/Paper";
 
 const myName = "Yueheng[Alex] Zhang";
 const bookTitle = "The Book of";
@@ -16,7 +15,7 @@ const explainOf =
 /* ================================== Functions ======================================== */
 
 const switchExplainer = (isHoveredMe) => {
-  var styleToUse = dictEntryStyles;
+  var styleToUse: any = dictEntryStyles;
   var textToUse = "";
   switch (isHoveredMe) {
     case "Me":
@@ -43,9 +42,9 @@ const switchExplainer = (isHoveredMe) => {
   );
 };
 
-const wordHoverableSentence = (sentence, clickCallback) => {
+const wordHoverableSentence = (sentence: any, clickCallback: any) => {
   const words = sentence.split(/ /g);
-  return words.map((w) => (
+  return words.map((w: any) => (
     <span onMouseEnter={() => clickCallback(w)}>{w} </span>
   ));
 };
@@ -99,7 +98,6 @@ const IndexPage = () => {
   const [Hovered, setHovered] = useState("");
   return (
     <main style={pageStyles}>
-      <Paper />
       <title>Book of Me</title>
       <h1>
         <span style={headingNormalStyles}>
