@@ -2,13 +2,19 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
-import { pageStyles, headingNormalStyles } from "./index";
+import { pageStyles } from "../styles/global";
+
+const headingNormalStyles = {
+  fontFamily: "Inconsolata",
+  fontSize: "5vw",
+  fontWeight: "bold",
+};
 
 const bodyStyles = {
   color: "rgba(68, 68, 68, 0.7)",
   maxWidth: "68%",
-  fontFamily: "Chalkduster, fantasy",
-  fontSize: "1em",
+  fontFamily: "Inconsolata",
+  fontSize: "2vw",
   textDecoration: "none",
 };
 

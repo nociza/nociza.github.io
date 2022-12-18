@@ -2,12 +2,12 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
-import { pageStyles, headingNormalStyles } from "./index";
+import { pageStyles, headingNormalStyles } from "../styles/global";
 
 const listStyles = {
   color: "rgba(68, 68, 68, 0.7)",
   maxWidth: "68%",
-  fontFamily: "Chalkduster, fantasy",
+  fontFamily: "Inconsolata",
 };
 
 const Navigation = () => {
@@ -24,6 +24,16 @@ const Navigation = () => {
       </h1>
       <ul style={listStyles}>
         <li>
+          <Link
+            to="/resume"
+            style={{
+              color: "rgba(68, 68, 68, 0.7)",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            My Resumé
+          </Link>
           <Link
             to="/resume"
             style={{
