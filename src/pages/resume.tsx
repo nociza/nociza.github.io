@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
-import { pageStyles, headingNormalStyles } from "./index";
+import { pageStyles, headingNormalStyles } from "../styles/global";
 
 const listStyles = {
   maxWidth: "68%",

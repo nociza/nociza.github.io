@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
+import { pageStyles } from "../styles/global";
 
 const myName = "Yueheng[Alex] Zhang";
 const bookTitle = "The Book of";
@@ -50,9 +51,6 @@ const wordHoverableSentence = (sentence: any, clickCallback: any) => {
 };
 
 /* ================================== Styles ======================================== */
-export const pageStyles = {
-  padding: 96,
-};
 const titleStyles = isMobile
   ? {
       color: "rgba(68, 68, 68, 0.7)",
@@ -67,7 +65,7 @@ const titleStyles = isMobile
       fontFamily: "Trattatello, fantasy",
       fontSize: "6em",
     };
-export const headingNormalStyles = {
+const headingNormalStyles = {
   color: "rgba(68, 68, 68, 0.7)",
   maxWidth: "68%",
   fontFamily: "Trattatello, fantasy",
