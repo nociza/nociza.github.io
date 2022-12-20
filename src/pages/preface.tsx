@@ -2,27 +2,12 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
-import { pageStyles } from "../styles/global";
-
-const headingNormalStyles = {
-  fontFamily: "Inconsolata",
-  fontSize: "5vw",
-  fontWeight: "bold",
-};
-
-const bodyStyles = {
-  color: "rgba(68, 68, 68, 0.7)",
-  maxWidth: "68%",
-  fontFamily: "Inconsolata",
-  fontSize: "2vw",
-  textDecoration: "none",
-};
-
-const bodyRefs = {
-  color: "rgba(255, 168, 68, 0.7)",
-  textDecoration: "none",
-  fontWeight: "bold",
-};
+import {
+  pageStyles,
+  headingNormalStyles,
+  bodyRefStyles,
+  bodyNormalStyles,
+} from "../styles/global";
 
 const Preface = () => {
   const [Hovered, setHovered] = useState("");
@@ -37,19 +22,29 @@ const Preface = () => {
       >
         Preface
       </h1>
-      <p style={bodyStyles}>
+      <p style={bodyNormalStyles}>
         Congradulations! You have found the Preface. So this website isn't a
         hoax after all. For the impatient reader, and those who are in need of a
-        blatant overview of my experiences, here is how you can{" "}
-        <Link to="/navigation" style={bodyRefs}>
-          Navigate
-        </Link>
-        .<br />
+        blatant overview of my experiences, you would find this{" "}
+        <Link to="/me" style={bodyRefStyles}>
+          Summary
+        </Link>{" "}
+        suites your needs.
+        <br />
+        <br />
+        The completion of this personal website has long existed on a certain
+        list somewhere on one of the productivity tools I've signed up for with
+        my school email for free student subscriptions. The relavent item has
+        manifested itself in multiple lists across multiple productivity tools
+        and frameworks, each claiming to be essential, and each having a very
+        aluring student subscription deal that I definitely should take'
+        advantage of.
+        <br />
         <br />
         Otherwise, we shall indulge in a deeper discussion of how a
         <Link
           to="/my-gf"
-          style={Hovered == "carol" ? bodyRefs : bodyStyles}
+          style={Hovered == "carol" ? bodyRefStyles : bodyNormalStyles}
           onMouseEnter={() => setHovered("carol")}
           onMouseLeave={() => setHovered("")}
         >

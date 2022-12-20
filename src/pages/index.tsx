@@ -15,7 +15,7 @@ const explainOf =
 
 /* ================================== Functions ======================================== */
 
-const switchExplainer = (isHoveredMe) => {
+const switchExplainer = (isHoveredMe: any) => {
   var styleToUse: any = dictEntryStyles;
   var textToUse = "";
   switch (isHoveredMe) {
@@ -99,7 +99,7 @@ const IndexPage = () => {
       <title>Book of Me</title>
       <h1>
         <span style={headingNormalStyles}>
-          {wordHoverableSentence(bookTitle, (w) => setHovered(w))}
+          {wordHoverableSentence(bookTitle, (w: any) => setHovered(w))}
         </span>
         <Link
           to="/preface"

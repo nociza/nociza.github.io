@@ -1,19 +1,12 @@
-import BrainWaterIcon from "../images/brainwater.jpeg";
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { headingNormalStyles, pageStyles } from "../styles/global";
 
 const MyGF = () => {
   return (
-    <div>
-      <h1>My Girl Friend is So Pretty</h1>
-      <img
-        alt="Brain with water"
-        src={BrainWaterIcon}
-        style={{
-          width: "100%",
-          maxWidth: "320px",
-          marginBottom: 48,
-        }}
-      />
+    <div style={pageStyles}>
+      <h1 style={headingNormalStyles}>Brain with Water</h1>
+      <StaticImage alt="Brain with water" src="../images/brainwater.jpeg" />
     </div>
   );
 };
