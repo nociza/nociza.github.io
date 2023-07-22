@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy with gh-pages
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/nociza.github.io.git
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/nociza/nociza.github.io.git
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
