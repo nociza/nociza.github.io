@@ -13,8 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build && gh-pages -d public -b master -r 'gh-pages'"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^3.1.0",
