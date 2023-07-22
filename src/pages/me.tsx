@@ -27,7 +27,7 @@ const Me = () => {
     skills: false,
   });
 
-  const handleToggle = (field) => {
+  const handleToggle = (field: keyof typeof show) => {
     setShow({ ...show, [field]: !show[field] });
   };
 
