@@ -18,6 +18,9 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Copy CNAME file
+        run: cp CNAME public/
+
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/nociza/nociza.github.io.git
