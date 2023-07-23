@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 const ComputerVisionProjectReports = () => {
   return (
+    //@ts-ignore
     <div style={styles.container}>
       <h3 style={styles.h3}>CS184/284A - Computer Vision: Project Reports</h3>
       <ul style={styles.ul}>
