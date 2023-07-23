@@ -55,7 +55,7 @@ const Me = () => {
           <Box>Zhang</Box>
 
           {/* Details Grid */}
-          <Grid gridAutoFlow="row" gap={6}>
+          <Grid gridAutoFlow="row" gap={6} paddingTop={10}>
             <VStack align="start" spacing={2}>
               <Button variant="link" onClick={() => handleToggle("education")}>
                 Education
