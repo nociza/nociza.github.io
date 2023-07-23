@@ -10,6 +10,13 @@ export const headingNormalStyles = {
   fontWeight: "bold",
 };
 
+export const headingFancyStyles = {
+  color: "rgba(68, 68, 68, 0.7)",
+  maxWidth: "68%",
+  fontFamily: "Trattatello, fantasy",
+  fontSize: "4vw",
+};
+
 export const listStyles = {
   maxWidth: "68%",
   fontFamily: "Inconsolata",

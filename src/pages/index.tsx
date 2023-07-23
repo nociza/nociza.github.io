@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "gatsby";
 import { isMobile } from "react-device-detect";
 import { pageStyles } from "../styles/global";
+import { headingFancyStyles } from "../styles/global";
 
 const myName = "Yueheng[Alex] Zhang";
 const bookTitle = "The Book of";
@@ -51,41 +52,21 @@ const wordHoverableSentence = (sentence: any, clickCallback: any) => {
 };
 
 /* ================================== Styles ======================================== */
-const titleStyles = isMobile
-  ? {
-      color: "rgba(68, 68, 68, 0.7)",
-      margin: "0 0 24px 0",
-      maxWidth: "68%",
-      fontFamily: "Trattatello, fantasy",
-      fontSize: "6em",
-    }
-  : {
-      color: "rgba(68, 68, 68, 0.7)",
-      margin: "0 0 24px 0",
-      fontFamily: "Trattatello, fantasy",
-      fontSize: "6em",
-    };
-const headingNormalStyles = {
-  color: "rgba(68, 68, 68, 0.7)",
-  maxWidth: "68%",
-  fontFamily: "Trattatello, fantasy",
-  fontSize: "3em",
-};
 const headingAccentStyles = {
   color: "rgba(255, 168, 68, 0.7)",
   textDecoration: "none",
   fontFamily: "Trattatello, fantasy",
-  fontSize: "3em",
+  fontSize: "4vw",
 };
 const headingVeryFaintStyles = {
   color: "rgba(68, 68, 68, 0.1)",
   fontFamily: "Chalkduster, fantasy",
-  fontSize: "2em",
+  fontSize: "4vw",
 };
 const dictEntryStyles = {
   color: "rgba(68, 68, 68, 0.9)",
   fontFamily: "Courier New, monospace",
-  fontSize: "0.68em",
+  fontSize: "1.5vw",
   maxWidth: "20%",
   marginTop: "0",
   marginBottom: "0",
@@ -98,7 +79,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <title>Book of Me</title>
       <h1>
-        <span style={headingNormalStyles}>
+        <span style={headingFancyStyles}>
           {wordHoverableSentence(bookTitle, (w: any) => setHovered(w))}
         </span>
         <Link

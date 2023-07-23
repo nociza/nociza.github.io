@@ -17,7 +17,8 @@ const Preface = () => {
       <h1
         style={{
           ...headingNormalStyles,
-          color: "black",
+          color: "rgba(68, 68, 68, 0.9)",
+          fontSize: "3em",
         }}
       >
         Preface
