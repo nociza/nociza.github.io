@@ -135,9 +135,9 @@ const Me = () => {
                       : a Web2.5 Social App (July 2022 – Present)
                     </ListItem>
                     <ListItem>
-                      <Text as="span" fontWeight="bold">
-                        Colink.app
-                      </Text>
+                      <Link to="https://www.colink.app" style={bodyRefStyles}>
+                        Colink
+                      </Link>
                       : an opensource decentralized programming abstraction
                       (Aug. 2022 – Present)
                     </ListItem>
@@ -162,8 +162,11 @@ const Me = () => {
                         Computer Graphics
                       </Text>
                       :{" "}
-                      <Link to="/projects/compvision" style={bodyRefStyles}>
-                        Projects
+                      <Link
+                        to="https://cal-cs184-student.github.io/project-reports/"
+                        style={bodyRefStyles}
+                      >
+                        Project Reports
                       </Link>
                     </ListItem>
                     <ListItem>
@@ -171,11 +174,8 @@ const Me = () => {
                         Comp Vision and Comp Photography
                       </Text>
                       :{" "}
-                      <Link
-                        to="https://cal-cs184-student.github.io/project-reports/"
-                        style={bodyRefStyles}
-                      >
-                        Projects
+                      <Link to="compvision" style={bodyRefStyles}>
+                        Project Reports
                       </Link>
                     </ListItem>
                   </UnorderedList>
@@ -189,23 +189,39 @@ const Me = () => {
                 Skills
               </Button>
               <Collapse in={show.skills}>
-                <Text fontSize="sm" fontFamily="Roboto, sans-serif">
+                <Text
+                  fontSize="sm"
+                  fontFamily="Roboto, sans-serif"
+                  fontWeight="light"
+                >
                   <UnorderedList>
                     <ListItem>
-                      Languages: Golang, Python, Rust, C/C++, Java, Bash, Ruby,
+                      <Text as="span" fontWeight="bold">
+                        Languages
+                      </Text>
+                      : Golang, Python, Rust, C/C++, Java, Bash, Ruby,
                       Javascript/Typescript, HTML/CSS, SQL
                     </ListItem>
                     <ListItem>
-                      Tools: Graphql, RabbitMQ, Nginx, Redis, Kubernetes/Docker,
+                      <Text as="span" fontWeight="bold">
+                        Tools
+                      </Text>
+                      : Graphql, RabbitMQ, Nginx, Redis, Kubernetes/Docker,
                       TensorFlow, PyTorch, OpenAI API
                     </ListItem>
                     <ListItem>
-                      Frameworks: Rails, React, Node.js, Django, Apache
-                      Beam/Kafka/Avro, Telemetry
+                      <Text as="span" fontWeight="bold">
+                        Frameworks
+                      </Text>
+                      : Rails, React, Node.js, Django, Apache Beam/Kafka/Avro,
+                      Telemetry
                     </ListItem>
                     <ListItem>
-                      Platforms: GCS (AutoML, VertexAI); AWS (VPC, EC2, S3,
-                      CloudFront, Lambda); MongoDB Atlas
+                      <Text as="span" fontWeight="bold">
+                        Platforms
+                      </Text>
+                      : GCS (AutoML, VertexAI); AWS (VPC, EC2, S3, CloudFront,
+                      Lambda); MongoDB Atlas
                     </ListItem>
                   </UnorderedList>
                 </Text>
