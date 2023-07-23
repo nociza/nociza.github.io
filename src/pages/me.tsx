@@ -15,8 +15,8 @@ import {
   pageStyles,
   headingNormalStyles,
   bodyRefStyles,
-  bodyNormalStyles,
 } from "../styles/global";
+import { Link } from "gatsby";
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -25,6 +25,7 @@ const Me = () => {
     experience: false,
     projects: false,
     skills: false,
+    classes: false,
   });
 
   const handleToggle = (field: keyof typeof show) => {
@@ -81,21 +82,35 @@ const Me = () => {
                 Work Experience
               </Button>
               <Collapse in={show.experience}>
-                <Text fontSize="sm" fontFamily="Roboto, sans-serif">
+                <Text
+                  fontSize="sm"
+                  fontFamily="Roboto, sans-serif"
+                  fontWeight="light"
+                >
                   <UnorderedList>
                     <ListItem>
-                      Google, Software Engineering Intern (May – Aug. 2022)
+                      <Text as="span" fontWeight="bold">
+                        Google
+                      </Text>
+                      , Software Engineering Intern (2022)
                     </ListItem>
                     <ListItem>
-                      Five9, Software Engineering Intern (May – Aug. 2021)
+                      <Text as="span" fontWeight="bold">
+                        Five9
+                      </Text>
+                      , Software Engineering Intern (2021)
                     </ListItem>
                     <ListItem>
-                      Snackpass.co, Full Stack Development Intern (May – Aug.
-                      2021)
+                      <Text as="span" fontWeight="bold">
+                        Snackpass.co
+                      </Text>
+                      , Full Stack Development Intern (2021)
                     </ListItem>
                     <ListItem>
-                      Berkeley EECS Dept., Student Instructor (Mar. 2021 – May
-                      2022)
+                      <Text as="span" fontWeight="bold">
+                        Berkeley EECS Dept.
+                      </Text>
+                      , Undergraduate Student Instructor (2021 – 2022)
                     </ListItem>
                   </UnorderedList>
                 </Text>
@@ -104,24 +119,71 @@ const Me = () => {
 
             <VStack align="start" spacing={2}>
               <Button variant="link" onClick={() => handleToggle("projects")}>
-                Projects
+                Personal Projects
               </Button>
               <Collapse in={show.projects}>
-                <Text fontSize="sm" fontFamily="Roboto, sans-serif">
+                <Text
+                  fontSize="sm"
+                  fontFamily="Roboto, sans-serif"
+                  fontWeight="light"
+                >
                   <UnorderedList>
                     <ListItem>
-                      LifeWiki.xyz: a Web2.5 Social App (July 2022 – Present)
+                      <Link to="https://www.lifewiki.xyz" style={bodyRefStyles}>
+                        LifeWiki
+                      </Link>
+                      : a Web2.5 Social App (July 2022 – Present)
                     </ListItem>
                     <ListItem>
-                      Colink.app: an opensource decentralized programming
-                      abstraction (Aug. 2022 – Present)
+                      <Text as="span" fontWeight="bold">
+                        Colink.app
+                      </Text>
+                      : an opensource decentralized programming abstraction
+                      (Aug. 2022 – Present)
                     </ListItem>
-                    <ListItem>Class Projects</ListItem>
                   </UnorderedList>
                 </Text>
               </Collapse>
             </VStack>
 
+            <VStack align="start" spacing={2}>
+              <Button variant="link" onClick={() => handleToggle("classes")}>
+                Classes Taken
+              </Button>
+              <Collapse in={show.classes}>
+                <Text
+                  fontSize="sm"
+                  fontFamily="Roboto, sans-serif"
+                  fontWeight="light"
+                >
+                  <UnorderedList>
+                    <ListItem>
+                      <Text as="span" fontWeight="bold">
+                        Computer Graphics
+                      </Text>
+                      :{" "}
+                      <Link to="/projects/compvision" style={bodyRefStyles}>
+                        Projects
+                      </Link>
+                    </ListItem>
+                    <ListItem>
+                      <Text as="span" fontWeight="bold">
+                        Comp Vision and Comp Photography
+                      </Text>
+                      :{" "}
+                      <Link
+                        to="https://cal-cs184-student.github.io/project-reports/"
+                        style={bodyRefStyles}
+                      >
+                        Projects
+                      </Link>
+                    </ListItem>
+                  </UnorderedList>
+                </Text>
+              </Collapse>
+            </VStack>
+
+            {/* Skills */}
             <VStack align="start" spacing={2}>
               <Button variant="link" onClick={() => handleToggle("skills")}>
                 Skills
