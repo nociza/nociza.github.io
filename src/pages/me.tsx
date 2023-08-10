@@ -19,7 +19,7 @@ import {
   bodyRefStyles,
 } from "../styles/global";
 import { Link } from "gatsby";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -64,16 +64,36 @@ const Me = () => {
                 Education
               </Button>
               <Collapse in={show.education}>
-                <Text fontSize="sm" fontFamily="Roboto, sans-serif">
+                <Text
+                  fontSize="sm"
+                  fontFamily="Roboto, sans-serif"
+                  fontWeight={"light"}
+                >
                   <UnorderedList>
                     <ListItem>
-                      University of California, Berkeley (2019 - 2024)
+                      <Text as="span" fontWeight="bold">
+                        University of California at Berkeley
+                      </Text>{" "}
+                      (2019 - 2024)
                     </ListItem>
                     <ListItem>
-                      MS: EECS; BA: Computer Science and Economics
+                      <Text as="span" fontWeight="bold">
+                        MS
+                      </Text>
+                      : Electrical Engineering and Computer Science
                     </ListItem>
                     <ListItem>
-                      Research: RISELab, under Prof. Dawn Song
+                      <Text as="span" fontWeight="bold">
+                        BA
+                      </Text>
+                      : Computer Science and Economics
+                    </ListItem>
+                    <ListItem>
+                      <Text as="span" fontWeight="bold">
+                        Research
+                      </Text>
+                      : RISELab, under Prof. Dawn Song on Decentralized
+                      Intelligence
                     </ListItem>
                   </UnorderedList>
                 </Text>
@@ -233,33 +253,51 @@ const Me = () => {
           </Grid>
         </Grid>
 
-        <Box w="25vw">
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
           <StaticImage
             alt="Alex Zhang"
+            placeholder="blurred"
             src="../images/linkedin_pic_rounded.png"
-            jpgOptions={{
-              quality: 100,
-              progressive: true,
-            }}
+            width={300}
+            height={300}
           />
-          <HStack spacing={3}>
+          <HStack spacing={3} paddingTop={5}>
             <IconButton
               as={Link}
+              //@ts-ignore
               href="https://github.com/nociza"
               aria-label="GitHub"
               icon={<FaGithub />}
+              rounded={"full"}
             />
             <IconButton
               as={Link}
+              //@ts-ignore
               href="https://www.linkedin.com/in/azicon/"
               aria-label="LinkedIn"
               icon={<FaLinkedin />}
+              rounded={"full"}
             />
             <IconButton
               as={Link}
+              //@ts-ignore
               href="https://twitter.com/nociza68"
               aria-label="Twitter"
               icon={<FaTwitter />}
+              rounded={"full"}
+            />
+            <IconButton
+              as={Link}
+              //@ts-ignore
+              href="https://www.instagram.com/nociza/"
+              aria-label="Instagram"
+              icon={<FaInstagram />}
+              rounded={"full"}
             />
             {/* Add more social media icons as needed */}
           </HStack>
