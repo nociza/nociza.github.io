@@ -9,6 +9,8 @@ import {
   VStack,
   UnorderedList,
   ListItem,
+  HStack,
+  IconButton,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import {
@@ -17,6 +19,7 @@ import {
   bodyRefStyles,
 } from "../styles/global";
 import { Link } from "gatsby";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -239,6 +242,27 @@ const Me = () => {
               progressive: true,
             }}
           />
+          <HStack spacing={3}>
+            <IconButton
+              as={Link}
+              href="https://github.com/nociza"
+              aria-label="GitHub"
+              icon={<FaGithub />}
+            />
+            <IconButton
+              as={Link}
+              href="https://www.linkedin.com/in/azicon/"
+              aria-label="LinkedIn"
+              icon={<FaLinkedin />}
+            />
+            <IconButton
+              as={Link}
+              href="https://twitter.com/nociza68"
+              aria-label="Twitter"
+              icon={<FaTwitter />}
+            />
+            {/* Add more social media icons as needed */}
+          </HStack>
         </Box>
       </Grid>
     </main>
