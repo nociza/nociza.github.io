@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Grid,
@@ -20,6 +20,8 @@ import {
 } from "../styles/global";
 import { Link } from "gatsby";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+// @ts-ignore
+import { renderCanvas } from "../components/renderCanvas";
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -35,8 +37,21 @@ const Me = () => {
     setShow({ ...show, [field]: !show[field] });
   };
 
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   return (
     <main style={pageStyles}>
+      <canvas
+        style={{
+          position: "absolute",
+          pointerEvents: "none",
+          inset: 0,
+          zIndex: -1,
+        }}
+        id="canvas"
+      />
       <title>Speaking of myself</title>
       <Grid gridGap={2} gridAutoFlow="column dense">
         <Grid
