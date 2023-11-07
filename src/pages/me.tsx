@@ -43,7 +43,7 @@ const Me = () => {
 
   return (
     <main style={pageStyles}>
-      TODO: Add a toggle for canvas
+      {/* TODO: Add a toggle for canvas */}
       <canvas
         style={{
           position: "absolute",
