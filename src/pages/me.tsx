@@ -20,8 +20,7 @@ import {
 } from "../styles/global";
 import { Link } from "gatsby";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-// @ts-ignore
-import { renderCanvas } from "../components/renderCanvas";
+import renderCanvas from "../components/renderCanvas";
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -47,7 +46,6 @@ const Me = () => {
       <canvas
         style={{
           position: "absolute",
-          pointerEvents: "none",
           inset: 0,
           zIndex: -1,
         }}
