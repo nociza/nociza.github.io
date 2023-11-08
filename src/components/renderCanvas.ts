@@ -84,13 +84,9 @@ export default function renderCanvas() {
     return `hsl(${hue}, 100%, 50%)`; // Lower speed is blue, higher speed is red
   }
 
-  canvas.addEventListener("mousemove", (event) => {
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-
-    const mouseX = (event.clientX - rect.left) * scaleX;
-    const mouseY = (event.clientY - rect.top) * scaleY;
+  document.addEventListener("mousemove", (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
     // The velocity components for a new point are initially 0
     line.addPoint(
