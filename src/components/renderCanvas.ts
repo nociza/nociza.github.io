@@ -3,19 +3,31 @@ const rho = 28;
 const beta = 8 / 3;
 const dt = 0.01;
 const maxTrailLength = 1000; // Maximum number of segments for the trail
-const K = 60; // Max points per second
-const pointGenerationInterval = 1000 / K; // Interval in milliseconds
-let lastPointTime = 0; // Last time a point was added
+const maxSpeed = 20; // Define a max speed for color scaling
 
 class LorenzAttractor {
-  trail: { x: number; y: number; z: number; velocity: number }[];
+  trail: {
+    x: number;
+    y: number;
+    z: number;
+    dx: number;
+    dy: number;
+    dz: number;
+  }[];
 
   constructor() {
     this.trail = [];
   }
 
-  addPoint(x: number, y: number, z: number, velocity: number) {
-    this.trail.push({ x, y, z, velocity });
+  addPoint(
+    x: number,
+    y: number,
+    z: number,
+    dx: number,
+    dy: number,
+    dz: number
+  ) {
+    this.trail.push({ x, y, z, dx, dy, dz });
     while (this.trail.length > maxTrailLength) {
       this.trail.shift(); // Remove the oldest segment
     }
@@ -24,13 +36,12 @@ class LorenzAttractor {
   update() {
     for (let i = 0; i < this.trail.length - 1; i++) {
       let point = this.trail[i];
-      let dx = sigma * (point.y - point.x) * dt;
-      let dy = (point.x * (rho - point.z) - point.y) * dt;
-      let dz = (point.x * point.y - beta * point.z) * dt;
-      point.x += dx;
-      point.y += dy;
-      point.z += dz;
-      point.velocity = Math.sqrt(dx * dx + dy * dy + dz * dz); // Calculate velocity
+      point.dx = sigma * (point.y - point.x) * dt;
+      point.dy = (point.x * (rho - point.z) - point.y) * dt;
+      point.dz = (point.x * point.y - beta * point.z) * dt;
+      point.x += point.dx;
+      point.y += point.dy;
+      point.z += point.dz;
     }
   }
 }
@@ -48,45 +59,48 @@ export default function renderCanvas() {
     line.update();
     for (let i = 0; i < line.trail.length - 1; i++) {
       const point = line.trail[i];
-      ctx.fillStyle = getVelocityColor(point.velocity);
-      ctx.beginPath();
-      ctx.arc(
-        canvas.width / 2 + point.x * 10,
-        canvas.height / 2 + point.y * 10,
-        4, // radius
-        0, // start angle
-        2 * Math.PI // end angle
+      const speed = Math.sqrt(
+        point.dx * point.dx + point.dy * point.dy + point.dz * point.dz
       );
-      ctx.fill();
+      const normalizedSpeed = Math.min(speed, maxSpeed); // Normalize speed for color calculation
+      ctx.strokeStyle = getVelocityColor(normalizedSpeed);
+      ctx.beginPath();
+      ctx.moveTo(
+        canvas.width / 2 + point.x * 10,
+        canvas.height / 2 + point.y * 10
+      );
+      // Draw the tail in the opposite direction of the velocity
+      ctx.lineTo(
+        canvas.width / 2 + point.x * 10 - point.dx * 10,
+        canvas.height / 2 + point.y * 10 - point.dy * 10
+      );
+      ctx.stroke();
     }
   }
 
-  function getVelocityColor(velocity: number): string {
-    // Convert velocity to a color
-    const normalizedVelocity = Math.min(velocity, 20); // Cap the velocity so color doesn't go too bright
-    const hue = (normalizedVelocity / 20) * 240; // Map velocity to 0-240 degrees of the hue (red to blue spectrum)
-    return `hsl(${240 - hue}, 100%, 50%)`; // 240 is blue in HSL, 0 is red
+  function getVelocityColor(speed: number): string {
+    // Convert speed to a color
+    const hue = (1 - speed / maxSpeed) * 240; // Map speed to 0-240 degrees of the hue (blue to red spectrum)
+    return `hsl(${hue}, 100%, 50%)`; // Lower speed is blue, higher speed is red
   }
 
   canvas.addEventListener("mousemove", (event) => {
-    const currentTime = performance.now();
-    if (currentTime - lastPointTime > pointGenerationInterval) {
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
 
-      const mouseX = (event.clientX - rect.left) * scaleX;
-      const mouseY = (event.clientY - rect.top) * scaleY;
-      const velocity = 0; // Initial velocity of a new point is 0
+    const mouseX = (event.clientX - rect.left) * scaleX;
+    const mouseY = (event.clientY - rect.top) * scaleY;
 
-      line.addPoint(
-        (mouseX - canvas.width / 2) / 10,
-        (mouseY - canvas.height / 2) / 10,
-        0, // Z value is not used for a 2D effect
-        velocity
-      );
-      lastPointTime = currentTime;
-    }
+    // The velocity components for a new point are initially 0
+    line.addPoint(
+      (mouseX - canvas.width / 2) / 10,
+      (mouseY - canvas.height / 2) / 10,
+      0, // Z value is not used for a 2D effect
+      0,
+      0,
+      0
+    );
   });
 
   function animate() {
