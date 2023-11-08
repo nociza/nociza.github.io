@@ -20,7 +20,15 @@ import {
 } from "../styles/global";
 import { Link } from "gatsby";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import renderCanvas from "../components/renderCanvas";
+import { RadioGroup } from "@headlessui/react";
+import lorenzAttractor from "../components/attractors/lorenz";
+import rosslerAttractor from "../components/attractors/rossler";
+
+const attractors = [
+  { name: "lorenz", title: "Lorenz Attractor" },
+  { name: "rossler", title: "Rössler Attractor" },
+  { name: "none", title: "No Attractor" },
+];
 
 const Me = () => {
   const [Hovered, setHovered] = useState("");
@@ -31,14 +39,23 @@ const Me = () => {
     skills: false,
     classes: false,
   });
+  const [attractor, setAttractor] = useState(attractors[0].name);
 
   const handleToggle = (field: keyof typeof show) => {
     setShow({ ...show, [field]: !show[field] });
   };
 
   useEffect(() => {
-    renderCanvas();
-  }, []);
+    // clear canvas
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+    const ctx = canvas.getContext("2d")!;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (attractor === "lorenz") {
+      lorenzAttractor();
+    } else if (attractor === "rossler") {
+      rosslerAttractor();
+    }
+  }, [attractor]);
 
   return (
     <main style={pageStyles}>
@@ -317,6 +334,33 @@ const Me = () => {
           </HStack>
         </Box>
       </Grid>
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <RadioGroup value={attractor} onChange={setAttractor}>
+          <div className="flex space-x-2">
+            {attractors.map((attractor) => (
+              <RadioGroup.Option key={attractor.name} value={attractor.name}>
+                {({ checked }) => (
+                  <button
+                    className={`${
+                      checked ? "bg-blue-500 text-white" : "bg-white text-black"
+                    } px-4 py-2 border rounded`}
+                  >
+                    {attractor.title}
+                  </button>
+                )}
+              </RadioGroup.Option>
+            ))}
+          </div>
+        </RadioGroup>
+      </div>
     </main>
   );
 };
