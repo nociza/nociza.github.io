@@ -166,6 +166,13 @@ const Me = () => {
                 >
                   <UnorderedList>
                     <ListItem>
+                      <Link to="https://www.labotr.com" style={bodyRefStyles}>
+                        Labotr
+                      </Link>
+                      : The first labor market for AI agents (Sept. 2023 –
+                      Present)
+                    </ListItem>
+                    <ListItem>
                       <Link to="https://www.lifewiki.xyz" style={bodyRefStyles}>
                         LifeWiki
                       </Link>
