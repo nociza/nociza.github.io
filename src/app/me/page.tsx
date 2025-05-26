@@ -1,24 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import LorenzCanvas from "../../components/lorenz-canvas";
+import NameHeader from "../../components/name-header";
+import CollapsibleSection from "../../components/collapsible-section";
+import SocialLinks from "../../components/social-links";
+import ResumeSection from "../../components/resume-section";
+import { resumeData } from "../../data/resume-data";
+import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 
 export default function MePage() {
-  const [hovered, setHovered] = useState("");
-  const [show, setShow] = useState({
+  const { isOpen, toggle } = useCollapsibleSections({
     education: false,
     experience: false,
     projects: false,
     skills: false,
     classes: false,
   });
-
-  const handleToggle = (field: keyof typeof show) => {
-    setShow({ ...show, [field]: !show[field] });
-  };
 
   return (
     <main className="page-container">
@@ -28,242 +26,24 @@ export default function MePage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Column - Content */}
         <div className="w-full lg:w-[40vw]">
-          <div
-            className="w-full lg:w-[40vw] cursor-pointer transition-all duration-300"
-            style={{
-              color:
-                hovered === "Alex"
-                  ? "rgba(255, 168, 68, 0.8)"
-                  : "rgba(68, 68, 68, 0.9)",
-              fontFamily: "'Times New Roman', 'Times', serif",
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: "600",
-              maxWidth: "68%",
-              letterSpacing: "-0.02em",
-              textShadow:
-                hovered === "Alex"
-                  ? "2px 2px 8px rgba(255, 168, 68, 0.4)"
-                  : "2px 2px 4px rgba(0, 0, 0, 0.1)",
-              transform:
-                hovered === "Alex" ? "translateY(-2px)" : "translateY(0)",
-              lineHeight: "1.1",
-            }}
-            onMouseEnter={() => setHovered("Alex")}
-            onMouseLeave={() => setHovered("")}
-          >
-            {hovered === "Alex" ? "Alexander" : "Yueheng"}
-          </div>
-          <div
-            className="heading-normal"
-            style={{
-              color: "rgba(1, 1, 1, 0.9)",
-              fontFamily: "'Times New Roman', 'Times', serif",
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: "600",
-              maxWidth: "68%",
-              letterSpacing: "-0.02em",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
-              lineHeight: "1.1",
-            }}
-          >
-            Zhang
-          </div>
+          <NameHeader
+            firstName="Yueheng"
+            altFirstName="Alexander"
+            lastName="Zhang"
+          />
 
           {/* Details Grid */}
           <div className="flex flex-col gap-3 pt-10">
-            {/* Education */}
-            <div className="flex flex-col items-start gap-1">
-              <button
-                className="text-left transition-all hover:underline"
-                onClick={() => handleToggle("education")}
+            {Object.entries(resumeData).map(([key, section]) => (
+              <CollapsibleSection
+                key={key}
+                title={section.title}
+                isOpen={isOpen(key)}
+                onToggle={() => toggle(key)}
               >
-                Education
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  show.education ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-sm font-light font-inconsolata">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <span className="font-bold">
-                        University of California at Berkeley
-                      </span>{" "}
-                      (2019 - 2024)
-                    </li>
-                    <li>
-                      <span className="font-bold">MS</span>: Electrical
-                      Engineering and Computer Science
-                    </li>
-                    <li>
-                      <span className="font-bold">BA</span>: Computer Science
-                      and Economics
-                    </li>
-                    <li>
-                      <span className="font-bold">Research</span>: RISELab,
-                      under Prof. Dawn Song on Decentralized Intelligence
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Work Experience */}
-            <div className="flex flex-col items-start gap-1">
-              <button
-                className="text-left transition-all hover:underline"
-                onClick={() => handleToggle("experience")}
-              >
-                Work Experience
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  show.experience ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-sm font-light font-inconsolata">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <span className="font-bold">Google</span>, Software
-                      Engineering Intern (2022)
-                    </li>
-                    <li>
-                      <span className="font-bold">Five9</span>, Software
-                      Engineering Intern (2021)
-                    </li>
-                    <li>
-                      <span className="font-bold">Snackpass.co</span>, Full
-                      Stack Development Intern (2021)
-                    </li>
-                    <li>
-                      <span className="font-bold">Berkeley EECS Dept.</span>,
-                      Undergraduate Student Instructor (2021 – 2022)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Personal Projects */}
-            <div className="flex flex-col items-start gap-1">
-              <button
-                className="text-left transition-all hover:underline"
-                onClick={() => handleToggle("projects")}
-              >
-                Personal Projects
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  show.projects ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-sm font-light font-inconsolata">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <Link href="https://www.labotr.com" className="body-ref">
-                        Labotr
-                      </Link>
-                      : The first labor market for AI agents (Sept. 2023 –
-                      Present)
-                    </li>
-                    <li>
-                      <Link
-                        href="https://www.lifewiki.xyz"
-                        className="body-ref"
-                      >
-                        LifeWiki
-                      </Link>
-                      : a Web2.5 Social App (July 2022 – Present)
-                    </li>
-                    <li>
-                      <Link href="https://www.colink.app" className="body-ref">
-                        Colink
-                      </Link>
-                      : an opensource decentralized programming abstraction
-                      (Aug. 2022 – Present)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Classes Taken */}
-            <div className="flex flex-col items-start gap-1">
-              <button
-                className="text-left transition-all hover:underline"
-                onClick={() => handleToggle("classes")}
-              >
-                Classes Taken
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  show.classes ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-sm font-light font-inconsolata">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <span className="font-bold">Computer Graphics</span>:{" "}
-                      <Link
-                        href="https://cal-cs184-student.github.io/project-reports/"
-                        className="body-ref"
-                      >
-                        Project Reports
-                      </Link>
-                    </li>
-                    <li>
-                      <span className="font-bold">
-                        Comp Vision and Comp Photography
-                      </span>
-                      :{" "}
-                      <Link href="/compvision" className="body-ref">
-                        Project Reports
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Skills */}
-            <div className="flex flex-col items-start gap-1">
-              <button
-                className="text-left transition-all hover:underline"
-                onClick={() => handleToggle("skills")}
-              >
-                Skills
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  show.skills ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-sm font-light font-inconsolata">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <span className="font-bold">Languages</span>: Golang,
-                      Python, Rust, C/C++, Java, Bash, Ruby,
-                      Javascript/Typescript, HTML/CSS, SQL
-                    </li>
-                    <li>
-                      <span className="font-bold">Tools</span>: Graphql,
-                      RabbitMQ, Nginx, Redis, Kubernetes/Docker, TensorFlow,
-                      PyTorch, OpenAI API
-                    </li>
-                    <li>
-                      <span className="font-bold">Frameworks</span>: Rails,
-                      React, Node.js, Django, Apache Beam/Kafka/Avro, Telemetry
-                    </li>
-                    <li>
-                      <span className="font-bold">Platforms</span>: GCS (AutoML,
-                      VertexAI); AWS (VPC, EC2, S3, CloudFront, Lambda); MongoDB
-                      Atlas
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                <ResumeSection items={section.items} />
+              </CollapsibleSection>
+            ))}
           </div>
         </div>
 
@@ -277,36 +57,7 @@ export default function MePage() {
             className="rounded-full"
             priority
           />
-          <div className="flex gap-3 pt-5">
-            <Link
-              href="https://github.com/nociza"
-              aria-label="GitHub"
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              <FaGithub size={24} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/azicon/"
-              aria-label="LinkedIn"
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              <FaLinkedin size={24} />
-            </Link>
-            <Link
-              href="https://twitter.com/nociza68"
-              aria-label="Twitter"
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              <FaTwitter size={24} />
-            </Link>
-            <Link
-              href="https://www.instagram.com/nociza/"
-              aria-label="Instagram"
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              <FaInstagram size={24} />
-            </Link>
-          </div>
+          <SocialLinks />
         </div>
       </div>
     </main>
