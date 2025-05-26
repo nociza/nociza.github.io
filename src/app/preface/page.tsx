@@ -1,33 +1,25 @@
-import * as React from "react";
-import { useState } from "react";
-import { Link } from "gatsby";
-import { isMobile } from "react-device-detect";
-import {
-  pageStyles,
-  headingNormalStyles,
-  bodyRefStyles,
-  bodyNormalStyles,
-} from "../styles/global";
+"use client";
 
-const Preface = () => {
-  const [Hovered, setHovered] = useState("");
+import { useState } from "react";
+import Link from "next/link";
+
+export default function PrefacePage() {
+  const [hovered, setHovered] = useState("");
+
   return (
-    <main style={pageStyles}>
+    <main className="page-container">
       <title>Preface</title>
       <h1
-        style={{
-          ...headingNormalStyles,
-          color: "rgba(68, 68, 68, 0.9)",
-          fontSize: "3em",
-        }}
+        className="heading-normal"
+        style={{ color: "rgba(68, 68, 68, 0.9)", fontSize: "3em" }}
       >
         Preface
       </h1>
-      <p style={bodyNormalStyles}>
+      <p className="body-normal">
         Congradulations! You have found the Preface. So this website isn't a
         hoax after all. For the impatient reader, and those who are in need of a
         blatant overview of my experiences, you would find this{" "}
-        <Link to="/me" style={bodyRefStyles}>
+        <Link href="/me" className="body-ref">
           Summary
         </Link>{" "}
         suites your needs.
@@ -44,8 +36,8 @@ const Preface = () => {
         <br />
         Otherwise, we shall indulge in a deeper discussion of how a
         <Link
-          to="/my-gf"
-          style={Hovered == "carol" ? bodyRefStyles : bodyNormalStyles}
+          href="/my-gf"
+          className={hovered === "carol" ? "body-ref" : "body-normal"}
           onMouseEnter={() => setHovered("carol")}
           onMouseLeave={() => setHovered("")}
         >
@@ -55,6 +47,4 @@ const Preface = () => {
       </p>
     </main>
   );
-};
-
-export default Preface;
+}
