@@ -9,11 +9,11 @@ import LorenzCanvas from "../../components/lorenz-canvas";
 export default function MePage() {
   const [hovered, setHovered] = useState("");
   const [show, setShow] = useState({
-    education: true,
-    experience: true,
-    projects: true,
-    skills: true,
-    classes: true,
+    education: false,
+    experience: false,
+    projects: false,
+    skills: false,
+    classes: false,
   });
 
   const handleToggle = (field: keyof typeof show) => {
