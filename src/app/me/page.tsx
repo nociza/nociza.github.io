@@ -35,9 +35,9 @@ export default function MePage() {
                 hovered === "Alex"
                   ? "rgba(255, 168, 68, 0.8)"
                   : "rgba(68, 68, 68, 0.9)",
-              fontFamily: "'Inconsolata', monospace",
+              fontFamily: "'Times New Roman', 'Times', serif",
               fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: "700",
+              fontWeight: "600",
               maxWidth: "68%",
               letterSpacing: "-0.02em",
               textShadow:
@@ -56,10 +56,10 @@ export default function MePage() {
           <div
             className="heading-normal"
             style={{
-              color: "rgba(68, 68, 68, 0.9)",
-              fontFamily: "'Inconsolata', monospace",
+              color: "rgba(1, 1, 1, 0.9)",
+              fontFamily: "'Times New Roman', 'Times', serif",
               fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: "700",
+              fontWeight: "600",
               maxWidth: "68%",
               letterSpacing: "-0.02em",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
