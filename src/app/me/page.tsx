@@ -35,15 +35,11 @@ export default function MePage() {
                 hovered === "Alex"
                   ? "rgba(255, 168, 68, 0.8)"
                   : "rgba(68, 68, 68, 0.9)",
-              fontFamily:
-                hovered === "Alex"
-                  ? "'Playfair Display', 'Dancing Script', 'Brush Script MT', cursive"
-                  : "'Inconsolata', monospace",
+              fontFamily: "'Inconsolata', monospace",
               fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: hovered === "Alex" ? "normal" : "700",
-              fontStyle: hovered === "Alex" ? "italic" : "normal",
+              fontWeight: "700",
               maxWidth: "68%",
-              letterSpacing: hovered === "Alex" ? "0.05em" : "-0.02em",
+              letterSpacing: "-0.02em",
               textShadow:
                 hovered === "Alex"
                   ? "2px 2px 8px rgba(255, 168, 68, 0.4)"
@@ -74,11 +70,11 @@ export default function MePage() {
           </div>
 
           {/* Details Grid */}
-          <div className="flex flex-col gap-6 pt-10">
+          <div className="flex flex-col gap-3 pt-10">
             {/* Education */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-1">
               <button
-                className="text-left transition-all"
+                className="text-left transition-all hover:underline"
                 onClick={() => handleToggle("education")}
               >
                 Education
@@ -114,9 +110,9 @@ export default function MePage() {
             </div>
 
             {/* Work Experience */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-1">
               <button
-                className="text-left transition-all"
+                className="text-left transition-all hover:underline"
                 onClick={() => handleToggle("experience")}
               >
                 Work Experience
@@ -150,9 +146,9 @@ export default function MePage() {
             </div>
 
             {/* Personal Projects */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-1">
               <button
-                className="text-left transition-all"
+                className="text-left transition-all hover:underline"
                 onClick={() => handleToggle("projects")}
               >
                 Personal Projects
@@ -193,9 +189,9 @@ export default function MePage() {
             </div>
 
             {/* Classes Taken */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-1">
               <button
-                className="text-left transition-all"
+                className="text-left transition-all hover:underline"
                 onClick={() => handleToggle("classes")}
               >
                 Classes Taken
@@ -231,9 +227,9 @@ export default function MePage() {
             </div>
 
             {/* Skills */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-1">
               <button
-                className="text-left transition-all"
+                className="text-left transition-all hover:underline"
                 onClick={() => handleToggle("skills")}
               >
                 Skills
