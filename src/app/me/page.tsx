@@ -38,7 +38,7 @@ export default function MePage() {
               fontFamily:
                 hovered === "Alex"
                   ? "'Playfair Display', 'Dancing Script', 'Brush Script MT', cursive"
-                  : "'Inconsolata', 'Fira Code', monospace",
+                  : "'Inconsolata', monospace",
               fontSize: "clamp(2.5rem, 7vw, 5rem)",
               fontWeight: hovered === "Alex" ? "normal" : "700",
               fontStyle: hovered === "Alex" ? "italic" : "normal",
@@ -61,7 +61,7 @@ export default function MePage() {
             className="heading-normal"
             style={{
               color: "rgba(68, 68, 68, 0.9)",
-              fontFamily: "'Inconsolata', 'Fira Code', monospace",
+              fontFamily: "'Inconsolata', monospace",
               fontSize: "clamp(2.5rem, 7vw, 5rem)",
               fontWeight: "700",
               maxWidth: "68%",
@@ -88,7 +88,7 @@ export default function MePage() {
                   show.education ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-sm font-light font-roboto">
+                <div className="text-sm font-light font-inconsolata">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
                       <span className="font-bold">
@@ -126,7 +126,7 @@ export default function MePage() {
                   show.experience ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-sm font-light font-roboto">
+                <div className="text-sm font-light font-inconsolata">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
                       <span className="font-bold">Google</span>, Software
@@ -162,7 +162,7 @@ export default function MePage() {
                   show.projects ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-sm font-light font-roboto">
+                <div className="text-sm font-light font-inconsolata">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
                       <Link href="https://www.labotr.com" className="body-ref">
@@ -205,7 +205,7 @@ export default function MePage() {
                   show.classes ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-sm font-light font-roboto">
+                <div className="text-sm font-light font-inconsolata">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
                       <span className="font-bold">Computer Graphics</span>:{" "}
@@ -243,7 +243,7 @@ export default function MePage() {
                   show.skills ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-sm font-light font-roboto">
+                <div className="text-sm font-light font-inconsolata">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
                       <span className="font-bold">Languages</span>: Golang,

@@ -54,7 +54,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inconsolata;
   }
 }
 
@@ -115,7 +115,7 @@
 .body-normal {
   color: rgba(68, 68, 68, 0.7);
   max-width: 68%;
-  font-family: 'Inconsolata', 'Fira Code', 'SF Mono', 'Monaco', monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: clamp(1rem, 2vw, 1.5rem);
   text-decoration: none;
   line-height: 1.6;
@@ -127,7 +127,7 @@
   color: rgba(255, 168, 68, 0.7);
   text-decoration: none;
   font-weight: 700;
-  font-family: 'Inconsolata', 'Fira Code', 'SF Mono', 'Monaco', monospace;
+  font-family: 'Inconsolata', monospace;
   transition: all 0.3s ease;
   text-shadow: 0.5px 0.5px 2px rgba(255, 168, 68, 0.2);
 }
@@ -140,7 +140,7 @@
 
 .dict-entry {
   color: rgba(68, 68, 68, 0.9);
-  font-family: 'Courier New', 'SF Mono', 'Monaco', monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   max-width: 20%;
   margin-top: 0;
