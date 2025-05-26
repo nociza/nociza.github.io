@@ -176,4 +176,39 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-} 
+}
+
+/* Scroll snap styles */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  position: relative;
+  /* Add subtle transition for smoother feel */
+  transition: transform 0.3s ease-out;
+}
+
+/* Add visual feedback during scroll */
+.scroll-section:hover {
+  transform: translateY(-2px);
+}
+
+/* Smooth transitions for section content */
+.scroll-section > * {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}

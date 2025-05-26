@@ -16,38 +16,54 @@ const sectionConfigs: SectionConfig[] = [
 
 export function useSectionObserver() {
     const [currentAttractor, setCurrentAttractor] = useState<AttractorType>('lorenz');
+    const [currentSection, setCurrentSection] = useState<string>('resume');
 
     useEffect(() => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '-50% 0px -50% 0px', // Trigger when section is in center of viewport
-            threshold: 0
-        };
+        const scrollContainer = document.querySelector('.scroll-container');
+        if (!scrollContainer) return;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.id;
-                    const config = sectionConfigs.find(c => c.id === sectionId);
-                    if (config) {
-                        setCurrentAttractor(config.attractorType);
-                    }
+        const updateCurrentSection = () => {
+            const scrollTop = scrollContainer.scrollTop;
+            const containerHeight = scrollContainer.clientHeight;
+            const sections = scrollContainer.querySelectorAll('.scroll-section');
+
+            let currentSectionElement: Element | null = null;
+            let minDistance = Infinity;
+
+            // Find the section closest to the center of the viewport
+            sections.forEach((section) => {
+                const sectionTop = (section as HTMLElement).offsetTop;
+                const sectionHeight = (section as HTMLElement).offsetHeight;
+                const sectionCenter = sectionTop + sectionHeight / 2;
+                const viewportCenter = scrollTop + containerHeight / 2;
+                const distance = Math.abs(sectionCenter - viewportCenter);
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    currentSectionElement = section;
                 }
             });
-        }, observerOptions);
 
-        // Observe all sections
-        sectionConfigs.forEach(({ id }) => {
-            const element = document.getElementById(id);
-            if (element) {
-                observer.observe(element);
+            if (currentSectionElement) {
+                const sectionId = (currentSectionElement as HTMLElement).id;
+                const config = sectionConfigs.find(c => c.id === sectionId);
+                if (config) {
+                    setCurrentAttractor(config.attractorType);
+                    setCurrentSection(sectionId);
+                }
             }
-        });
+        };
+
+        // Initial check
+        updateCurrentSection();
+
+        // Listen to scroll events
+        scrollContainer.addEventListener('scroll', updateCurrentSection);
 
         return () => {
-            observer.disconnect();
+            scrollContainer.removeEventListener('scroll', updateCurrentSection);
         };
     }, []);
 
-    return currentAttractor;
+    return { currentAttractor, currentSection };
 } 
