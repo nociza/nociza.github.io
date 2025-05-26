@@ -78,12 +78,16 @@ export default function MePage() {
             {/* Education */}
             <div className="flex flex-col items-start gap-2">
               <button
-                className="text-left underline hover:no-underline transition-all"
+                className="text-left transition-all"
                 onClick={() => handleToggle("education")}
               >
                 Education
               </button>
-              {show.education && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  show.education ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="text-sm font-light font-roboto">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
@@ -106,18 +110,22 @@ export default function MePage() {
                     </li>
                   </ul>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Work Experience */}
             <div className="flex flex-col items-start gap-2">
               <button
-                className="text-left underline hover:no-underline transition-all"
+                className="text-left transition-all"
                 onClick={() => handleToggle("experience")}
               >
                 Work Experience
               </button>
-              {show.experience && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  show.experience ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="text-sm font-light font-roboto">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
@@ -138,18 +146,22 @@ export default function MePage() {
                     </li>
                   </ul>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Personal Projects */}
             <div className="flex flex-col items-start gap-2">
               <button
-                className="text-left underline hover:no-underline transition-all"
+                className="text-left transition-all"
                 onClick={() => handleToggle("projects")}
               >
                 Personal Projects
               </button>
-              {show.projects && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  show.projects ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="text-sm font-light font-roboto">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
@@ -177,18 +189,22 @@ export default function MePage() {
                     </li>
                   </ul>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Classes Taken */}
             <div className="flex flex-col items-start gap-2">
               <button
-                className="text-left underline hover:no-underline transition-all"
+                className="text-left transition-all"
                 onClick={() => handleToggle("classes")}
               >
                 Classes Taken
               </button>
-              {show.classes && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  show.classes ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="text-sm font-light font-roboto">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
@@ -211,18 +227,22 @@ export default function MePage() {
                     </li>
                   </ul>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Skills */}
             <div className="flex flex-col items-start gap-2">
               <button
-                className="text-left underline hover:no-underline transition-all"
+                className="text-left transition-all"
                 onClick={() => handleToggle("skills")}
               >
                 Skills
               </button>
-              {show.skills && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  show.skills ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="text-sm font-light font-roboto">
                   <ul className="list-disc list-inside space-y-1">
                     <li>
@@ -246,7 +266,7 @@ export default function MePage() {
                     </li>
                   </ul>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
