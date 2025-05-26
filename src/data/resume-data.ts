@@ -91,7 +91,7 @@ export const resumeData: Record<string, ResumeSection> = {
         ],
     },
     classes: {
-        title: "Classes Taken",
+        title: "Course Projects",
         items: [
             {
                 title: "Computer Graphics",

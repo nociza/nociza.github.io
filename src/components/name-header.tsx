@@ -16,15 +16,13 @@ export default function NameHeader({
   const [hovered, setHovered] = useState(false);
 
   const nameStyle = {
-    color: hovered ? "rgba(255, 168, 68, 0.8)" : "rgba(1, 1, 1, 0.9)",
+    color: hovered ? "rgba(255, 168, 68, 0.8)" : "rgba(20, 20, 20, 0.9)",
     fontFamily: "'Times New Roman', 'Times', serif",
     fontSize: "clamp(2.5rem, 7vw, 5rem)",
     fontWeight: "600",
     maxWidth: "68%",
     letterSpacing: "-0.02em",
-    textShadow: hovered
-      ? "2px 2px 8px rgba(255, 168, 68, 0.4)"
-      : "2px 2px 4px rgba(0, 0, 0, 0.1)",
+    textShadow: "none",
     transform: hovered ? "translateY(-2px)" : "translateY(0)",
     lineHeight: "1.1",
   };
