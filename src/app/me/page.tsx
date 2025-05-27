@@ -14,6 +14,7 @@ import { resumeData } from "../../data/resume-data";
 import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
 import { useScrollSnap } from "../../hooks/use-scroll-snap";
+import { useSwipe } from "../../hooks/use-swipe";
 
 export default function MePage() {
   const { isOpen, toggle } = useCollapsibleSections({
@@ -56,6 +57,42 @@ export default function MePage() {
     handleSectionClick(sections[targetIndex]);
   };
 
+  const handleSwipeRight = () => {
+    // Navigate to the appropriate archive page based on current section
+    const archiveRoutes = {
+      resume: null, // No archive for resume
+      coffee: "/coffee",
+      books: "/books",
+      music: "/music",
+    };
+
+    const route = archiveRoutes[currentSection as keyof typeof archiveRoutes];
+    if (route) {
+      window.location.href = route;
+    }
+  };
+
+  // Add swipe gesture support
+  useSwipe({
+    onSwipeRight: currentSection !== "resume" ? handleSwipeRight : undefined,
+    onSwipeUp: () => {
+      const currentIndex = sections.findIndex(
+        (section) => section === currentSection
+      );
+      if (currentIndex > 0) {
+        handleSectionClick(sections[currentIndex - 1]);
+      }
+    },
+    onSwipeDown: () => {
+      const currentIndex = sections.findIndex(
+        (section) => section === currentSection
+      );
+      if (currentIndex < sections.length - 1) {
+        handleSectionClick(sections[currentIndex + 1]);
+      }
+    },
+  });
+
   return (
     <div className="relative">
       <LorenzCanvas attractorType={currentAttractor} />
@@ -64,6 +101,9 @@ export default function MePage() {
         currentSection={currentSection}
         sections={sections}
         onNavigate={handleNavigate}
+        onSwipeRight={
+          currentSection !== "resume" ? handleSwipeRight : undefined
+        }
       />
 
       <div ref={scrollContainerRef} className="scroll-container">
