@@ -1,13 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import SearchableIndex from "../../components/searchable-index";
-import { allCoffeeData, CoffeeEntry } from "../../data/personal-data";
+import AddCoffeeForm from "../../components/add-coffee-form";
+import { useCoffeeData } from "../../hooks/use-coffee-data";
+import { NotionCoffeeEntry } from "@/lib/notion";
 
-function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
+function CoffeeCard({
+  coffee,
+  index,
+}: {
+  coffee: NotionCoffeeEntry;
+  index: number;
+}) {
   return (
     <Card>
       <CardHeader>
@@ -19,9 +28,31 @@ function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
             {coffee.date}
           </span>
         </div>
-        <p className="text-muted-foreground font-semibold font-inconsolata">
-          {coffee.roaster}
-        </p>
+        <div className="flex items-center gap-2 mb-2">
+          <p className="text-muted-foreground font-semibold font-inconsolata">
+            {coffee.roaster}
+          </p>
+          {coffee.status === "currently_drinking" && (
+            <Badge variant="secondary" className="text-xs">
+              Currently Drinking
+            </Badge>
+          )}
+        </div>
+        {coffee.origin && (
+          <p className="text-sm text-muted-foreground font-inconsolata">
+            Origin: {coffee.origin}
+          </p>
+        )}
+        {coffee.process && (
+          <p className="text-sm text-muted-foreground font-inconsolata">
+            Process: {coffee.process}
+          </p>
+        )}
+        {coffee.rating && (
+          <p className="text-sm text-muted-foreground font-inconsolata">
+            Rating: {coffee.rating}/10
+          </p>
+        )}
       </CardHeader>
       <CardContent>
         <p className="text-foreground leading-relaxed font-inconsolata">
@@ -33,6 +64,34 @@ function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
 }
 
 export default function CoffeeIndexPage() {
+  const { coffeeData, loading, error } = useCoffeeData();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="flex items-center gap-2">
+          <Loader2 className="w-6 h-6 animate-spin" />
+          <span className="font-inconsolata">Loading coffee archive...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-500 font-inconsolata mb-4">
+            Failed to load coffee archive from Notion
+          </p>
+          <p className="text-muted-foreground font-inconsolata text-sm">
+            {error}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative">
       {/* Back Button */}
@@ -49,13 +108,16 @@ export default function CoffeeIndexPage() {
 
       <SearchableIndex
         title="Coffee Discovery Archive"
-        items={allCoffeeData}
-        searchFields={["name", "roaster", "notes"]}
-        placeholder="Search by coffee name, roaster, or tasting notes..."
-        renderItem={(coffee, index) => (
-          <CoffeeCard key={index} coffee={coffee} index={index} />
+        items={coffeeData}
+        searchFields={["name", "roaster", "notes", "origin", "process"]}
+        placeholder="Search by coffee name, roaster, origin, process, or tasting notes..."
+        renderItem={(coffee: NotionCoffeeEntry, index: number) => (
+          <CoffeeCard key={coffee.id} coffee={coffee} index={index} />
         )}
       />
+
+      {/* Add Coffee Form */}
+      <AddCoffeeForm />
     </div>
   );
 }
