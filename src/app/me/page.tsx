@@ -9,7 +9,7 @@ import ResumeSection from "../../components/resume-section";
 import CoffeeSection from "../../components/coffee-section";
 import BooksSection from "../../components/books-section";
 import MusicSection from "../../components/music-section";
-import SectionIndicator from "../../components/section-indicator";
+import NavigationArrows from "../../components/navigation-arrows";
 import { resumeData } from "../../data/resume-data";
 import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
@@ -39,14 +39,31 @@ export default function MePage() {
     }
   };
 
+  const handleNavigate = (direction: "up" | "down") => {
+    const currentIndex = sections.findIndex(
+      (section) => section === currentSection
+    );
+    let targetIndex: number;
+
+    if (direction === "down" && currentIndex < sections.length - 1) {
+      targetIndex = currentIndex + 1;
+    } else if (direction === "up" && currentIndex > 0) {
+      targetIndex = currentIndex - 1;
+    } else {
+      return;
+    }
+
+    handleSectionClick(sections[targetIndex]);
+  };
+
   return (
     <div className="relative">
       <LorenzCanvas attractorType={currentAttractor} />
 
-      <SectionIndicator
-        sections={sections}
+      <NavigationArrows
         currentSection={currentSection}
-        onSectionClick={handleSectionClick}
+        sections={sections}
+        onNavigate={handleNavigate}
       />
 
       <div ref={scrollContainerRef} className="scroll-container">
