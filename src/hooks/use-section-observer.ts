@@ -11,7 +11,8 @@ const sectionConfigs: SectionConfig[] = [
     { id: 'resume', attractorType: 'lorenz' },
     { id: 'coffee', attractorType: 'rossler' },
     { id: 'books', attractorType: 'chua' },
-    { id: 'music', attractorType: 'lorenz-side' }
+    { id: 'papers', attractorType: 'lorenz-side' },
+    // { id: 'music', attractorType: 'lorenz-side' } // Temporarily hidden
 ];
 
 export function useSectionObserver() {

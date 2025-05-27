@@ -8,6 +8,7 @@ import SocialLinks from "../../components/social-links";
 import ResumeSection from "../../components/resume-section";
 import CoffeeSection from "../../components/coffee-section";
 import BooksSection from "../../components/books-section";
+import PapersSection from "../../components/papers-section";
 import MusicSection from "../../components/music-section";
 import NavigationArrows from "../../components/navigation-arrows";
 import { resumeData } from "../../data/resume-data";
@@ -28,7 +29,7 @@ export default function MePage() {
   const { currentAttractor, currentSection } = useSectionObserver();
   const scrollContainerRef = useScrollSnap();
 
-  const sections = ["resume", "coffee", "books", "music"];
+  const sections = ["resume", "coffee", "books", "papers"]; // Added papers section
 
   const handleSectionClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -63,7 +64,8 @@ export default function MePage() {
       resume: null, // No archive for resume
       coffee: "/coffee",
       books: "/books",
-      music: "/music",
+      papers: "/papers",
+      // music: "/music", // Temporarily hidden
     };
 
     const route = archiveRoutes[currentSection as keyof typeof archiveRoutes];
@@ -162,10 +164,15 @@ export default function MePage() {
           <BooksSection />
         </section>
 
-        {/* Music Section */}
-        <section id="music" className="scroll-section">
-          <MusicSection />
+        {/* Papers Section */}
+        <section id="papers" className="scroll-section">
+          <PapersSection />
         </section>
+
+        {/* Music Section - Temporarily Hidden */}
+        {/* <section id="music" className="scroll-section">
+          <MusicSection />
+        </section> */}
       </div>
     </div>
   );

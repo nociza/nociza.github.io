@@ -10,10 +10,12 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run fetch-data && next build",
+    "build:static": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
+    "export": "npm run fetch-data && next build",
+    "fetch-data": "node scripts/fetch-notion-data.js",
     "deploy": "npm run export && touch out/CNAME && echo 'www.nociza.com' > out/CNAME && gh-pages -d out -t true",
     "typecheck": "tsc --noEmit"
   },

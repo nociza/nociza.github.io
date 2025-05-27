@@ -4,10 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCoffeeData } from "../hooks/use-coffee-data";
-import { NotionCoffeeEntry } from "@/lib/notion";
+
+interface CoffeeEntry {
+  id: string;
+  name: string;
+  roaster: string;
+  date: string;
+  notes: string;
+  rating?: number;
+  origin?: string;
+  process?: string;
+  status?: string;
+}
 
 interface CoffeeCardProps {
-  coffee: NotionCoffeeEntry;
+  coffee: CoffeeEntry;
   rank?: number;
 }
 
@@ -21,7 +32,10 @@ function CoffeeCard({ coffee, rank }: CoffeeCardProps) {
         <p className="text-muted-foreground font-semibold font-inconsolata">
           {coffee.roaster}
         </p>
-        {coffee.status === "currently_drinking" && (
+        {(coffee.status === "currently_drinking" ||
+          coffee.status === "Currently Drinking" ||
+          coffee.status === "Currently Brewing" ||
+          coffee.status?.toLowerCase().includes("current")) && (
           <Badge variant="secondary" className="w-fit">
             Currently Drinking
           </Badge>
@@ -107,11 +121,9 @@ export default function CoffeeSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentlyDrinking.length > 0 ? (
-            currentlyDrinking.map(
-              (coffee: NotionCoffeeEntry, index: number) => (
-                <CoffeeCard key={coffee.id} coffee={coffee} rank={index + 1} />
-              )
-            )
+            currentlyDrinking.map((coffee: CoffeeEntry, index: number) => (
+              <CoffeeCard key={coffee.id} coffee={coffee} rank={index + 1} />
+            ))
           ) : (
             <div className="col-span-full text-center">
               <p className="text-muted-foreground font-inconsolata mb-2">

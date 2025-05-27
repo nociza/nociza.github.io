@@ -6,17 +6,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SearchableIndex from "../../components/searchable-index";
-import AddCoffeeForm from "../../components/add-coffee-form";
 import { useCoffeeData } from "../../hooks/use-coffee-data";
-import { NotionCoffeeEntry } from "@/lib/notion";
 
-function CoffeeCard({
-  coffee,
-  index,
-}: {
-  coffee: NotionCoffeeEntry;
-  index: number;
-}) {
+interface CoffeeEntry {
+  id: string;
+  name: string;
+  roaster: string;
+  date: string;
+  notes: string;
+  rating?: number;
+  origin?: string;
+  process?: string;
+  status?: string;
+}
+
+function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
   return (
     <Card>
       <CardHeader>
@@ -32,7 +36,10 @@ function CoffeeCard({
           <p className="text-muted-foreground font-semibold font-inconsolata">
             {coffee.roaster}
           </p>
-          {coffee.status === "currently_drinking" && (
+          {(coffee.status === "currently_drinking" ||
+            coffee.status === "Currently Drinking" ||
+            coffee.status === "Currently Brewing" ||
+            coffee.status?.toLowerCase().includes("current")) && (
             <Badge variant="secondary" className="text-xs">
               Currently Drinking
             </Badge>
@@ -64,7 +71,7 @@ function CoffeeCard({
 }
 
 export default function CoffeeIndexPage() {
-  const { coffeeData, loading, error } = useCoffeeData();
+  const { coffeeEntries, loading, error } = useCoffeeData();
 
   if (loading) {
     return (
@@ -108,16 +115,13 @@ export default function CoffeeIndexPage() {
 
       <SearchableIndex
         title="Coffee Discovery Archive"
-        items={coffeeData}
+        items={coffeeEntries}
         searchFields={["name", "roaster", "notes", "origin", "process"]}
         placeholder="Search by coffee name, roaster, origin, process, or tasting notes..."
-        renderItem={(coffee: NotionCoffeeEntry, index: number) => (
+        renderItem={(coffee: CoffeeEntry, index: number) => (
           <CoffeeCard key={coffee.id} coffee={coffee} index={index} />
         )}
       />
-
-      {/* Add Coffee Form */}
-      <AddCoffeeForm />
     </div>
   );
 }
