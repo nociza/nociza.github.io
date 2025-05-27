@@ -11,22 +11,20 @@ interface CoffeeCardProps {
 
 function CoffeeCard({ coffee, rank }: CoffeeCardProps) {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
-        <div className="flex items-start justify-between">
-          <CardTitle className="text-xl font-inconsolata">
-            <span className="text-orange-500">#{rank}</span> {coffee.name}
-          </CardTitle>
-          <span className="text-sm text-muted-foreground font-inconsolata">
-            {coffee.date}
-          </span>
-        </div>
+        <CardTitle className="text-lg font-inconsolata">
+          {coffee.name}
+        </CardTitle>
         <p className="text-muted-foreground font-semibold font-inconsolata">
           {coffee.roaster}
         </p>
+        <span className="text-sm text-muted-foreground font-inconsolata">
+          {coffee.date}
+        </span>
       </CardHeader>
       <CardContent>
-        <p className="text-foreground leading-relaxed font-inconsolata">
+        <p className="text-foreground leading-relaxed font-inconsolata text-sm">
           {coffee.notes}
         </p>
       </CardContent>
@@ -40,10 +38,10 @@ export default function CoffeeSection() {
       <div className="max-w-4xl w-full">
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-gray-800 mb-4 font-serif">
-            Coffee Diary
+            Coffee Discovery
           </h1>
           <p className="text-xl text-gray-600 mb-6 font-inconsolata">
-            My top 3 coffee discoveries, ranked by pure caffeinated joy
+            Currently drinking and recent discoveries
           </p>
           <Button
             variant="link"
@@ -51,13 +49,13 @@ export default function CoffeeSection() {
             asChild
           >
             <Link href="/coffee" className="inline-flex items-center gap-2">
-              View Full Coffee Archive
+              View Full Discovery Archive
               <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {coffeeData.map((coffee, index) => (
             <CoffeeCard key={index} coffee={coffee} rank={index + 1} />
           ))}

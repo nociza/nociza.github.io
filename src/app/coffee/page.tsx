@@ -48,7 +48,7 @@ export default function CoffeeIndexPage() {
       </Button>
 
       <SearchableIndex
-        title="Coffee Archive"
+        title="Coffee Discovery Archive"
         items={allCoffeeData}
         searchFields={["name", "roaster", "notes"]}
         placeholder="Search by coffee name, roaster, or tasting notes..."
