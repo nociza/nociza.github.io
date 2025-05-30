@@ -23,7 +23,6 @@ concurrency:
 jobs:
   # Build job
   build:
-    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -54,6 +53,14 @@ jobs:
           NOTION_COFFEE_DATABASE_ID: ${{ secrets.NOTION_COFFEE_DATABASE_ID }}
           NOTION_PAPERS_DATABASE_ID: ${{ secrets.NOTION_PAPERS_DATABASE_ID }}
         run: npm run build:static
+
+      - name: List build output files
+        run: |
+          echo "Listing contents of ./out directory:"
+          find ./out -type f -name "*.png" -o -name "*.jpg" -o -name "*.jpeg"
+          echo "Checking specific image files:"
+          ls -la ./out/linkedin_pic_rounded.png || echo "linkedin_pic_rounded.png not found"
+          ls -la ./out/brainwater.jpeg || echo "brainwater.jpeg not found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
