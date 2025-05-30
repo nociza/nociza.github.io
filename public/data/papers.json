@@ -1,0 +1,49 @@
+[
+  {
+    "id": "203cb2de-72bc-80f0-94ab-eb34c700b90a",
+    "arxivId": "2010.15980",
+    "url": "https://arxiv.org/abs/2010.15980",
+    "title": "AutoPrompt: Eliciting Knowledge from Language Models with Automatically\n  Generated Prompts",
+    "authors": [
+      "Taylor Shin",
+      "Yasaman Razeghi",
+      "Robert L. Logan IV",
+      "Eric Wallace",
+      "Sameer Singh"
+    ],
+    "abstract": "The remarkable success of pretrained language models has motivated the study of what kinds of knowledge these models learn during pretraining. Reformulating tasks as fill-in-the-blanks problems (e.g., cloze tests) is a natural approach for gauging such knowledge, however, its usage is limited by the manual effort and guesswork required to write suitable prompts. To address this, we develop AutoPrompt, an automated method to create prompts for a diverse set of tasks, based on a gradient-guided search. Using AutoPrompt, we show that masked language models (MLMs) have an inherent capability to perform sentiment analysis and natural language inference without additional parameters or finetuning, sometimes achieving performance on par with recent state-of-the-art supervised models. We also show that our prompts elicit more accurate factual knowledge from MLMs than the manually created prompts on the LAMA benchmark, and that MLMs can be used as relation extractors more effectively than supervised relation extraction models. These results demonstrate that automatically generated prompts are a viable parameter-free alternative to existing probing methods, and as pretrained LMs become more sophisticated and capable, potentially a replacement for finetuning.",
+    "publishedDate": "2020-10-29T22:54:00Z",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "status": "Done"
+  },
+  {
+    "id": "203cb2de-72bc-8022-b4da-fd473a6f83ea",
+    "arxivId": "2412.05299",
+    "url": "https://arxiv.org/abs/2412.05299",
+    "title": "Specifications: The missing link to making the development of LLM\n  systems an engineering discipline",
+    "authors": [
+      "Ion Stoica",
+      "Matei Zaharia",
+      "Joseph Gonzalez",
+      "Ken Goldberg",
+      "Koushik Sen",
+      "Hao Zhang",
+      "Anastasios Angelopoulos",
+      "Shishir G. Patil",
+      "Lingjiao Chen",
+      "Wei-Lin Chiang",
+      "Jared Q. Davis"
+    ],
+    "abstract": "Despite the significant strides made by generative AI in just a few short years, its future progress is constrained by the challenge of building modular and robust systems. This capability has been a cornerstone of past technological revolutions, which relied on combining components to create increasingly sophisticated and reliable systems. Cars, airplanes, computers, and software consist of components-such as engines, wheels, CPUs, and libraries-that can be assembled, debugged, and replaced. A key tool for building such reliable and modular systems is specification: the precise description of the expected behavior, inputs, and outputs of each component. However, the generality of LLMs and the inherent ambiguity of natural language make defining specifications for LLM-based components (e.g., agents) both a challenging and urgent problem. In this paper, we discuss the progress the field has made so far-through advances like structured outputs, process supervision, and test-time compute-and outline several future directions for research to enable the development of modular and reliable LLM-based systems through improved specifications.",
+    "publishedDate": "2024-11-25T07:48:31Z",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "status": "Done"
+  }
+]

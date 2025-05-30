@@ -40,6 +40,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Check public directory
+        run: |
+          echo "Checking public directory contents:"
+          ls -la public/ || echo "Public directory not found"
+          echo "Looking for image files:"
+          find public -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" 2>/dev/null || echo "No images in public"
+
       - name: Fetch Notion data
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
@@ -53,6 +60,13 @@ jobs:
           NOTION_COFFEE_DATABASE_ID: ${{ secrets.NOTION_COFFEE_DATABASE_ID }}
           NOTION_PAPERS_DATABASE_ID: ${{ secrets.NOTION_PAPERS_DATABASE_ID }}
         run: npm run build:static
+
+      - name: Manually copy public files to out directory
+        run: |
+          echo "Manually copying public files to out directory..."
+          cp -r public/* out/ 2>/dev/null || echo "No files to copy from public"
+          echo "Files copied, checking out directory:"
+          ls -la out/*.png out/*.jpg out/*.jpeg 2>/dev/null || echo "No image files found in out"
 
       - name: List build output files
         run: |
