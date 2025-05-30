@@ -20,24 +20,9 @@ interface UsePapersDataReturn {
     addPaper: (url: string, status?: string) => Promise<boolean>;
 }
 
-// Fallback data
-const fallbackPapers: ArxivPaper[] = [
-    {
-        id: "fallback-1",
-        arxivId: "1706.03762",
-        url: "https://arxiv.org/abs/1706.03762",
-        title: "Attention Is All You Need",
-        authors: ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit"],
-        abstract: "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism.",
-        publishedDate: "2017-06-12",
-        categories: ["cs.CL", "cs.LG"],
-        status: "reading"
-    }
-];
-
 export function usePapersData(): UsePapersDataReturn {
-    const [papers, setPapers] = useState<ArxivPaper[]>(fallbackPapers);
-    const [loading, setLoading] = useState(false);
+    const [papers, setPapers] = useState<ArxivPaper[]>([]);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     const fetchPapers = async () => {
@@ -45,28 +30,24 @@ export function usePapersData(): UsePapersDataReturn {
         setError(null);
 
         try {
-            // Try to fetch from static JSON file first
+            // Try to fetch from static JSON file
             const response = await fetch('/data/papers.json');
 
             if (response.ok) {
                 const data = await response.json();
-                if (data.length > 0) {
-                    setPapers(data);
-                    console.log(`Loaded ${data.length} papers from static data`);
-                } else {
-                    console.log('No papers in static data, using fallback');
-                    setPapers(fallbackPapers);
-                }
+                setPapers(data || []);
+                console.log(`Loaded ${data.length} papers from static data`);
+            } else if (response.status === 404) {
+                // File doesn't exist - no papers configured
+                setPapers([]);
+                setError('Papers data not available. Set up Notion integration to track papers.');
             } else {
-                // If static file doesn't exist, use fallback
-                console.log('Static papers data not found, using fallback');
-                setPapers(fallbackPapers);
+                throw new Error(`Failed to fetch papers: ${response.statusText}`);
             }
         } catch (err) {
             console.error('Error fetching papers:', err);
-            setError(err instanceof Error ? err.message : 'Unknown error');
-            // Use fallback data on error
-            setPapers(fallbackPapers);
+            setError(err instanceof Error ? err.message : 'Failed to load papers data');
+            setPapers([]);
         } finally {
             setLoading(false);
         }

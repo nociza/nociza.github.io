@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import SearchableIndex from "../../components/searchable-index";
-import { ArrowLeft, FileText, ExternalLink } from "lucide-react";
+import { ArrowLeft, FileText, ExternalLink, Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -102,21 +102,21 @@ function PaperCard({ paper, index }: { paper: ArxivPaper; index: number }) {
     }
   };
 
-  // Truncate abstract to ~200 characters for archive view
+  // Truncate abstract to ~180 characters for archive view
   const truncatedAbstract =
-    paper.abstract.length > 200
-      ? paper.abstract.substring(0, 200) + "..."
+    paper.abstract.length > 180
+      ? paper.abstract.substring(0, 180) + "..."
       : paper.abstract;
 
   return (
-    <Card>
+    <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardHeader>
         <div className="flex items-start justify-between">
           <CardTitle className="text-lg font-inconsolata leading-tight">
             {paper.title}
           </CardTitle>
-          <div className="flex items-center gap-2 ml-2">
-            <FileText className="w-4 h-4" />
+          <div className="flex items-center gap-2 ml-2 flex-shrink-0">
+            <FileText className="w-4 h-4 text-muted-foreground" />
             {paper.status && (
               <Badge variant={getStatusVariant(paper.status)}>
                 {paper.status}
@@ -126,8 +126,15 @@ function PaperCard({ paper, index }: { paper: ArxivPaper; index: number }) {
         </div>
         <div className="space-y-1">
           <p className="text-sm text-muted-foreground font-inconsolata">
-            {paper.authors.slice(0, 3).join(", ")}
-            {paper.authors.length > 3 && ` +${paper.authors.length - 3} more`}
+            {paper.authors.length > 0 ? (
+              <>
+                {paper.authors.slice(0, 3).join(", ")}
+                {paper.authors.length > 3 &&
+                  ` +${paper.authors.length - 3} more`}
+              </>
+            ) : (
+              "Authors not available"
+            )}
           </p>
           <p className="text-xs text-muted-foreground font-inconsolata">
             arXiv:{paper.arxivId} •{" "}
@@ -152,7 +159,7 @@ function PaperCard({ paper, index }: { paper: ArxivPaper; index: number }) {
               href={paper.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1"
+              className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600"
             >
               <ExternalLink className="w-3 h-3" />
               arXiv
@@ -167,12 +174,61 @@ function PaperCard({ paper, index }: { paper: ArxivPaper; index: number }) {
 export default function PapersIndexPage() {
   const { papers, loading, error } = usePapersData();
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="flex items-center gap-2">
+          <Loader2 className="w-6 h-6 animate-spin" />
+          <span className="font-inconsolata">Loading papers archive...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+          <p className="text-red-500 font-inconsolata mb-4">
+            Failed to load papers data
+          </p>
+          <p className="text-muted-foreground font-inconsolata text-sm mb-6">
+            {error}
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/me">Return to Main Page</Link>
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+  if (papers.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+          <p className="text-muted-foreground font-inconsolata mb-2">
+            No papers found in the archive
+          </p>
+          <p className="text-sm text-muted-foreground font-inconsolata mb-6">
+            Add arXiv papers to your Notion database to see them here
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/me">Return to Main Page</Link>
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative">
       {/* Back Button */}
       <Link
         href="/me"
-        className="fixed top-8 left-8 z-50 p-2 bg-white border border-gray-200 rounded-full hover:border-orange-500 transition-colors duration-200"
+        className="fixed top-8 left-8 z-50 p-2 bg-white border border-gray-200 rounded-full hover:border-orange-500 transition-colors duration-200 shadow-sm"
       >
         <ArrowLeft className="w-5 h-5 text-gray-600 hover:text-orange-500" />
       </Link>
