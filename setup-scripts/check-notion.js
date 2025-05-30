@@ -102,7 +102,9 @@ async function checkNotionSetup() {
       console.log("   1. Change Status property to Select type");
       console.log("   2. Add options: currently_drinking, completed, wishlist");
     } else {
-      console.log("\n🔧 Check the troubleshooting guide in NOTION_SETUP.md");
+      console.log(
+        "\n🔧 Check the troubleshooting guide in docs/NOTION_SETUP.md"
+      );
     }
   }
 }

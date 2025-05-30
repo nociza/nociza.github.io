@@ -34,6 +34,19 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# cache directories
 .cache
+.parcel-cache
 
-tsconfig.tsbuildinfo
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

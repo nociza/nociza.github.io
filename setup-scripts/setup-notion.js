@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 console.log("🚀 Notion Coffee Tracker Setup\n");
 console.log("This script will help you set up your Notion integration.");
 console.log(
-  "Follow the guide in NOTION_SETUP.md first to create your integration and database.\n"
+  "Follow the guide in docs/NOTION_SETUP.md first to create your integration and database.\n"
 );
 
 function question(prompt) {
