@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 export default function MyGFPage() {
   return (
     <div className="page-container">
       <h1 className="heading-normal">Brain with Water</h1>
-      <Image
+      <img
         alt="Brain with water"
         src="/brainwater.jpeg"
         width={800}
