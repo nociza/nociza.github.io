@@ -25,9 +25,7 @@ async function fetchArxivMetadata(arxivId) {
     // Parse XML (basic parsing)
     const titleMatch = xmlText.match(/<title>(.*?)<\/title>/s);
     const summaryMatch = xmlText.match(/<summary>(.*?)<\/summary>/s);
-    const authorsMatch = xmlText.match(
-      /<author><name>(.*?)<\/name><\/author>/g
-    );
+    const authorsMatch = xmlText.match(/<name>(.*?)<\/name>/g);
     const publishedMatch = xmlText.match(/<published>(.*?)<\/published>/);
     const categoriesMatch = xmlText.match(/<category term="(.*?)".*?\/>/g);
 
