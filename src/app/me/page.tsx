@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import LorenzCanvas from "../../components/lorenz-canvas";
 import NameHeader from "../../components/name-header";
 import CollapsibleSection from "../../components/collapsible-section";
@@ -140,13 +139,12 @@ export default function MePage() {
 
               {/* Right Column - Image and Social Links */}
               <div className="flex flex-col items-center justify-center">
-                <Image
+                <img
                   alt="Alex Zhang"
                   src="/linkedin_pic_rounded.png"
                   width={300}
                   height={300}
                   className="rounded-full"
-                  priority
                 />
                 <SocialLinks />
               </div>
