@@ -2,6 +2,7 @@
   "name": "nociza.github.io",
   "version": "1.0.0",
   "private": true,
+  "_comment": "Force deployment trigger",
   "description": "nociza.github.io",
   "author": "nociza",
   "keywords": [
