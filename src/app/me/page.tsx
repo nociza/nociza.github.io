@@ -10,6 +10,7 @@ import BooksSection from "../../components/books-section";
 import PapersSection from "../../components/papers-section";
 import MusicSection from "../../components/music-section";
 import NavigationArrows from "../../components/navigation-arrows";
+import ProfilePicture from "../../components/profile-picture";
 import { resumeData } from "../../data/resume-data";
 import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
@@ -139,13 +140,7 @@ export default function MePage() {
 
               {/* Right Column - Image and Social Links */}
               <div className="flex flex-col items-center justify-center">
-                <img
-                  alt="Alex Zhang"
-                  src="/linkedin_pic_rounded.png"
-                  width={300}
-                  height={300}
-                  className="rounded-full"
-                />
+                <ProfilePicture size={300} />
                 <SocialLinks />
               </div>
             </div>

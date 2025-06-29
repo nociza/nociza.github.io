@@ -11,12 +11,13 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "npm run fetch-data && next build",
+    "build": "npm run fetch-data && npm run generate-sitemap && next build",
     "build:static": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run fetch-data && next build",
+    "export": "npm run fetch-data && npm run generate-sitemap && next build",
     "fetch-data": "node scripts/fetch-notion-data.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
     "deploy": "npm run export && touch out/CNAME && echo 'www.nociza.com' > out/CNAME && gh-pages -d out -t true",
     "typecheck": "tsc --noEmit"
   },

@@ -14,7 +14,8 @@ interface CoffeeEntry {
   roaster: string;
   date: string;
   notes: string;
-  rating?: number;
+  pourOverRating?: number;
+  americanoRating?: number;
   origin?: string;
   process?: string;
   status?: string;
@@ -22,51 +23,64 @@ interface CoffeeEntry {
 
 function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
   return (
-    <Card>
-      <CardHeader>
-        <div className="flex items-start justify-between">
-          <CardTitle className="text-xl font-inconsolata">
-            {coffee.name}
-          </CardTitle>
-          <span className="text-sm text-muted-foreground font-inconsolata">
-            {coffee.date}
-          </span>
-        </div>
-        <div className="flex items-center gap-2 mb-2">
-          <p className="text-muted-foreground font-semibold font-inconsolata">
-            {coffee.roaster}
-          </p>
-          {(coffee.status === "currently_drinking" ||
-            coffee.status === "Currently Drinking" ||
-            coffee.status === "Currently Brewing" ||
-            coffee.status?.toLowerCase().includes("current")) && (
-            <Badge variant="secondary" className="text-xs">
-              Currently Drinking
-            </Badge>
+    <Link href={`/coffee/${coffee.id}`}>
+      <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+        <CardHeader>
+          <div className="flex items-start justify-between">
+            <CardTitle className="text-xl font-inconsolata">
+              {coffee.name}
+            </CardTitle>
+            <span className="text-sm text-muted-foreground font-inconsolata">
+              {coffee.date}
+            </span>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <p className="text-muted-foreground font-semibold font-inconsolata">
+              {coffee.roaster}
+            </p>
+            {(coffee.status === "currently_drinking" ||
+              coffee.status === "Currently Drinking" ||
+              coffee.status === "Currently Brewing" ||
+              coffee.status?.toLowerCase().includes("current")) && (
+              <Badge variant="secondary" className="text-xs">
+                Currently Drinking
+              </Badge>
+            )}
+          </div>
+          {coffee.origin && (
+            <p className="text-sm text-muted-foreground font-inconsolata">
+              Origin: {coffee.origin}
+            </p>
           )}
-        </div>
-        {coffee.origin && (
-          <p className="text-sm text-muted-foreground font-inconsolata">
-            Origin: {coffee.origin}
+          {coffee.process && (
+            <p className="text-sm text-muted-foreground font-inconsolata">
+              Process: {coffee.process}
+            </p>
+          )}
+
+          {/* Ratings Section */}
+          {(coffee.pourOverRating || coffee.americanoRating) && (
+            <div className="mb-1">
+              {coffee.pourOverRating && (
+                <p className="text-sm text-muted-foreground font-inconsolata">
+                  Pour Over: {coffee.pourOverRating}/10
+                </p>
+              )}
+              {coffee.americanoRating && (
+                <p className="text-sm text-muted-foreground font-inconsolata">
+                  Americano: {coffee.americanoRating}/10
+                </p>
+              )}
+            </div>
+          )}
+        </CardHeader>
+        <CardContent>
+          <p className="text-foreground leading-relaxed font-inconsolata line-clamp-4">
+            {coffee.notes}
           </p>
-        )}
-        {coffee.process && (
-          <p className="text-sm text-muted-foreground font-inconsolata">
-            Process: {coffee.process}
-          </p>
-        )}
-        {coffee.rating && (
-          <p className="text-sm text-muted-foreground font-inconsolata">
-            Rating: {coffee.rating}/10
-          </p>
-        )}
-      </CardHeader>
-      <CardContent>
-        <p className="text-foreground leading-relaxed font-inconsolata">
-          {coffee.notes}
-        </p>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
 

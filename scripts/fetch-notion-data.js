@@ -120,6 +120,8 @@ async function fetchCoffeeData() {
       origin: getPropertyValue(page.properties.Origin),
       process: getPropertyValue(page.properties.Process),
       status: getPropertyValue(page.properties.Status) || "completed",
+      pourOverRating: getPropertyValue(page.properties["Pour Over Rating"]),
+      americanoRating: getPropertyValue(page.properties["Americano Rating"]),
     }));
 
     console.log(`✅ Fetched ${entries.length} coffee entries`);

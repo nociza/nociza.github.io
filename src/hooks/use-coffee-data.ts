@@ -6,7 +6,8 @@ interface CoffeeEntry {
     roaster: string;
     date: string;
     notes: string;
-    rating?: number;
+    pourOverRating?: number;
+    americanoRating?: number;
     origin?: string;
     process?: string;
     status?: string;
@@ -28,7 +29,8 @@ const fallbackCoffeeData: CoffeeEntry[] = [
         roaster: "Local Roaster",
         date: "2024-01-01",
         notes: "A delicious coffee with notes of chocolate and caramel.",
-        rating: 4,
+        pourOverRating: 8,
+        americanoRating: 7,
         origin: "Colombia",
         process: "Washed",
         status: "completed"

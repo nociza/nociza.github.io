@@ -1,16 +1,15 @@
-"use client";
+import { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { generateMetadata } from "../lib/seo";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+export const metadata: Metadata = generateMetadata({
+  title: undefined, // Use default title
+  description: undefined, // Use default description
+  url: "/",
+  type: "website",
+});
 
 export default function IndexPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace("/me");
-  }, [router]);
-
-  return (
-    <div className="page-container">Well you sure have a slow internet...</div>
-  );
+  // Redirect to /me on the server side for better SEO
+  redirect("/me");
 }

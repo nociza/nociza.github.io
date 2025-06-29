@@ -5,10 +5,25 @@
     "roaster": "Fazenda",
     "date": "2025-05-25",
     "notes": "No notes available",
-    "rating": 8,
+    "rating": null,
     "origin": "Ethiopia",
     "process": "Raised Bed Dried",
-    "status": "Currently Brewing"
+    "status": "Currently Brewing",
+    "pourOverRating": 8,
+    "americanoRating": null
+  },
+  {
+    "id": "205cb2de-72bc-8078-adf5-eb7bf5003913",
+    "name": "Counter Culture Field Trip",
+    "roaster": "Counter Culture",
+    "date": "2025-05-08",
+    "notes": "No notes available",
+    "rating": null,
+    "origin": "Blend",
+    "process": "",
+    "status": "Currently Brewing",
+    "pourOverRating": null,
+    "americanoRating": 9
   },
   {
     "id": "200cb2de-72bc-80b0-99fd-f4c8b4cf0bec",
@@ -16,10 +31,12 @@
     "roaster": "Chromatic",
     "date": "2025-04-20",
     "notes": "No notes available",
-    "rating": 9,
+    "rating": null,
     "origin": "Columbia",
     "process": "",
-    "status": "Currently Brewing"
+    "status": "Currently Brewing",
+    "pourOverRating": null,
+    "americanoRating": 9
   },
   {
     "id": "200cb2de-72bc-80f9-902e-d9c188c35557",
@@ -30,6 +47,8 @@
     "rating": null,
     "origin": "Papua New Guinea",
     "process": "",
-    "status": "Currently Brewing"
+    "status": "Currently Brewing",
+    "pourOverRating": null,
+    "americanoRating": 6
   }
 ]

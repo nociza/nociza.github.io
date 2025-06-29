@@ -1,47 +1,38 @@
 import type { Metadata } from "next";
 import { Inconsolata, Roboto } from "next/font/google";
 import "../styles/globals.css";
+import {
+  generateMetadata,
+  generateJsonLd,
+  personStructuredData,
+  websiteStructuredData,
+} from "../lib/seo";
 
 const inconsolata = Inconsolata({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-inconsolata",
+  display: "swap",
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
   variable: "--font-roboto",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Yueheng [Alex] Zhang",
-  description: "Personal website of Yueheng [Alex] Zhang",
-  metadataBase: new URL("https://www.nociza.com"),
-  openGraph: {
-    title: "Yueheng [Alex] Zhang",
-    description: "Personal website of Yueheng [Alex] Zhang",
-    url: "https://www.nociza.com",
-    siteName: "nociza.com",
-    images: [
-      {
-        url: "/linkedin_pic.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en_US",
+  ...generateMetadata({
+    title: undefined, // Use default title
+    description: undefined, // Use default description
+    url: "",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Yueheng [Alex] Zhang",
-    description: "Personal website of Yueheng [Alex] Zhang",
-    images: ["/linkedin_pic.jpg"],
-  },
+  }),
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon-32x32.png",
+    apple: "/icon.png",
   },
 };
 
@@ -53,6 +44,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="color-scheme" content="light dark" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={generateJsonLd(personStructuredData)}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={generateJsonLd(websiteStructuredData)}
+        />
+
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+
+        {/* Optimized font loading */}
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
           rel="stylesheet"
@@ -69,6 +83,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap"
           rel="stylesheet"
         />
+
+        {/* Custom font fallbacks */}
         <style>{`
           @font-face {
             font-family: 'Trattatello-fallback';
@@ -81,6 +97,10 @@ export default function RootLayout({
             font-display: swap;
           }
         `}</style>
+
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
       <body
         className={`${inconsolata.variable} ${roboto.variable} font-inconsolata`}

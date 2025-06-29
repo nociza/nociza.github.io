@@ -6,19 +6,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Plus, X, Loader2 } from "lucide-react";
-import { useCoffeeData } from "../hooks/use-coffee-data";
 
 export default function AddCoffeeForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { addCoffeeEntry } = useCoffeeData();
 
   const [formData, setFormData] = useState({
     name: "",
     roaster: "",
     date: new Date().toISOString().split("T")[0], // Today's date
     notes: "",
-    rating: "",
+    pourOverRating: "",
+    americanoRating: "",
     origin: "",
     process: "",
     status: "currently_drinking" as const,
@@ -29,12 +28,18 @@ export default function AddCoffeeForm() {
     setIsSubmitting(true);
 
     try {
-      await addCoffeeEntry({
+      // TODO: Implement coffee entry submission when needed
+      console.log("Coffee entry data:", {
         name: formData.name,
         roaster: formData.roaster,
         date: formData.date,
         notes: formData.notes,
-        rating: formData.rating ? parseInt(formData.rating) : undefined,
+        pourOverRating: formData.pourOverRating
+          ? parseInt(formData.pourOverRating)
+          : undefined,
+        americanoRating: formData.americanoRating
+          ? parseInt(formData.americanoRating)
+          : undefined,
         origin: formData.origin || undefined,
         process: formData.process || undefined,
         status: formData.status,
@@ -46,7 +51,8 @@ export default function AddCoffeeForm() {
         roaster: "",
         date: new Date().toISOString().split("T")[0],
         notes: "",
-        rating: "",
+        pourOverRating: "",
+        americanoRating: "",
         origin: "",
         process: "",
         status: "currently_drinking",
@@ -146,20 +152,41 @@ export default function AddCoffeeForm() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium font-inconsolata">
-                  Rating (1-10)
-                </label>
-                <Input
-                  type="number"
-                  min="1"
-                  max="10"
-                  value={formData.rating}
-                  onChange={(e) => handleInputChange("rating", e.target.value)}
-                  placeholder="8"
-                  className="font-inconsolata"
-                />
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium font-inconsolata">
+                    Pour Over Rating (1-10)
+                  </label>
+                  <Input
+                    type="number"
+                    min="1"
+                    max="10"
+                    value={formData.pourOverRating}
+                    onChange={(e) =>
+                      handleInputChange("pourOverRating", e.target.value)
+                    }
+                    placeholder="8"
+                    className="font-inconsolata"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium font-inconsolata">
+                    Americano Rating (1-10)
+                  </label>
+                  <Input
+                    type="number"
+                    min="1"
+                    max="10"
+                    value={formData.americanoRating}
+                    onChange={(e) =>
+                      handleInputChange("americanoRating", e.target.value)
+                    }
+                    placeholder="7"
+                    className="font-inconsolata"
+                  />
+                </div>
               </div>
 
               <div>
