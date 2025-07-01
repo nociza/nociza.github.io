@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import CoffeeDetailClient from "./coffee-detail-client";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 interface CoffeeEntry {
   id: string;
@@ -18,9 +20,12 @@ interface CoffeeEntry {
 // Generate static params for all coffee entries
 export async function generateStaticParams() {
   try {
-    // Fetch coffee data from the static JSON files
-    const coffeeData = await import("../../../../public/data/coffee.json");
-    return coffeeData.default.map((coffee: any) => ({
+    // Read coffee data from the JSON file at build time
+    const filePath = join(process.cwd(), "public", "data", "coffee.json");
+    const fileContents = readFileSync(filePath, "utf8");
+    const coffeeData = JSON.parse(fileContents);
+
+    return coffeeData.map((coffee: any) => ({
       id: coffee.id,
     }));
   } catch (error) {
