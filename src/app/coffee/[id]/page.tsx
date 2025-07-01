@@ -25,11 +25,27 @@ export async function generateStaticParams() {
     const fileContents = readFileSync(filePath, "utf8");
     const coffeeData = JSON.parse(fileContents);
 
-    return coffeeData.map((coffee: any) => ({
+    // Ensure we have valid data and it's an array
+    if (!Array.isArray(coffeeData)) {
+      console.warn("Coffee data is not an array, returning empty params");
+      return [];
+    }
+
+    // Filter out entries without valid IDs
+    const validEntries = coffeeData.filter(
+      (coffee: any) => coffee && coffee.id
+    );
+
+    console.log(
+      `Generating static params for ${validEntries.length} coffee entries`
+    );
+
+    return validEntries.map((coffee: any) => ({
       id: coffee.id,
     }));
   } catch (error) {
     console.error("Error generating static params:", error);
+    console.warn("Falling back to empty params array");
     return [];
   }
 }

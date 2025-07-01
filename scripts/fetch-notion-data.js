@@ -207,40 +207,77 @@ async function main() {
   console.log("☕ Fetching coffee data...");
   const coffeeData = await fetchCoffeeData();
 
-  // Filter currently drinking coffee
-  const currentlyDrinking = coffeeData.filter(
-    (entry) =>
-      entry.status === "currently_drinking" ||
-      entry.status === "Currently Drinking" ||
-      entry.status === "Currently Brewing" ||
-      entry.status?.toLowerCase().includes("current")
-  );
+  // Only write coffee data if we successfully fetched some, otherwise preserve existing data
+  if (coffeeData.length > 0) {
+    // Filter currently drinking coffee
+    const currentlyDrinking = coffeeData.filter(
+      (entry) =>
+        entry.status === "currently_drinking" ||
+        entry.status === "Currently Drinking" ||
+        entry.status === "Currently Brewing" ||
+        entry.status?.toLowerCase().includes("current")
+    );
 
-  // Write coffee data
-  fs.writeFileSync(
-    path.join(dataDir, "coffee.json"),
-    JSON.stringify(coffeeData, null, 2)
-  );
-  fs.writeFileSync(
-    path.join(dataDir, "coffee-current.json"),
-    JSON.stringify(currentlyDrinking, null, 2)
-  );
+    // Write coffee data
+    fs.writeFileSync(
+      path.join(dataDir, "coffee.json"),
+      JSON.stringify(coffeeData, null, 2)
+    );
+    fs.writeFileSync(
+      path.join(dataDir, "coffee-current.json"),
+      JSON.stringify(currentlyDrinking, null, 2)
+    );
+  } else {
+    // Preserve existing data or create empty files if they don't exist
+    const coffeeFile = path.join(dataDir, "coffee.json");
+    const currentFile = path.join(dataDir, "coffee-current.json");
+
+    if (!fs.existsSync(coffeeFile)) {
+      fs.writeFileSync(coffeeFile, JSON.stringify([], null, 2));
+    }
+    if (!fs.existsSync(currentFile)) {
+      fs.writeFileSync(currentFile, JSON.stringify([], null, 2));
+    }
+    console.log("⚠️  No new coffee data fetched, preserving existing files");
+  }
 
   // Fetch papers data
   console.log("📄 Fetching papers data...");
   const papersData = await fetchPapersData();
 
-  // Write papers data
-  fs.writeFileSync(
-    path.join(dataDir, "papers.json"),
-    JSON.stringify(papersData, null, 2)
+  // Only write papers data if we successfully fetched some, otherwise preserve existing data
+  if (papersData.length > 0) {
+    // Write papers data
+    fs.writeFileSync(
+      path.join(dataDir, "papers.json"),
+      JSON.stringify(papersData, null, 2)
+    );
+  } else {
+    // Preserve existing data or create empty file if it doesn't exist
+    const papersFile = path.join(dataDir, "papers.json");
+
+    if (!fs.existsSync(papersFile)) {
+      fs.writeFileSync(papersFile, JSON.stringify([], null, 2));
+    }
+    console.log("⚠️  No new papers data fetched, preserving existing files");
+  }
+
+  // Read final counts from the actual files
+  const finalCoffeeData = JSON.parse(
+    fs.readFileSync(path.join(dataDir, "coffee.json"), "utf8")
+  );
+  const finalCurrentData = JSON.parse(
+    fs.readFileSync(path.join(dataDir, "coffee-current.json"), "utf8")
+  );
+  const finalPapersData = JSON.parse(
+    fs.readFileSync(path.join(dataDir, "papers.json"), "utf8")
   );
 
   console.log("\n✅ Data fetching complete!");
   console.log(
-    `   Coffee entries: ${coffeeData.length} (${currentlyDrinking.length} currently drinking)`
+    `   Coffee entries: ${finalCoffeeData.length} (${finalCurrentData.length} currently drinking)`
   );
-  console.log(`   Paper entries: ${papersData.length}`);
+  console.log(`   Paper entries: ${finalPapersData.length}`);
   console.log(`   Files written to: ${dataDir}`);
 }
 
