@@ -37,18 +37,5 @@
     "status": "Currently Brewing",
     "pourOverRating": null,
     "americanoRating": 9
-  },
-  {
-    "id": "200cb2de-72bc-80f9-902e-d9c188c35557",
-    "name": "Chromatic Papua New Guinea Kunjin",
-    "roaster": "Chromatic",
-    "date": "2025-04-20",
-    "notes": "No notes available",
-    "rating": null,
-    "origin": "Papua New Guinea",
-    "process": "",
-    "status": "Currently Brewing",
-    "pourOverRating": null,
-    "americanoRating": 6
   }
 ]

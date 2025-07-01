@@ -1,25 +1,44 @@
 const fs = require("fs");
 const path = require("path");
 
-// Import the sitemap utilities (convert to CommonJS format)
-const { generateSitemap, siteUrls } = require("../src/lib/sitemap.ts");
+// Import the sitemap utilities from the JavaScript file
+const { generateSitemap, siteUrls } = require("./sitemap-utils.js");
 
 /**
  * Generate and write the sitemap.xml file
  */
 function generateSitemapFile() {
   try {
-    // Update the lastModified dates to current date
-    const updatedUrls = siteUrls.map((url) => ({
-      ...url,
-      lastModified: new Date(),
-    }));
+    // Load coffee data to add individual coffee pages
+    const coffeeDataPath = path.join(__dirname, "../public/data/coffee.json");
+    let coffeeUrls = [];
+
+    if (fs.existsSync(coffeeDataPath)) {
+      const coffeeData = JSON.parse(fs.readFileSync(coffeeDataPath, "utf8"));
+      coffeeUrls = coffeeData.map((coffee) => ({
+        url: `https://www.nociza.com/coffee/${coffee.id}/`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.7,
+      }));
+    }
+
+    // Update the lastModified dates to current date and combine with coffee URLs
+    const updatedUrls = [
+      ...siteUrls.map((url) => ({
+        ...url,
+        lastModified: new Date(),
+      })),
+      ...coffeeUrls,
+    ];
 
     const sitemap = generateSitemap(updatedUrls);
     const sitemapPath = path.join(__dirname, "../public/sitemap.xml");
 
     fs.writeFileSync(sitemapPath, sitemap, "utf8");
-    console.log("✅ Sitemap generated successfully at public/sitemap.xml");
+    console.log(
+      `✅ Sitemap generated successfully at public/sitemap.xml (${updatedUrls.length} URLs)`
+    );
 
     // Also update the robots.txt timestamp if needed
     const robotsPath = path.join(__dirname, "../public/robots.txt");

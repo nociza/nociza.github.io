@@ -1,5 +1,31 @@
 [
   {
+    "id": "21acb2de-72bc-80bf-82b9-c2f33a4791fe",
+    "name": "Chromatic Gamut",
+    "roaster": "Chromatic",
+    "date": "2025-06-22",
+    "notes": "No notes available",
+    "rating": null,
+    "origin": "Blend",
+    "process": "",
+    "status": "Not started",
+    "pourOverRating": null,
+    "americanoRating": null
+  },
+  {
+    "id": "21acb2de-72bc-8013-affa-e19ec278b940",
+    "name": "Equator Coffees Ethiopia Fair Trade",
+    "roaster": "Equator Coffees",
+    "date": "2025-06-22",
+    "notes": "No notes available",
+    "rating": null,
+    "origin": "Ethiopia",
+    "process": "Washed",
+    "status": "Not started",
+    "pourOverRating": null,
+    "americanoRating": null
+  },
+  {
     "id": "1ffcb2de-72bc-8027-8180-e4633916de68",
     "name": "Fazenda Ethiopia Duram Village",
     "roaster": "Fazenda",
@@ -47,8 +73,21 @@
     "rating": null,
     "origin": "Papua New Guinea",
     "process": "",
-    "status": "Currently Brewing",
+    "status": "Finished",
     "pourOverRating": null,
     "americanoRating": 6
+  },
+  {
+    "id": "206cb2de-72bc-807e-a636-d543ba19d07b",
+    "name": "Andytown Guji Kayon mountain",
+    "roaster": "Andytown",
+    "date": "2025-06-02T17:23:00.000Z",
+    "notes": "No notes available",
+    "rating": null,
+    "origin": "Kayon",
+    "process": "",
+    "status": "Not started",
+    "pourOverRating": null,
+    "americanoRating": 8
   }
 ]
