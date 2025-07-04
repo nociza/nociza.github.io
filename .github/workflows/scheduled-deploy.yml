@@ -2,8 +2,8 @@ name: Scheduled Deploy to GitHub Pages
 
 on:
   schedule:
-    # Runs every 10 minutes
-    - cron: '*/10 * * * *'
+    # Runs every 20 minutes
+    - cron: '*/20 * * * *'
   # Allow manual triggering for testing
   workflow_dispatch:
 
