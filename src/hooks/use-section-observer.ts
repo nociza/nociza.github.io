@@ -20,87 +20,72 @@ export function useSectionObserver() {
     const [currentSection, setCurrentSection] = useState<string>('resume');
 
     useEffect(() => {
-        // Wait for DOM to be ready
-        const timer = setTimeout(() => {
-            const scrollContainer = document.querySelector('.scroll-container');
-            if (!scrollContainer) {
-                console.log('Scroll container not found');
-                return;
-            }
+        const scrollContainer = document.querySelector<HTMLElement>('.scroll-container');
+        if (!scrollContainer) {
+            return;
+        }
 
-            const updateCurrentSection = () => {
-                const scrollTop = scrollContainer.scrollTop;
-                const containerHeight = scrollContainer.clientHeight;
-                const sections = scrollContainer.querySelectorAll('.scroll-section');
+        const sectionRatios = new Map<string, number>();
+        const sections = Array.from(
+            scrollContainer.querySelectorAll<HTMLElement>('.scroll-section')
+        );
 
-                if (sections.length === 0) {
-                    console.log('No sections found');
-                    return;
+        if (sections.length === 0) {
+            return;
+        }
+
+        const updateCurrentSection = () => {
+            let nextSection = sectionConfigs[0].id;
+            let highestRatio = -1;
+
+            sectionConfigs.forEach((config) => {
+                const ratio = sectionRatios.get(config.id) ?? 0;
+                if (ratio > highestRatio) {
+                    highestRatio = ratio;
+                    nextSection = config.id;
                 }
+            });
 
-                let currentSectionElement: Element | null = null;
-                let minDistance = Infinity;
+            const nextConfig =
+                sectionConfigs.find((config) => config.id === nextSection) ??
+                sectionConfigs[0];
 
-                // Find the section that is most visible in the viewport
-                sections.forEach((section) => {
-                    const rect = section.getBoundingClientRect();
-                    const containerRect = scrollContainer.getBoundingClientRect();
+            setCurrentSection((previous) =>
+                previous === nextSection ? previous : nextSection
+            );
+            setCurrentAttractor((previous) =>
+                previous === nextConfig.attractorType
+                    ? previous
+                    : nextConfig.attractorType
+            );
+        };
 
-                    // Calculate how much of the section is visible
-                    const visibleTop = Math.max(rect.top, containerRect.top);
-                    const visibleBottom = Math.min(rect.bottom, containerRect.bottom);
-                    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-
-                    // If this section has the most visible area, it's the current one
-                    if (visibleHeight > 0) {
-                        const sectionCenter = rect.top + rect.height / 2;
-                        const viewportCenter = containerRect.top + containerRect.height / 2;
-                        const distance = Math.abs(sectionCenter - viewportCenter);
-
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            currentSectionElement = section;
-                        }
-                    }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    sectionRatios.set(
+                        (entry.target as HTMLElement).id,
+                        entry.intersectionRatio
+                    );
                 });
+                updateCurrentSection();
+            },
+            {
+                root: scrollContainer,
+                threshold: [0.2, 0.4, 0.6, 0.8],
+            }
+        );
 
-                if (currentSectionElement) {
-                    const sectionId = (currentSectionElement as HTMLElement).id;
-                    const config = sectionConfigs.find(c => c.id === sectionId);
-                    if (config) {
-                        console.log('Switching to section:', sectionId, 'attractor:', config.attractorType);
-                        setCurrentAttractor(config.attractorType);
-                        setCurrentSection(sectionId);
-                    }
-                }
-            };
-
-            // Initial check
-            updateCurrentSection();
-
-            // Listen to scroll events with throttling
-            let ticking = false;
-            const handleScroll = () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        updateCurrentSection();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            };
-
-            scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
-
-            return () => {
-                scrollContainer.removeEventListener('scroll', handleScroll);
-            };
-        }, 100);
+        sections.forEach((section) => {
+            sectionRatios.set(section.id, section.id === 'resume' ? 1 : 0);
+            observer.observe(section);
+        });
+        updateCurrentSection();
 
         return () => {
-            clearTimeout(timer);
+            observer.disconnect();
         };
     }, []);
 
     return { currentAttractor, currentSection };
-} 
+}

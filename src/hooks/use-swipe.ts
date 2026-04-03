@@ -9,7 +9,12 @@ interface SwipeHandlers {
 
 export function useSwipe(handlers: SwipeHandlers) {
     const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+    const handlersRef = useRef(handlers);
     const minSwipeDistance = 50;
+
+    useEffect(() => {
+        handlersRef.current = handlers;
+    }, [handlers]);
 
     useEffect(() => {
         const handleTouchStart = (e: TouchEvent) => {
@@ -34,16 +39,16 @@ export function useSwipe(handlers: SwipeHandlers) {
             if (absDeltaX > absDeltaY && absDeltaX > minSwipeDistance) {
                 // Horizontal swipe
                 if (deltaX > 0) {
-                    handlers.onSwipeRight?.();
+                    handlersRef.current.onSwipeRight?.();
                 } else {
-                    handlers.onSwipeLeft?.();
+                    handlersRef.current.onSwipeLeft?.();
                 }
             } else if (absDeltaY > absDeltaX && absDeltaY > minSwipeDistance) {
                 // Vertical swipe
                 if (deltaY > 0) {
-                    handlers.onSwipeDown?.();
+                    handlersRef.current.onSwipeDown?.();
                 } else {
-                    handlers.onSwipeUp?.();
+                    handlersRef.current.onSwipeUp?.();
                 }
             }
 
@@ -57,5 +62,5 @@ export function useSwipe(handlers: SwipeHandlers) {
             document.removeEventListener('touchstart', handleTouchStart);
             document.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [handlers]);
-} 
+    }, []);
+}

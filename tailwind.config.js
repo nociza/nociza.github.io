@@ -69,10 +69,13 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        inconsolata: ["Inconsolata", "monospace"],
-        trattatello: ["Trattatello", "fantasy"],
-        chalkduster: ["Chalkduster", "fantasy"],
-        roboto: ["Roboto", "sans-serif"],
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif-display)"],
+        mono: ["var(--font-mono)"],
+        inconsolata: ["var(--font-mono)"],
+        trattatello: ["var(--font-script)"],
+        chalkduster: ["var(--font-script)"],
+        roboto: ["var(--font-sans)"],
         courier: ["Courier New", "monospace"],
       },
       fontSize: {

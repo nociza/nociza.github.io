@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface ProfilePictureProps {
   size?: number;
@@ -12,20 +13,47 @@ export default function ProfilePicture({
   className = "",
 }: ProfilePictureProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [shouldLoadPortrait, setShouldLoadPortrait] = useState(false);
+
+  useEffect(() => {
+    if (shouldLoadPortrait) {
+      return;
+    }
+
+    if (typeof window.requestIdleCallback === "function") {
+      const idleCallbackId = window.requestIdleCallback(
+        () => setShouldLoadPortrait(true),
+        { timeout: 1500 }
+      );
+
+      return () => window.cancelIdleCallback?.(idleCallbackId);
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setShouldLoadPortrait(true);
+    }, 1200);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [shouldLoadPortrait]);
+
+  const handleMouseEnter = () => {
+    setShouldLoadPortrait(true);
+    setIsHovered(true);
+  };
 
   return (
     <div
       className={`relative overflow-hidden rounded-full cursor-pointer transition-all duration-300 ${className}`}
       style={{ width: size, height: size }}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Skull image (default) - adjusted padding to prevent cropping */}
-      <img
-        alt="Profile"
+      <Image
+        alt="Profile illustration"
         src="/skull.png"
-        width={size}
-        height={size}
+        fill
+        priority
+        sizes={`${size}px`}
         className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 p-10 ${
           isHovered ? "opacity-0" : "opacity-100"
         }`}
@@ -34,16 +62,17 @@ export default function ProfilePicture({
         }}
       />
 
-      {/* LinkedIn picture (on hover) */}
-      <img
-        alt="Alex Zhang"
-        src="/linkedin_pic_rounded.png"
-        width={size}
-        height={size}
-        className={`absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-300 ${
-          isHovered ? "opacity-100" : "opacity-0"
-        }`}
-      />
+      {shouldLoadPortrait ? (
+        <Image
+          alt="Alex Zhang"
+          src="/linkedin_pic.jpg"
+          fill
+          sizes={`${size}px`}
+          className={`absolute inset-0 h-full w-full rounded-full object-cover transition-opacity duration-300 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ) : null}
     </div>
   );
 }

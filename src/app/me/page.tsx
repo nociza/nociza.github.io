@@ -1,14 +1,11 @@
 "use client";
 
-import LorenzCanvas from "../../components/lorenz-canvas";
+import dynamic from "next/dynamic";
+import DeferredSection from "../../components/deferred-section";
 import NameHeader from "../../components/name-header";
 import CollapsibleSection from "../../components/collapsible-section";
 import SocialLinks from "../../components/social-links";
 import ResumeSection from "../../components/resume-section";
-import CoffeeSection from "../../components/coffee-section";
-import BooksSection from "../../components/books-section";
-import PapersSection from "../../components/papers-section";
-import MusicSection from "../../components/music-section";
 import NavigationArrows from "../../components/navigation-arrows";
 import ProfilePicture from "../../components/profile-picture";
 import { resumeData } from "../../data/resume-data";
@@ -16,6 +13,56 @@ import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
 import { useScrollSnap } from "../../hooks/use-scroll-snap";
 import { useSwipe } from "../../hooks/use-swipe";
+
+const LorenzCanvas = dynamic(() => import("../../components/lorenz-canvas"), {
+  ssr: false,
+});
+
+const CoffeeSection = dynamic(() => import("../../components/coffee-section"), {
+  loading: () => (
+    <SectionPlaceholder
+      title="Coffee Discovery"
+      description="Loading the latest brews."
+    />
+  ),
+});
+
+const BooksSection = dynamic(() => import("../../components/books-section"), {
+  loading: () => (
+    <SectionPlaceholder
+      title="Currently Reading"
+      description="Loading the active reading stack."
+    />
+  ),
+});
+
+const PapersSection = dynamic(() => import("../../components/papers-section"), {
+  loading: () => (
+    <SectionPlaceholder
+      title="Interesting Papers"
+      description="Loading the current paper queue."
+    />
+  ),
+});
+
+function SectionPlaceholder({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="min-h-screen flex items-center justify-center page-container">
+      <div className="text-center">
+        <h2 className="text-4xl font-bold text-gray-800 font-serif">{title}</h2>
+        <p className="mt-3 text-lg text-gray-600 font-inconsolata">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function MePage() {
   const { isOpen, toggle } = useCollapsibleSections({
@@ -112,8 +159,6 @@ export default function MePage() {
         {/* Resume Section */}
         <section id="resume" className="scroll-section">
           <main className="page-container">
-            <title>Speaking of myself</title>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Column - Content */}
               <div className="w-full lg:w-[40vw]">
@@ -149,17 +194,44 @@ export default function MePage() {
 
         {/* Coffee Section */}
         <section id="coffee" className="scroll-section">
-          <CoffeeSection />
+          <DeferredSection
+            fallback={
+              <SectionPlaceholder
+                title="Coffee Discovery"
+                description="Loading the latest brews."
+              />
+            }
+          >
+            <CoffeeSection />
+          </DeferredSection>
         </section>
 
         {/* Books Section */}
         <section id="books" className="scroll-section">
-          <BooksSection />
+          <DeferredSection
+            fallback={
+              <SectionPlaceholder
+                title="Currently Reading"
+                description="Loading the active reading stack."
+              />
+            }
+          >
+            <BooksSection />
+          </DeferredSection>
         </section>
 
         {/* Papers Section */}
         <section id="papers" className="scroll-section">
-          <PapersSection />
+          <DeferredSection
+            fallback={
+              <SectionPlaceholder
+                title="Interesting Papers"
+                description="Loading the current paper queue."
+              />
+            }
+          >
+            <PapersSection />
+          </DeferredSection>
         </section>
 
         {/* Music Section - Temporarily Hidden */}

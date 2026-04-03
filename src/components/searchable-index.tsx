@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
@@ -20,20 +20,32 @@ export default function SearchableIndex<T>({
   placeholder = "Search...",
 }: SearchableIndexProps<T>) {
   const [searchTerm, setSearchTerm] = useState("");
+  const deferredSearchTerm = useDeferredValue(searchTerm);
 
   const filteredItems = useMemo(() => {
-    if (!searchTerm.trim()) return items;
+    const normalizedSearchTerm = deferredSearchTerm.trim().toLowerCase();
+    if (!normalizedSearchTerm) return items;
 
     return items.filter((item) =>
       searchFields.some((field) => {
         const value = item[field];
-        return (
-          typeof value === "string" &&
-          value.toLowerCase().includes(searchTerm.toLowerCase())
-        );
+
+        if (typeof value === "string") {
+          return value.toLowerCase().includes(normalizedSearchTerm);
+        }
+
+        if (Array.isArray(value)) {
+          return value.some(
+            (entry) =>
+              typeof entry === "string" &&
+              entry.toLowerCase().includes(normalizedSearchTerm)
+          );
+        }
+
+        return false;
       })
     );
-  }, [items, searchFields, searchTerm]);
+  }, [deferredSearchTerm, items, searchFields]);
 
   return (
     <div className="min-h-screen bg-white p-8">

@@ -62,30 +62,38 @@ export const resumeData: Record<string, ResumeSection> = {
         ],
     },
     projects: {
-        title: "Personal Projects",
+        title: "Current Projects",
         items: [
             {
-                title: "Labotr",
-                description: "The first labor market for AI agents (Sept. 2023 – Present)",
+                title: "cuti",
+                description: "Provider-aware AI dev environment for containerized coding, multi-agent orchestration, auth wiring, and operator tooling.",
                 link: {
-                    url: "https://www.labotr.com",
-                    text: "Labotr",
+                    url: "https://github.com/nociza/cuti",
+                    text: "cuti",
                 },
             },
             {
-                title: "LifeWiki",
-                description: "a Web2.5 Social App (July 2022 – Present)",
+                title: "clawie",
+                description: "Central control plane for isolated claws, shared addons, provider cutovers, and runtime supervision.",
                 link: {
-                    url: "https://www.lifewiki.xyz",
-                    text: "LifeWiki",
+                    url: "https://github.com/nociza/clawie",
+                    text: "clawie",
                 },
             },
             {
-                title: "Colink",
-                description: "an opensource decentralized programming abstraction (Aug. 2022 – Present)",
+                title: "OmniView",
+                description: "Self-hosted machine control plane with a hub, native client, and host agents for telemetry and remote launch workflows.",
                 link: {
-                    url: "https://www.colink.app",
-                    text: "Colink",
+                    url: "https://github.com/nociza/OmniView",
+                    text: "OmniView",
+                },
+            },
+            {
+                title: "TSMC",
+                description: "Local-first second brain for AI chats with active work across auth, dashboards, CLI/service flows, search, and graph APIs.",
+                link: {
+                    url: "https://github.com/nociza/tsmc",
+                    text: "TSMC",
                 },
             },
         ],

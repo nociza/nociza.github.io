@@ -1,52 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Loader2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SearchableIndex from "../../components/searchable-index";
-import { useCoffeeData } from "../../hooks/use-coffee-data";
-
-interface CoffeeEntry {
-  id: string;
-  name: string;
-  roaster: string;
-  date: string;
-  notes: string;
-  pourOverRating?: number;
-  americanoRating?: number;
-  origin?: string;
-  process?: string;
-  status?: string;
-}
+import { CoffeeEntry, coffeeEntries } from "../../data/site-data";
 
 function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
+  const isCurrentlyDrinking = coffee.status === "currently_drinking" ||
+    coffee.status === "Currently Drinking" ||
+    coffee.status === "Currently Brewing" ||
+    coffee.status?.toLowerCase().includes("current");
+
   return (
-    <Link href={`/coffee/${coffee.id}`}>
-      <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-        <CardHeader>
-          <div className="flex items-start justify-between">
-            <CardTitle className="text-xl font-inconsolata">
+    <div className="relative">
+      {isCurrentlyDrinking && (
+        <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs z-10">
+          Currently Drinking
+        </Badge>
+      )}
+      <Link href={`/coffee/${coffee.id}`}>
+        <Card className="hover:shadow-lg transition-all cursor-pointer border-gray-200 hover:border-gray-300">
+          <CardHeader>
+            <CardTitle className="text-lg font-inconsolata">
               {coffee.name}
             </CardTitle>
+            {coffee.roasterLink ? (
+              <Link 
+                href={coffee.roasterLink} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:text-orange-600 font-semibold font-inconsolata transition-colors inline-block"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {coffee.roaster}
+              </Link>
+            ) : (
+              <p className="text-muted-foreground font-semibold font-inconsolata">
+                {coffee.roaster}
+              </p>
+            )}
             <span className="text-sm text-muted-foreground font-inconsolata">
               {coffee.date}
             </span>
-          </div>
-          <div className="flex items-center gap-2 mb-2">
-            <p className="text-muted-foreground font-semibold font-inconsolata">
-              {coffee.roaster}
-            </p>
-            {(coffee.status === "currently_drinking" ||
-              coffee.status === "Currently Drinking" ||
-              coffee.status === "Currently Brewing" ||
-              coffee.status?.toLowerCase().includes("current")) && (
-              <Badge variant="secondary" className="text-xs">
-                Currently Drinking
-              </Badge>
-            )}
-          </div>
           {coffee.origin && (
             <p className="text-sm text-muted-foreground font-inconsolata">
               Origin: {coffee.origin}
@@ -79,40 +77,13 @@ function CoffeeCard({ coffee, index }: { coffee: CoffeeEntry; index: number }) {
             {coffee.notes}
           </p>
         </CardContent>
-      </Card>
-    </Link>
+        </Card>
+      </Link>
+    </div>
   );
 }
 
 export default function CoffeeIndexPage() {
-  const { coffeeEntries, loading, error } = useCoffeeData();
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="flex items-center gap-2">
-          <Loader2 className="w-6 h-6 animate-spin" />
-          <span className="font-inconsolata">Loading coffee archive...</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-500 font-inconsolata mb-4">
-            Failed to load coffee archive from Notion
-          </p>
-          <p className="text-muted-foreground font-inconsolata text-sm">
-            {error}
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="relative">
       {/* Back Button */}

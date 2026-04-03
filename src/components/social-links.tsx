@@ -1,32 +1,38 @@
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  LucideIcon,
+  Twitter,
+} from "lucide-react";
 
 interface SocialLink {
   href: string;
   label: string;
-  icon: React.ComponentType<{ size: number }>;
+  icon: LucideIcon;
 }
 
 const socialLinks: SocialLink[] = [
   {
     href: "https://github.com/nociza",
     label: "GitHub",
-    icon: FaGithub,
+    icon: Github,
   },
   {
     href: "https://www.linkedin.com/in/azicon/",
     label: "LinkedIn",
-    icon: FaLinkedin,
+    icon: Linkedin,
   },
   {
     href: "https://twitter.com/nociza68",
     label: "Twitter",
-    icon: FaTwitter,
+    icon: Twitter,
   },
   {
     href: "https://www.instagram.com/nociza/",
     label: "Instagram",
-    icon: FaInstagram,
+    icon: Instagram,
   },
 ];
 
@@ -38,9 +44,11 @@ export default function SocialLinks() {
           key={label}
           href={href}
           aria-label={label}
+          target="_blank"
+          rel="noreferrer"
           className="p-2 rounded-full hover:bg-gray-100 transition-colors"
         >
-          <Icon size={24} />
+          <Icon size={20} strokeWidth={1.75} />
         </Link>
       ))}
     </div>

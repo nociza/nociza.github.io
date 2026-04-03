@@ -1,46 +1,83 @@
 import Link from "next/link";
-import { ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useCoffeeData } from "../hooks/use-coffee-data";
-
-interface CoffeeEntry {
-  id: string;
-  name: string;
-  roaster: string;
-  date: string;
-  notes: string;
-  pourOverRating?: number;
-  americanoRating?: number;
-  origin?: string;
-  process?: string;
-  status?: string;
-}
+import { CoffeeEntry, currentlyDrinking } from "../data/site-data";
 
 interface CoffeeCardProps {
   coffee: CoffeeEntry;
-  rank?: number;
+  type?: "currently_drinking" | "all_time_favorite";
 }
 
-function CoffeeCard({ coffee, rank }: CoffeeCardProps) {
+const allTimeFavorites: CoffeeEntry[] = [
+  {
+    id: "counter-culture-hologram",
+    name: "Hologram",
+    roaster: "Counter Culture Coffee",
+    date: "All-Time Favorite",
+    notes:
+      "A vibrant and complex coffee with bright floral notes and citrus acidity. This Ethiopian coffee showcases the best of Counter Culture's sourcing and roasting.",
+    origin: "Ethiopia",
+    roasterLink: "https://counterculturecoffee.com",
+  },
+  {
+    id: "sw-guatemala-hunapu",
+    name: "Guatemala Hunapu",
+    roaster: "S&W Coffee",
+    date: "All-Time Favorite",
+    notes:
+      "Rich chocolate and caramel notes with a smooth, full body. This Guatemalan coffee still stands out as one of my favorite everyday brews.",
+    origin: "Guatemala",
+    roasterLink: "https://swroasting.coffee",
+  },
+];
+
+function CoffeeCard({ coffee, type }: CoffeeCardProps) {
+  const isCurrentlyDrinking = type === "currently_drinking" || 
+    coffee.status === "currently_drinking" ||
+    coffee.status === "Currently Drinking" ||
+    coffee.status === "Currently Brewing" ||
+    coffee.status?.toLowerCase().includes("current");
+    
+  const isAllTimeFavorite = type === "all_time_favorite";
+  
   return (
-    <Link href={`/coffee/${coffee.id}`}>
-      <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
-        <CardHeader>
-          <CardTitle className="text-lg font-inconsolata">
-            {coffee.name}
-          </CardTitle>
-          <p className="text-muted-foreground font-semibold font-inconsolata">
-            {coffee.roaster}
-          </p>
-          {(coffee.status === "currently_drinking" ||
-            coffee.status === "Currently Drinking" ||
-            coffee.status === "Currently Brewing" ||
-            coffee.status?.toLowerCase().includes("current")) && (
-            <Badge variant="secondary" className="w-fit">
-              Currently Drinking
-            </Badge>
+    <div className="relative">
+      {isCurrentlyDrinking && (
+        <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs z-10">
+          Currently Drinking
+        </Badge>
+      )}
+      {isAllTimeFavorite && (
+        <Badge className="absolute -top-2 -right-2 text-xs bg-gradient-to-r from-orange-500 to-amber-500 text-white border-0 shadow-sm z-10">
+          ⭐ Favorite
+        </Badge>
+      )}
+      <Link href={coffee.id ? `/coffee/${coffee.id}` : "#"}>
+        <Card className={`h-full hover:shadow-lg transition-all cursor-pointer ${
+          isAllTimeFavorite 
+            ? 'border-orange-200 hover:border-orange-400' 
+            : 'border-gray-200 hover:border-gray-300'
+        }`}>
+          <CardHeader>
+            <CardTitle className="text-lg font-inconsolata">
+              {coffee.name}
+            </CardTitle>
+          {coffee.roasterLink ? (
+            <Link 
+              href={coffee.roasterLink} 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 hover:text-orange-600 font-semibold font-inconsolata transition-colors inline-block"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {coffee.roaster}
+            </Link>
+          ) : (
+            <p className="text-muted-foreground font-semibold font-inconsolata">
+              {coffee.roaster}
+            </p>
           )}
           <span className="text-sm text-muted-foreground font-inconsolata">
             {coffee.date}
@@ -78,49 +115,40 @@ function CoffeeCard({ coffee, rank }: CoffeeCardProps) {
             {coffee.notes}
           </p>
         </CardContent>
-      </Card>
-    </Link>
+        </Card>
+      </Link>
+    </div>
   );
 }
 
 export default function CoffeeSection() {
-  const { currentlyDrinking, loading, error } = useCoffeeData();
+  // Prioritize all-time favorites first, then add currently drinking if there's space
+  const maxCards = 4;
+  const allTimeFavoritesWithType = allTimeFavorites.map((coffee: CoffeeEntry) => ({ 
+    ...coffee, 
+    type: "all_time_favorite" as const 
+  }));
+  const currentlyDrinkingWithType = currentlyDrinking.map((coffee: CoffeeEntry) => ({ 
+    ...coffee, 
+    type: "currently_drinking" as const 
+  }));
 
-  if (loading) {
-    return (
-      <section className="min-h-screen flex items-center justify-center page-container">
-        <div className="flex items-center gap-2">
-          <Loader2 className="w-6 h-6 animate-spin" />
-          <span className="font-inconsolata">Loading coffee data...</span>
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className="min-h-screen flex items-center justify-center page-container">
-        <div className="text-center">
-          <p className="text-red-500 font-inconsolata mb-4">
-            Failed to load coffee data from Notion
-          </p>
-          <p className="text-muted-foreground font-inconsolata text-sm">
-            {error}
-          </p>
-        </div>
-      </section>
-    );
-  }
+  // Always show all-time favorites first, fill remaining slots with currently drinking
+  const remainingSlots = Math.max(0, maxCards - allTimeFavoritesWithType.length);
+  const displayedCoffees = [
+    ...allTimeFavoritesWithType,
+    ...currentlyDrinkingWithType.slice(0, remainingSlots)
+  ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center page-container">
-      <div className="max-w-4xl w-full">
-        <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold text-gray-800 mb-4 font-serif">
+    <div className="min-h-screen flex items-center justify-center page-container">
+      <div className="max-w-5xl w-full px-6">
+        <div className="text-center mb-8">
+          <h1 className="text-5xl font-bold text-gray-800 mb-3 font-serif">
             Coffee Discovery
           </h1>
-          <p className="text-xl text-gray-600 mb-6 font-inconsolata">
-            Currently drinking and recent discoveries
+          <p className="text-lg text-gray-600 mb-4 font-inconsolata">
+            Currently drinking and all-time favorites
           </p>
           <Button
             variant="link"
@@ -134,13 +162,15 @@ export default function CoffeeSection() {
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentlyDrinking.length > 0 ? (
-            currentlyDrinking
-              .slice(0, 3)
-              .map((coffee: CoffeeEntry, index: number) => (
-                <CoffeeCard key={coffee.id} coffee={coffee} rank={index + 1} />
-              ))
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-h-[60vh]">
+          {displayedCoffees.length > 0 ? (
+            displayedCoffees.map((coffee) => (
+              <CoffeeCard 
+                key={coffee.id} 
+                coffee={coffee} 
+                type={coffee.type}
+              />
+            ))
           ) : (
             <div className="col-span-full text-center">
               <p className="text-muted-foreground font-inconsolata mb-2">
@@ -153,6 +183,6 @@ export default function CoffeeSection() {
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

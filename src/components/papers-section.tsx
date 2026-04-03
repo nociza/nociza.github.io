@@ -1,21 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, FileText, ExternalLink, Loader2 } from "lucide-react";
+import { ArrowRight, FileText, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { usePapersData } from "../hooks/use-papers-data";
-
-interface ArxivPaper {
-  id: string;
-  arxivId: string;
-  url: string;
-  title: string;
-  authors: string[];
-  abstract: string;
-  publishedDate: string;
-  categories: string[];
-  status?: "reading" | "completed" | "bookmarked";
-}
+import { ArxivPaper, papers } from "../data/site-data";
 
 interface PaperCardProps {
   paper: ArxivPaper;
@@ -105,36 +93,8 @@ function PaperCard({ paper }: PaperCardProps) {
 }
 
 export default function PapersSection() {
-  const { papers, loading, error } = usePapersData();
-
-  if (loading) {
-    return (
-      <section className="min-h-screen flex items-center justify-center page-container">
-        <div className="flex items-center gap-2">
-          <Loader2 className="w-6 h-6 animate-spin" />
-          <span className="font-inconsolata">Loading papers...</span>
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className="min-h-screen flex items-center justify-center page-container">
-        <div className="text-center">
-          <p className="text-red-500 font-inconsolata mb-4">
-            Failed to load papers data from Notion
-          </p>
-          <p className="text-muted-foreground font-inconsolata text-sm">
-            {error}
-          </p>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section className="min-h-screen flex items-center justify-center page-container">
+    <div className="min-h-screen flex items-center justify-center page-container">
       <div className="max-w-4xl w-full">
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-gray-800 mb-4 font-serif">
@@ -173,6 +133,6 @@ export default function PapersSection() {
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
