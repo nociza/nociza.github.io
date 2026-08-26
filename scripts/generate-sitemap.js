@@ -12,6 +12,7 @@ function generateSitemapFile() {
     // Load coffee data to add individual coffee pages
     const coffeeDataPath = path.join(__dirname, "../public/data/coffee.json");
     let coffeeUrls = [];
+    let sipUrls = [];
 
     if (fs.existsSync(coffeeDataPath)) {
       const coffeeData = JSON.parse(fs.readFileSync(coffeeDataPath, "utf8"));
@@ -23,6 +24,17 @@ function generateSitemapFile() {
       }));
     }
 
+    const sipDataPath = path.join(__dirname, "../public/data/sips.json");
+    if (fs.existsSync(sipDataPath)) {
+      const sipData = JSON.parse(fs.readFileSync(sipDataPath, "utf8"));
+      sipUrls = sipData.map((entry) => ({
+        url: `https://www.nociza.com/sips/${entry.slug}/`,
+        lastModified: new Date(entry.publishedAt),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      }));
+    }
+
     // Update the lastModified dates to current date and combine with coffee URLs
     const updatedUrls = [
       ...siteUrls.map((url) => ({
@@ -30,6 +42,7 @@ function generateSitemapFile() {
         lastModified: new Date(),
       })),
       ...coffeeUrls,
+      ...sipUrls,
     ];
 
     const sitemap = generateSitemap(updatedUrls);

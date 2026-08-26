@@ -49,6 +49,12 @@ const siteUrls = [
     priority: 0.8,
   },
   {
+    url: "https://www.nociza.com/sips/",
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  },
+  {
     url: "https://www.nociza.com/books/",
     lastModified: new Date(),
     changeFrequency: "weekly",

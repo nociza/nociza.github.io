@@ -44,6 +44,12 @@ export const siteUrls: SitemapUrl[] = [
         priority: 0.8,
     },
     {
+        url: 'https://www.nociza.com/sips/',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
         url: 'https://www.nociza.com/books/',
         lastModified: new Date(),
         changeFrequency: 'weekly',
@@ -91,4 +97,4 @@ export const siteUrls: SitemapUrl[] = [
         changeFrequency: 'monthly',
         priority: 0.5,
     },
-] 
+]
