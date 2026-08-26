@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Coffee archive entry</title>
+  <desc id="description">An abstract cream and rust archive card with a line drawing of a coffee cup.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3ea"/>
+      <stop offset="1" stop-color="#eadfce"/>
+    </linearGradient>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#8b735f" stroke-opacity=".12" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1270" cy="170" r="330" fill="#d66f32" opacity=".11"/>
+  <circle cx="210" cy="790" r="290" fill="#687c63" opacity=".1"/>
+  <g transform="translate(190 190)" fill="none" stroke="#3f352d" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M95 215h390v155c0 108-87 195-195 195S95 478 95 370V215Z" stroke-width="25"/>
+    <path d="M485 265h52c85 0 138 48 138 116s-53 116-138 116h-70" stroke-width="25"/>
+    <path d="M180 125c-45-48 39-70 0-119M300 125c-45-48 39-70 0-119M420 125c-45-48 39-70 0-119" stroke-width="18" opacity=".72"/>
+    <path d="M25 600h720" stroke-width="18"/>
+  </g>
+  <g fill="#3f352d">
+    <text x="975" y="550" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" letter-spacing="12">SIPLOGUE</text>
+    <text x="970" y="665" font-family="Georgia, Times New Roman, serif" font-size="112" font-weight="700">Coffee</text>
+    <text x="975" y="740" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" letter-spacing="9" fill="#b65327">ARCHIVE RECORD</text>
+  </g>
+</svg>

@@ -23,7 +23,9 @@ export interface SipEntry {
   tags: string[];
 }
 
-export const sipEntries = sipJson as SipEntry[];
+// The collection is validated before every build; the extra `unknown` hop
+// avoids TypeScript treating omitted JSON object keys as explicit undefined.
+export const sipEntries = sipJson as unknown as SipEntry[];
 
 export function findSip(slug: string): SipEntry | undefined {
   return sipEntries.find((entry) => entry.slug === slug);

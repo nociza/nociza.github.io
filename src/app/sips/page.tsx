@@ -24,7 +24,7 @@ export default function SipsPage() {
               <span className="h-px w-10 bg-orange-500" />
               Tea, coffee, and time
             </div>
-            <h1 className="max-w-4xl font-serif text-6xl font-semibold leading-[0.92] tracking-[-0.045em] text-stone-950 sm:text-7xl lg:text-[7.5rem]">
+            <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight tracking-[-0.035em] text-stone-950 sm:text-5xl lg:text-6xl">
               Cups worth remembering.
             </h1>
           </div>

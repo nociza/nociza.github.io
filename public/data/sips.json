@@ -1,1 +1,176 @@
-[]
+[
+  {
+    "id": "21acb2de-72bc-80bf-82b9-c2f33a4791fe",
+    "slug": "2025-06-22-chromatic-gamut",
+    "title": "Chromatic Gamut",
+    "kind": "coffee",
+    "excerpt": "An archived Chromatic blend, kept as a shelf note before a full tasting record was made.",
+    "body": "The old coffee list recorded Chromatic Gamut as a blend on June 22, 2025. It was marked not started, and the archive contains no brew rating or tasting notes.\n\nI’m keeping it here as a shelf note rather than filling in a cup I never documented.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-06-22T12:00:00Z",
+    "publishedAt": "2025-06-22T12:00:00Z",
+    "subject": {
+      "name": "Chromatic Gamut",
+      "producer": "Chromatic",
+      "origin": "Blend"
+    },
+    "brew": {},
+    "tastingNotes": [],
+    "rating": null,
+    "tags": ["coffee", "legacy-archive", "not-started"]
+  },
+  {
+    "id": "21acb2de-72bc-8013-affa-e19ec278b940",
+    "slug": "2025-06-22-equator-ethiopia-fair-trade",
+    "title": "Equator Ethiopia Fair Trade",
+    "kind": "coffee",
+    "excerpt": "A washed Ethiopian coffee from Equator, preserved from the old list before it reached the brewer.",
+    "body": "This washed Ethiopian coffee from Equator entered the old list on June 22, 2025. The record says not started and does not include a rating or written tasting notes.\n\nIt belongs in the journal as an honest archive entry: a coffee I meant to explore, with the cup itself still undocumented.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-06-22T12:00:00Z",
+    "publishedAt": "2025-06-22T12:00:00Z",
+    "subject": {
+      "name": "Equator Ethiopia Fair Trade",
+      "producer": "Equator Coffees",
+      "origin": "Ethiopia",
+      "process": "Washed"
+    },
+    "brew": {},
+    "tastingNotes": [],
+    "rating": null,
+    "tags": ["coffee", "legacy-archive", "not-started"]
+  },
+  {
+    "id": "206cb2de-72bc-807e-a636-d543ba19d07b",
+    "slug": "2025-06-02-andytown-guji-kayon-mountain",
+    "title": "Andytown Guji Kayon Mountain",
+    "kind": "coffee",
+    "excerpt": "An Andytown archive record with an 8/10 Americano rating and one unresolved status mismatch.",
+    "body": "The old list records this Andytown coffee under Guji Kayon Mountain and includes an 8/10 Americano rating. The same record is marked not started, which conflicts with having a rating.\n\nI’m preserving both details instead of quietly resolving the mismatch. No tasting notes were attached to the original entry.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-06-02T17:23:00Z",
+    "publishedAt": "2025-06-02T17:23:00Z",
+    "subject": {
+      "name": "Guji Kayon Mountain",
+      "producer": "Andytown",
+      "origin": "Kayon"
+    },
+    "brew": {
+      "method": "Americano"
+    },
+    "tastingNotes": [],
+    "rating": 8,
+    "tags": ["coffee", "legacy-archive", "americano"]
+  },
+  {
+    "id": "1ffcb2de-72bc-8027-8180-e4633916de68",
+    "slug": "2025-05-25-fazenda-ethiopia-duram-village",
+    "title": "Fazenda Ethiopia Duram Village",
+    "kind": "coffee",
+    "excerpt": "A raised-bed-dried Ethiopian coffee whose pour-over earned an archived 8/10.",
+    "body": "The archive lists this Fazenda coffee as an Ethiopian lot from Duram Village, dried on raised beds. I had it marked as currently brewing and recorded the pour-over at 8/10.\n\nThe original entry stops there, so I’m carrying the rating and process forward without inventing tasting notes that were never written down.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-05-25T12:00:00Z",
+    "publishedAt": "2025-05-25T12:00:00Z",
+    "subject": {
+      "name": "Ethiopia Duram Village",
+      "producer": "Fazenda",
+      "origin": "Ethiopia",
+      "process": "Raised Bed Dried"
+    },
+    "brew": {
+      "method": "Pour over"
+    },
+    "tastingNotes": [],
+    "rating": 8,
+    "tags": ["coffee", "legacy-archive", "pour-over"]
+  },
+  {
+    "id": "205cb2de-72bc-8078-adf5-eb7bf5003913",
+    "slug": "2025-05-08-counter-culture-field-trip",
+    "title": "Counter Culture Field Trip",
+    "kind": "coffee",
+    "excerpt": "A Counter Culture blend remembered through a strong 9/10 Americano rating.",
+    "body": "Counter Culture Field Trip appears in the old archive as a blend I was actively brewing. The one clear judgment I recorded was an Americano rating of 9/10.\n\nThere are no surviving tasting notes in that entry, so this migration keeps the high rating visible without manufacturing the flavors behind it.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-05-08T12:00:00Z",
+    "publishedAt": "2025-05-08T12:00:00Z",
+    "subject": {
+      "name": "Field Trip",
+      "producer": "Counter Culture",
+      "origin": "Blend"
+    },
+    "brew": {
+      "method": "Americano"
+    },
+    "tastingNotes": [],
+    "rating": 9,
+    "tags": ["coffee", "legacy-archive", "americano"]
+  },
+  {
+    "id": "200cb2de-72bc-80b0-99fd-f4c8b4cf0bec",
+    "slug": "2025-04-20-chromatic-columbia-sugarcane-decaf",
+    "title": "Chromatic Columbia Sugarcane Decaf",
+    "kind": "coffee",
+    "excerpt": "A Chromatic decaf archive entry with a 9/10 Americano rating.",
+    "body": "The legacy list names this coffee Columbia SugarCane Decaf from Chromatic. I had it marked as currently brewing and gave the Americano a 9/10.\n\nThe original record contains no written tasting notes or process details beyond the name, so I’m leaving the rest of the cup undescribed.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-04-20T12:00:00Z",
+    "publishedAt": "2025-04-20T12:00:00Z",
+    "subject": {
+      "name": "Columbia SugarCane Decaf",
+      "producer": "Chromatic",
+      "origin": "Columbia",
+      "style": "Decaf"
+    },
+    "brew": {
+      "method": "Americano"
+    },
+    "tastingNotes": [],
+    "rating": 9,
+    "tags": ["coffee", "legacy-archive", "americano", "decaf"]
+  },
+  {
+    "id": "200cb2de-72bc-80f9-902e-d9c188c35557",
+    "slug": "2025-04-20-chromatic-papua-new-guinea-kunjin",
+    "title": "Chromatic Papua New Guinea Kunjin",
+    "kind": "coffee",
+    "excerpt": "A finished Chromatic Kunjin record whose Americano landed at 6/10.",
+    "body": "This Chromatic coffee from Papua New Guinea was marked finished in the old archive. The Americano received a 6/10 rating.\n\nNo tasting notes survived with the record, so this entry keeps the modest score and basic provenance without trying to explain more than I originally wrote down.",
+    "image": {
+      "src": "/images/sips/archive-coffee.svg",
+      "alt": "A graphic marking this entry as a coffee archive record without an original photograph."
+    },
+    "observedAt": "2025-04-20T12:00:00Z",
+    "publishedAt": "2025-04-20T12:00:00Z",
+    "subject": {
+      "name": "Papua New Guinea Kunjin",
+      "producer": "Chromatic",
+      "origin": "Papua New Guinea"
+    },
+    "brew": {
+      "method": "Americano"
+    },
+    "tastingNotes": [],
+    "rating": 6,
+    "tags": ["coffee", "legacy-archive", "americano", "finished"]
+  }
+]
