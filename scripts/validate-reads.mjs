@@ -8,6 +8,15 @@ const kinds = new Set(["book", "paper"]);
 const statuses = new Set(["planned", "active", "paused", "completed", "abandoned"]);
 const formats = new Set(["physical", "ebook", "audiobook"]);
 
+function validDate(value) {
+  if (typeof value !== "string") return false;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    const parsed = new Date(`${value}T00:00:00Z`);
+    return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
+  }
+  return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(value) && !Number.isNaN(Date.parse(value));
+}
+
 if (!Array.isArray(entries)) throw new Error("reads.json must contain an array");
 
 const ids = new Set();
@@ -21,8 +30,11 @@ for (const [index, entry] of entries.entries()) {
   if (typeof entry.title !== "string" || !entry.title.trim()) throw new Error(`${label}.title is required`);
   if (!Array.isArray(entry.authors) || !entry.authors.length || entry.authors.some((author) => typeof author !== "string" || !author.trim())) throw new Error(`${label}.authors is invalid`);
   if (!statuses.has(entry.status)) throw new Error(`${label}.status is invalid`);
-  if (!entry.addedAt || Number.isNaN(Date.parse(entry.addedAt))) throw new Error(`${label}.addedAt is invalid`);
-  if (!entry.updatedAt || Number.isNaN(Date.parse(entry.updatedAt))) throw new Error(`${label}.updatedAt is invalid`);
+  if (!validDate(entry.addedAt)) throw new Error(`${label}.addedAt is invalid`);
+  if (!validDate(entry.updatedAt)) throw new Error(`${label}.updatedAt is invalid`);
+  for (const field of ["publishedAt", "startedAt", "completedAt"]) {
+    if (entry[field] != null && !validDate(entry[field])) throw new Error(`${label}.${field} is invalid`);
+  }
   if (entry.kind === "book" && !formats.has(entry.format)) throw new Error(`${label}.format is invalid`);
   if (entry.kind === "paper" && !entry.url && !entry.identifiers?.arxiv && !entry.identifiers?.doi) throw new Error(`${label} needs a URL, arXiv ID, or DOI`);
   if (entry.progress?.percent != null && (typeof entry.progress.percent !== "number" || entry.progress.percent < 0 || entry.progress.percent > 100)) throw new Error(`${label}.progress.percent is invalid`);

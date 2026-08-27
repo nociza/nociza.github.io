@@ -90,8 +90,8 @@ export function bookFormatLabel(format: BookFormat): string {
   }[format];
 }
 
-export function readDate(value?: string): string | null {
+export function readDate(value?: string, yearOnly = false): string | null {
   if (!value) return null;
-  if (/^\d{4}$/.test(value)) return value;
+  if (yearOnly || /^\d{4}$/.test(value)) return value.slice(0, 4);
   return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value));
 }

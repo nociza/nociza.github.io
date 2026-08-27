@@ -1212,8 +1212,10 @@
       "Attila Futaki"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 3,
     "identifiers": {
       "isbn10": "1423116968",
@@ -1443,8 +1445,10 @@
       "Rick Riordan"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 5,
     "identifiers": {
       "isbn10": "142311339X",
@@ -1473,8 +1477,10 @@
       "Rick Riordan"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 4,
     "identifiers": {
       "isbn10": "1423101464",
@@ -1503,8 +1509,10 @@
       "Rick Riordan"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 4,
     "identifiers": {
       "goodreads": "561456"
@@ -1531,8 +1539,10 @@
       "Mary GrandPré"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 5,
     "identifiers": {
       "isbn10": "043965548X",
@@ -1590,8 +1600,10 @@
       "Rick Riordan"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 5,
     "identifiers": {
       "isbn10": "0786856866",
@@ -1647,8 +1659,10 @@
       "Mary GrandPré"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 3,
     "identifiers": {
       "goodreads": "15881"
@@ -1732,8 +1746,10 @@
       "Rick Riordan"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 4,
     "identifiers": {
       "isbn10": "0786838655",
@@ -1872,8 +1888,10 @@
       "J.K. Rowling"
     ],
     "status": "completed",
-    "completedAt": "2013",
-    "tags": [],
+    "completedAt": "2013-01-01",
+    "tags": [
+      "completion-year-approximate"
+    ],
     "rating": 4,
     "identifiers": {
       "isbn10": "0439554934",

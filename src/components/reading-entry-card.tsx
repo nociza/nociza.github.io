@@ -18,9 +18,11 @@ export default function ReadingEntryCard({
 }) {
   const Icon = entry.kind === "paper" ? FileText : entry.format === "audiobook" ? Headphones : BookOpen;
   const typeLabel = entry.kind === "paper" ? "Paper" : bookFormatLabel(entry.format);
-  const date = readDate(entry.publishedAt ?? entry.completedAt ?? entry.updatedAt);
   const description = entry.reflection ?? entry.excerpt ?? (entry.kind === "paper" ? entry.abstract : undefined);
-  const tags = entry.kind === "paper" ? entry.categories ?? entry.tags ?? [] : entry.tags ?? [];
+  const rawTags = entry.kind === "paper" ? entry.categories ?? entry.tags ?? [] : entry.tags ?? [];
+  const approximateCompletionYear = entry.kind === "book" && rawTags.includes("completion-year-approximate");
+  const date = readDate(entry.publishedAt ?? entry.completedAt ?? entry.updatedAt, approximateCompletionYear);
+  const tags = rawTags.filter((tag) => tag !== "completion-year-approximate");
   const primaryLink = entry.links?.[0] ?? (entry.kind === "paper" && entry.url ? { label: "Source", url: entry.url } : null);
   const isbn = entry.kind === "book" ? entry.identifiers?.isbn13 ?? entry.identifiers?.isbn10 : undefined;
   const cover = entry.cover;
