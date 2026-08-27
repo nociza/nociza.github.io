@@ -36,15 +36,6 @@ const BooksSection = dynamic(() => import("../../components/books-section"), {
   ),
 });
 
-const PapersSection = dynamic(() => import("../../components/papers-section"), {
-  loading: () => (
-    <SectionPlaceholder
-      title="Interesting Papers"
-      description="Loading the current paper queue."
-    />
-  ),
-});
-
 function SectionPlaceholder({
   title,
   description,
@@ -76,7 +67,7 @@ export default function MePage() {
   const { currentAttractor, currentSection } = useSectionObserver();
   const scrollContainerRef = useScrollSnap();
 
-  const sections = ["resume", "coffee", "books", "papers"]; // Added papers section
+  const sections = ["resume", "coffee", "books"];
 
   const handleSectionClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -111,7 +102,6 @@ export default function MePage() {
       resume: null, // No archive for resume
       coffee: "/coffee",
       books: "/books",
-      papers: "/papers",
       // music: "/music", // Temporarily hidden
     };
 
@@ -217,20 +207,6 @@ export default function MePage() {
             }
           >
             <BooksSection />
-          </DeferredSection>
-        </section>
-
-        {/* Papers Section */}
-        <section id="papers" className="scroll-section">
-          <DeferredSection
-            fallback={
-              <SectionPlaceholder
-                title="Interesting Papers"
-                description="Loading the current paper queue."
-              />
-            }
-          >
-            <PapersSection />
           </DeferredSection>
         </section>
 
