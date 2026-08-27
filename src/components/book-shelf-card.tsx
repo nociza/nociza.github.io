@@ -5,9 +5,11 @@ import { bookFormatLabel, BookRead, readDate, readStatusLabel } from "@/data/rea
 export default function BookShelfCard({
   entry,
   eagerCover = false,
+  compact = false,
 }: {
   entry: BookRead;
   eagerCover?: boolean;
+  compact?: boolean;
 }) {
   const isbn = entry.identifiers?.isbn13 ?? entry.identifiers?.isbn10;
   const approximateCompletionYear = entry.tags?.includes("completion-year-approximate") ?? false;
@@ -31,8 +33,15 @@ export default function BookShelfCard({
   );
 
   return (
-    <article id={entry.id} className="group min-w-0">
-      <div className="aspect-[2/3] overflow-hidden rounded-[3px] border border-black/10 bg-black/[0.035] shadow-[0_1px_2px_rgba(0,0,0,0.06)]">
+    <article
+      id={entry.id}
+      className={
+        compact
+          ? "group grid min-w-0 grid-cols-[6rem_minmax(0,1fr)] gap-4 border-t border-black/10 pt-4 sm:grid-cols-[7.5rem_minmax(0,1fr)] sm:gap-6"
+          : "group min-w-0"
+      }
+    >
+      <div className="aspect-[2/3] overflow-hidden rounded-xl border border-black/10 bg-black/[0.035] shadow-[0_1px_2px_rgba(0,0,0,0.06)]">
         {isbn && entry.cover ? (
           <Link
             href={`https://openlibrary.org/isbn/${isbn}`}
@@ -46,7 +55,7 @@ export default function BookShelfCard({
         ) : coverImage}
       </div>
 
-      <div className="pt-4">
+      <div className={compact ? "min-w-0 pt-1" : "pt-4"}>
         <div className="flex items-center justify-between gap-3 text-[11px] text-neutral-500">
           <span className="inline-flex min-w-0 items-center gap-1.5">
             <FormatIcon aria-hidden="true" className="h-3.5 w-3.5 shrink-0 stroke-[1.4]" />
