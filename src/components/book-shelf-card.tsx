@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, Headphones } from "lucide-react";
-import { bookFormatLabel, BookRead, readDate } from "@/data/read-data";
+import { bookFormatLabel, BookRead, readDate, readStatusLabel } from "@/data/read-data";
 
 export default function BookShelfCard({
   entry,
@@ -12,6 +12,7 @@ export default function BookShelfCard({
   const isbn = entry.identifiers?.isbn13 ?? entry.identifiers?.isbn10;
   const approximateCompletionYear = entry.tags?.includes("completion-year-approximate") ?? false;
   const date = readDate(entry.completedAt ?? entry.updatedAt, approximateCompletionYear);
+  const active = entry.status === "active";
   const primaryLink = entry.links?.[0];
   const FormatIcon = entry.format === "audiobook" ? Headphones : BookOpen;
 
@@ -51,7 +52,11 @@ export default function BookShelfCard({
             <FormatIcon aria-hidden="true" className="h-3.5 w-3.5 shrink-0 stroke-[1.4]" />
             <span className="truncate">{bookFormatLabel(entry.format)}</span>
           </span>
-          {date && <time className="shrink-0">{date}</time>}
+          {active ? (
+            <span className="shrink-0 font-medium text-neutral-700">{readStatusLabel(entry.status)}</span>
+          ) : date ? (
+            <time className="shrink-0">{date}</time>
+          ) : null}
         </div>
 
         <div className="mt-2.5 flex items-start justify-between gap-3">
@@ -74,6 +79,18 @@ export default function BookShelfCard({
         <p className="mt-2 line-clamp-2 text-xs leading-5 text-neutral-500">
           {entry.authors.join(", ")}
         </p>
+
+        {active && entry.progress?.percent != null && (
+          <div className="mt-4">
+            <div className="flex items-center justify-between gap-3 text-[11px] text-neutral-500">
+              <span className="truncate">{entry.progress.label ?? "Progress"}</span>
+              <span>{entry.progress.percent}%</span>
+            </div>
+            <div className="mt-2 h-px overflow-hidden bg-black/10">
+              <div className="h-full bg-neutral-700" style={{ width: `${entry.progress.percent}%` }} />
+            </div>
+          </div>
+        )}
       </div>
     </article>
   );

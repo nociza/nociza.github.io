@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import BookShelfCard from "@/components/book-shelf-card";
-import { completedBookReads } from "@/data/read-data";
+import { activeBookReads } from "@/data/read-data";
 
 export default function BooksSection() {
-  const visible = completedBookReads.slice(0, 3);
+  const visible = activeBookReads;
 
   return (
     <div className="min-h-screen bg-[#f4f4f1]/85 px-6 py-20 sm:px-10">
@@ -13,26 +13,26 @@ export default function BooksSection() {
           <div>
             <div className="mb-3 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
               <BookOpen aria-hidden="true" className="h-4 w-4 stroke-[1.5]" />
-              Recently finished
+              In progress
             </div>
-            <h1 className="font-serif text-4xl font-medium tracking-[-0.035em] text-neutral-950 sm:text-5xl">The shelf.</h1>
+            <h1 className="font-serif text-4xl font-medium tracking-[-0.035em] text-neutral-950 sm:text-5xl">Currently reading.</h1>
             <p className="mt-3 max-w-xl text-sm leading-7 text-neutral-600">
-              Books and audiobooks I have finished, with the notes I want to keep.
+              The books and audiobooks I am spending time with now.
             </p>
           </div>
           <Link href="/books" className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700 transition hover:text-neutral-950">
-            Open the shelf <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            View the shelf <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
         </div>
 
         {visible.length ? (
-          <div className="grid grid-cols-2 gap-x-5 gap-y-10 border-b border-black/10 py-8 sm:grid-cols-3 sm:gap-x-8 sm:py-10">
+          <div className="grid max-w-2xl grid-cols-2 gap-x-5 gap-y-10 border-b border-black/10 py-8 sm:gap-x-8 sm:py-10">
             {visible.map((entry) => <BookShelfCard key={entry.id} entry={entry} eagerCover />)}
           </div>
         ) : (
           <div className="border-b border-black/10 py-16 text-center">
-            <p className="font-serif text-2xl text-neutral-800">Nothing finished yet.</p>
-            <p className="mt-2 text-sm text-neutral-500">Completed books will appear here.</p>
+            <p className="font-serif text-2xl text-neutral-800">Nothing in progress.</p>
+            <p className="mt-2 text-sm text-neutral-500">Currently reading books will appear here.</p>
           </div>
         )}
       </div>

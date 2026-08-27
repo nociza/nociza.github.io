@@ -14,7 +14,7 @@ await mkdir(coversDirectory, { recursive: true });
 const candidates = entries.filter(
   (entry) =>
     entry?.kind === "book" &&
-    entry.status === "completed" &&
+    ["active", "completed"].includes(entry.status) &&
     (entry.identifiers?.isbn13 || entry.identifiers?.isbn10),
 );
 
@@ -35,6 +35,24 @@ async function pause(milliseconds) {
   await new Promise((resolvePause) => setTimeout(resolvePause, milliseconds));
 }
 
+async function fetchCover(url) {
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: { "User-Agent": "nociza.com cover cache (https://nociza.com)" },
+        redirect: "follow",
+      });
+      if (![429, 500, 502, 503, 504].includes(response.status) || attempt === 3) return response;
+    } catch (error) {
+      lastError = error;
+      if (attempt === 3) throw error;
+    }
+    await pause(attempt * 1_000);
+  }
+  throw lastError ?? new Error("Cover request failed");
+}
+
 for (const [index, entry] of candidates.entries()) {
   const isbn = String(entry.identifiers.isbn13 ?? entry.identifiers.isbn10).replace(/[^0-9X]/gi, "");
   const publicPath = `/images/reads/${entry.id}.jpg`;
@@ -47,10 +65,7 @@ for (const [index, entry] of candidates.entries()) {
   }
 
   const url = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-M.jpg?default=false`;
-  const response = await fetch(url, {
-    headers: { "User-Agent": "nociza.com cover cache (https://nociza.com)" },
-    redirect: "follow",
-  });
+  const response = await fetchCover(url);
 
   if (response.status === 404) {
     delete entry.cover;

@@ -67,6 +67,9 @@ export type ReadEntry = BookRead | PaperRead;
 
 export const readEntries = readsJson as ReadEntry[];
 export const bookReads = readEntries.filter((entry): entry is BookRead => entry.kind === "book");
+export const activeBookReads = bookReads
+  .filter((entry) => entry.status === "active")
+  .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt));
 export const completedBookReads = bookReads
   .filter((entry) => entry.status === "completed")
   .sort((left, right) => (right.completedAt ?? right.updatedAt).localeCompare(left.completedAt ?? left.updatedAt));

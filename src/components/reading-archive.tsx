@@ -40,6 +40,9 @@ export default function ReadingArchive({
     [deferredQuery, entries]
   );
   const books = kind === "book";
+  const filteredBooks = books ? filtered as BookRead[] : [];
+  const currentBooks = filteredBooks.filter((entry) => entry.status === "active");
+  const finishedBooks = filteredBooks.filter((entry) => entry.status === "completed");
 
   return (
     <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
@@ -57,14 +60,14 @@ export default function ReadingArchive({
 
         <header className="grid gap-8 py-14 sm:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(17rem,0.65fr)] lg:items-end">
           <div className="max-w-2xl">
-            <p className="mb-4 text-sm text-neutral-500">{books ? "Finished books and audiobooks" : "Research reading"}</p>
+            <p className="mb-4 text-sm text-neutral-500">{books ? "Books and audiobooks" : "Research reading"}</p>
             <h1 className="font-serif text-4xl font-medium leading-[1.03] tracking-[-0.035em] sm:text-5xl">
               {books ? "The shelf." : "Papers worth keeping."}
             </h1>
           </div>
           <p className="max-w-md text-sm leading-7 text-neutral-600 lg:justify-self-end">
             {books
-              ? "A searchable record of books and audiobooks I have completed."
+              ? "A searchable record of what I am reading now and what I have finished."
               : "A small, searchable record of research ideas I want to return to."}
           </p>
         </header>
@@ -89,10 +92,34 @@ export default function ReadingArchive({
 
           {filtered.length ? (
             books ? (
-              <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-8">
-                {(filtered as BookRead[]).map((entry, index) => (
-                  <BookShelfCard key={entry.id} entry={entry} eagerCover={index < 4} />
-                ))}
+              <div>
+                {currentBooks.length > 0 && (
+                  <section aria-labelledby="currently-reading-heading" className="pt-9">
+                    <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-3">
+                      <h2 id="currently-reading-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">Currently reading</h2>
+                      <span className="text-xs text-neutral-500">{currentBooks.length}</span>
+                    </div>
+                    <div className="grid max-w-xl grid-cols-2 gap-x-4 gap-y-11 pt-6 sm:gap-x-6">
+                      {currentBooks.map((entry) => (
+                        <BookShelfCard key={entry.id} entry={entry} eagerCover />
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {finishedBooks.length > 0 && (
+                  <section aria-labelledby="finished-books-heading" className={currentBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
+                    <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-3">
+                      <h2 id="finished-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">Finished</h2>
+                      <span className="text-xs text-neutral-500">{finishedBooks.length}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-8">
+                      {finishedBooks.map((entry, index) => (
+                        <BookShelfCard key={entry.id} entry={entry} eagerCover={currentBooks.length === 0 && index < 4} />
+                      ))}
+                    </div>
+                  </section>
+                )}
               </div>
             ) : (
               <div>
