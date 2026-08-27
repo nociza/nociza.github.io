@@ -58,7 +58,7 @@ export default function ReadingArchive({
           <div className="max-w-2xl">
             <p className="mb-4 text-sm text-neutral-500">{books ? "Finished books and audiobooks" : "Research reading"}</p>
             <h1 className="font-serif text-4xl font-medium leading-[1.03] tracking-[-0.035em] sm:text-5xl">
-              {books ? "The finished shelf." : "Papers worth keeping."}
+              {books ? "The shelf." : "Papers worth keeping."}
             </h1>
           </div>
           <p className="max-w-md text-sm leading-7 text-neutral-600 lg:justify-self-end">
