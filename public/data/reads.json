@@ -144,7 +144,8 @@
     "year": 1981,
     "pages": 521,
     "publisher": "Harvest Books",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-the-life-of-the-mind-hannah-arendt.jpg"
   },
   {
     "id": "book-this-is-water-some-thoughts-delivered-on-a-significant-occasion-about-david-foster-wallace",
@@ -474,7 +475,8 @@
     "year": 1993,
     "pages": 752,
     "publisher": "Penguin Books",
-    "updatedAt": "2025-06-16"
+    "updatedAt": "2025-06-16",
+    "cover": "/images/reads/book-j-r-william-gaddis.jpg"
   },
   {
     "id": "book-lanark-a-life-in-four-books-alasdair-gray",
