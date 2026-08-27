@@ -27,7 +27,7 @@ export default function BooksSection() {
 
         {visible.length ? (
           <div>
-            {visible.map((entry) => <ReadingEntryCard key={entry.id} entry={entry} compact />)}
+            {visible.map((entry) => <ReadingEntryCard key={entry.id} entry={entry} compact eagerCover />)}
           </div>
         ) : (
           <div className="border-b border-black/10 py-16 text-center">

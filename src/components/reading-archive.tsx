@@ -88,7 +88,7 @@ export default function ReadingArchive({
 
           {filtered.length ? (
             <div>
-              {filtered.map((entry) => <ReadingEntryCard key={entry.id} entry={entry} />)}
+              {filtered.map((entry, index) => <ReadingEntryCard key={entry.id} entry={entry} eagerCover={index < 4} />)}
             </div>
           ) : (
             <div className="border-b border-black/10 py-20 text-center">

@@ -95,7 +95,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0226025985",
       "isbn13": "9780226025988",
@@ -113,7 +113,8 @@
     "year": 1998,
     "pages": 349,
     "publisher": "The University of Chicago Press",
-    "updatedAt": "2026-08-01"
+    "updatedAt": "2026-08-01",
+    "cover": "/images/reads/book-the-human-condition-hannah-arendt.jpg"
   },
   {
     "id": "book-the-life-of-the-mind-hannah-arendt",
@@ -154,7 +155,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0316068225",
       "isbn13": "9780316068222",
@@ -171,7 +172,8 @@
     "year": 2009,
     "pages": 138,
     "publisher": "Little, Brown and Company",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-this-is-water-some-thoughts-delivered-on-a-significant-occasion-about-david-foster-wallace.jpg"
   },
   {
     "id": "book-a-thousand-brains-a-new-theory-of-intelligence-jeff-hawkins",
@@ -183,7 +185,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1541675819",
       "isbn13": "9781541675810",
@@ -200,7 +202,8 @@
     "year": 2021,
     "pages": 288,
     "publisher": "Basic Books",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-a-thousand-brains-a-new-theory-of-intelligence-jeff-hawkins.jpg"
   },
   {
     "id": "book-the-laws-of-thought-the-quest-for-a-mathematical-theory-of-the-mind-tom-griffiths",
@@ -211,7 +214,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "1250358353",
       "isbn13": "9781250358356",
@@ -240,7 +243,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "2517"
     },
@@ -266,7 +269,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0674055446",
       "isbn13": "9780674055445",
@@ -283,7 +286,8 @@
     "year": 2011,
     "pages": 928,
     "publisher": "Belknap Press: An Imprint of Harvard University Press",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-deng-xiaoping-and-the-transformation-of-china-ezra-f-vogel.jpg"
   },
   {
     "id": "book-principles-life-and-work-ray-dalio",
@@ -297,7 +301,7 @@
     "tags": [
       "did-not-finish"
     ],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1508243247",
       "isbn13": "9781508243243",
@@ -326,7 +330,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "38246560"
     },
@@ -746,7 +750,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "18753110"
     },
@@ -831,7 +835,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0316074233",
       "isbn13": "9780316074230",
@@ -849,7 +853,8 @@
     "year": 2011,
     "pages": 548,
     "publisher": "Little, Brown & Company",
-    "updatedAt": "2024-02-04"
+    "updatedAt": "2024-02-04",
+    "cover": "/images/reads/book-the-pale-king-david-foster-wallace.jpg"
   },
   {
     "id": "book-slaughterhouse-five-kurt-vonnegut-jr",
@@ -860,7 +865,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "4981"
     },
@@ -887,7 +892,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "goodreads": "2794"
     },
@@ -914,7 +919,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "0316013323",
       "isbn13": "9780316013321",
@@ -931,7 +936,8 @@
     "year": 2007,
     "pages": 344,
     "publisher": "Little, Brown Paperbacks",
-    "updatedAt": "2022-11-02"
+    "updatedAt": "2022-11-02",
+    "cover": "/images/reads/book-consider-the-lobster-and-other-essays-david-foster-wallace.jpg"
   },
   {
     "id": "book-artemis-andy-weir",
@@ -972,7 +978,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0143113879",
       "isbn13": "9780143113874",
@@ -989,7 +995,8 @@
     "year": 2008,
     "pages": 215,
     "publisher": "Penguin Books",
-    "updatedAt": "2022-11-02"
+    "updatedAt": "2022-11-02",
+    "cover": "/images/reads/book-plato-and-a-platypus-walk-into-a-bar-understanding-philosophy-through-thomas-cathcart.jpg"
   },
   {
     "id": "book-chronicles-of-a-liquid-society-posthumous-essays-on-culture-politics-a-umberto-eco",
@@ -1000,7 +1007,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1328505855",
       "isbn13": "9781328505859",
@@ -1017,7 +1024,8 @@
     "year": 2018,
     "pages": 320,
     "publisher": "HarperVia",
-    "updatedAt": "2022-11-02"
+    "updatedAt": "2022-11-02",
+    "cover": "/images/reads/book-chronicles-of-a-liquid-society-posthumous-essays-on-culture-politics-a-umberto-eco.jpg"
   },
   {
     "id": "book-dictionary-of-the-khazars-milorad-pavi",
@@ -1028,7 +1036,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "067972754X",
       "isbn13": "9780679727545",
@@ -1045,7 +1053,8 @@
     "year": 1989,
     "pages": 338,
     "publisher": "Vintage International",
-    "updatedAt": "2022-11-02"
+    "updatedAt": "2022-11-02",
+    "cover": "/images/reads/book-dictionary-of-the-khazars-milorad-pavi.jpg"
   },
   {
     "id": "book-a-random-walk-down-wall-street-the-time-tested-strategy-for-successful-burton-g-malkiel",
@@ -1056,7 +1065,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0393358380",
       "isbn13": "9780393358384",
@@ -1073,7 +1082,8 @@
     "year": 2020,
     "pages": 480,
     "publisher": "W. W. Norton & Company",
-    "updatedAt": "2022-11-02"
+    "updatedAt": "2022-11-02",
+    "cover": "/images/reads/book-a-random-walk-down-wall-street-the-time-tested-strategy-for-successful-burton-g-malkiel.jpg"
   },
   {
     "id": "book-klara-and-the-sun-kazuo-ishiguro",
@@ -1113,7 +1123,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0374275637",
       "isbn13": "9780374275631",
@@ -1130,7 +1140,8 @@
     "year": 2011,
     "pages": 499,
     "publisher": "Farrar, Straus and Giroux",
-    "updatedAt": "2021-12-30"
+    "updatedAt": "2021-12-30",
+    "cover": "/images/reads/book-thinking-fast-and-slow-daniel-kahneman.jpg"
   },
   {
     "id": "book-romeo-and-juliet-william-shakespeare",
@@ -1157,7 +1168,8 @@
     "year": 2002,
     "pages": 281,
     "publisher": "Washington Square Press",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-romeo-and-juliet-william-shakespeare.jpg"
   },
   {
     "id": "book-algorithms-to-live-by-the-computer-science-of-human-decisions-brian-christian",
@@ -1201,7 +1213,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1423116968",
       "isbn13": "9781423116967",
@@ -1218,7 +1230,8 @@
     "year": 2010,
     "pages": 135,
     "publisher": "Disney-Hyperion",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-lightning-thief-the-graphic-novel-percy-jackson-and-the-olympians-robert-venditti.jpg"
   },
   {
     "id": "book-the-war-of-the-worlds-h-g-wells",
@@ -1230,7 +1243,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0375759239",
       "isbn13": "9780375759239",
@@ -1247,7 +1260,8 @@
     "year": 2002,
     "pages": 192,
     "publisher": "Random House Publishing Group",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-war-of-the-worlds-h-g-wells.jpg"
   },
   {
     "id": "book-2001-a-space-odyssey-space-odyssey-1-arthur-c-clarke",
@@ -1258,7 +1272,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "70535"
     },
@@ -1286,7 +1300,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "2493"
     },
@@ -1313,7 +1327,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "6088007"
     },
@@ -1339,7 +1353,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0684830493",
       "isbn13": "9780684830490",
@@ -1356,7 +1370,8 @@
     "year": 1996,
     "pages": 96,
     "publisher": "Scribner",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-old-man-and-the-sea-ernest-hemingway.jpg"
   },
   {
     "id": "book-a-thousand-splendid-suns-khaled-hosseini",
@@ -1400,7 +1415,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn13": "9780143039563",
       "goodreads": "24583"
@@ -1416,7 +1431,8 @@
     "year": 2006,
     "pages": 244,
     "publisher": "Penguin Classics",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-adventures-of-tom-sawyer-mark-twain.jpg"
   },
   {
     "id": "book-the-lost-hero-the-heroes-of-olympus-1-rick-riordan",
@@ -1427,7 +1443,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "142311339X",
       "isbn13": "9781423113393",
@@ -1444,7 +1460,8 @@
     "year": 2010,
     "pages": 576,
     "publisher": "Disney-Hyperion Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-lost-hero-the-heroes-of-olympus-1-rick-riordan.jpg"
   },
   {
     "id": "book-the-battle-of-the-labyrinth-percy-jackson-and-the-olympians-4-rick-riordan",
@@ -1455,7 +1472,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "1423101464",
       "isbn13": "9781423101468",
@@ -1472,7 +1489,8 @@
     "year": 2008,
     "pages": 361,
     "publisher": "Hyperion Books for Children",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-battle-of-the-labyrinth-percy-jackson-and-the-olympians-4-rick-riordan.jpg"
   },
   {
     "id": "book-the-titan-s-curse-percy-jackson-and-the-olympians-3-rick-riordan",
@@ -1483,7 +1501,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "561456"
     },
@@ -1510,7 +1528,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "043965548X",
       "isbn13": "9780439655484",
@@ -1527,7 +1545,8 @@
     "year": 2004,
     "pages": 547,
     "publisher": "Scholastic Inc.",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-harry-potter-and-the-prisoner-of-azkaban-harry-potter-3-j-k-rowling.jpg"
   },
   {
     "id": "book-catch-22-joseph-heller",
@@ -1567,7 +1586,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0786856866",
       "isbn13": "9780786856862",
@@ -1584,7 +1603,8 @@
     "year": 2006,
     "pages": 279,
     "publisher": "Hyperion Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-sea-of-monsters-percy-jackson-and-the-olympians-2-rick-riordan.jpg"
   },
   {
     "id": "book-the-da-vinci-code-robert-langdon-2-dan-brown",
@@ -1595,7 +1615,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "968"
     },
@@ -1622,7 +1642,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "goodreads": "15881"
     },
@@ -1648,7 +1668,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1416914285",
       "isbn13": "9781416914280",
@@ -1665,7 +1685,8 @@
     "year": 2007,
     "pages": 485,
     "publisher": "Margaret K. McElderry Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-city-of-bones-the-mortal-instruments-1-cassandra-clare.jpg"
   },
   {
     "id": "book-me-before-you-me-before-you-1-jojo-moyes",
@@ -1676,7 +1697,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0670026603",
       "isbn13": "9780670026609",
@@ -1693,7 +1714,8 @@
     "year": 2012,
     "pages": 369,
     "publisher": "Pamela Dorman Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-me-before-you-me-before-you-1-jojo-moyes.jpg"
   },
   {
     "id": "book-the-lightning-thief-percy-jackson-and-the-olympians-1-rick-riordan",
@@ -1704,7 +1726,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0786838655",
       "isbn13": "9780786838653",
@@ -1721,7 +1743,8 @@
     "year": 2006,
     "pages": 377,
     "publisher": "Disney Hyperion Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-lightning-thief-percy-jackson-and-the-olympians-1-rick-riordan.jpg"
   },
   {
     "id": "book-the-fault-in-our-stars-john-green",
@@ -1732,7 +1755,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "goodreads": "11870085"
     },
@@ -1816,7 +1839,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "13079982"
     },
@@ -1842,7 +1865,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0439554934",
       "isbn13": "9780439554930",
@@ -1859,7 +1882,8 @@
     "year": 2003,
     "pages": 309,
     "publisher": "Scholastic Inc",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-harry-potter-and-the-sorcerer-s-stone-harry-potter-1-j-k-rowling.jpg"
   },
   {
     "id": "book-project-hail-mary-andy-weir",
@@ -1870,7 +1894,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0593135202",
       "isbn13": "9780593135204",
@@ -1887,7 +1911,8 @@
     "year": 2021,
     "pages": 476,
     "publisher": "Ballantine Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-project-hail-mary-andy-weir.jpg"
   },
   {
     "id": "book-gravity-s-rainbow-thomas-pynchon",
@@ -1898,7 +1923,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0143039946",
       "isbn13": "9780143039945",
@@ -1916,7 +1941,8 @@
     "year": 2006,
     "pages": 776,
     "publisher": "Penguin Books",
-    "updatedAt": "2021-10-25"
+    "updatedAt": "2021-10-25",
+    "cover": "/images/reads/book-gravity-s-rainbow-thomas-pynchon.jpg"
   },
   {
     "id": "book-doctor-faustus-thomas-mann",
@@ -1928,7 +1954,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0375701168",
       "isbn13": "9780375701160",
@@ -1945,7 +1971,8 @@
     "year": 1999,
     "pages": 535,
     "publisher": "Vintage",
-    "updatedAt": "2020-12-06"
+    "updatedAt": "2020-12-06",
+    "cover": "/images/reads/book-doctor-faustus-thomas-mann.jpg"
   },
   {
     "id": "book-the-glass-bead-game-hermann-hesse",
@@ -1961,7 +1988,7 @@
     "tags": [
       "to-read"
     ],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "0312278497",
       "isbn13": "9780312278496",
@@ -2023,7 +2050,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0679760806",
       "isbn13": "9780679760801",
@@ -2040,7 +2067,8 @@
     "year": 1996,
     "pages": 372,
     "publisher": "Vintage International",
-    "updatedAt": "2020-12-06"
+    "updatedAt": "2020-12-06",
+    "cover": "/images/reads/book-the-master-and-margarita-mikhail-bulgakov.jpg"
   },
   {
     "id": "book-bestiario-julio-cort-zar",
@@ -2142,7 +2170,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0847829863",
       "isbn13": "9780847829866",
@@ -2159,7 +2187,8 @@
     "year": 2007,
     "pages": 456,
     "publisher": "Rizzoli",
-    "updatedAt": "2020-12-06"
+    "updatedAt": "2020-12-06",
+    "cover": "/images/reads/book-on-ugliness-umberto-eco.jpg"
   },
   {
     "id": "book-the-recognitions-william-gaddis",
@@ -2230,7 +2259,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "052552004X",
       "isbn13": "9780525520047",
@@ -2247,7 +2276,8 @@
     "year": 2018,
     "pages": 681,
     "publisher": "Knopf",
-    "updatedAt": "2020-12-06"
+    "updatedAt": "2020-12-06",
+    "cover": "/images/reads/book-killing-commendatore-haruki-murakami.jpg"
   },
   {
     "id": "book-the-elegant-universe-superstrings-hidden-dimensions-and-the-quest-for-brian-greene",
@@ -2258,7 +2288,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "039333810X",
       "isbn13": "9780393338102",
@@ -2275,7 +2305,8 @@
     "year": 2010,
     "pages": 464,
     "publisher": "W. W. Norton & Company",
-    "updatedAt": "2020-12-06"
+    "updatedAt": "2020-12-06",
+    "cover": "/images/reads/book-the-elegant-universe-superstrings-hidden-dimensions-and-the-quest-for-brian-greene.jpg"
   },
   {
     "id": "book-snow-country-yasunari-kawabata",
@@ -2286,7 +2317,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "45868714"
     },
@@ -2312,7 +2343,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0307593312",
       "isbn13": "9780307593313",
@@ -2329,7 +2360,8 @@
     "year": 2011,
     "pages": 944,
     "publisher": "Knopf",
-    "updatedAt": "2019-07-10"
+    "updatedAt": "2019-07-10",
+    "cover": "/images/reads/book-1q84-1q84-1-3-haruki-murakami.jpg"
   },
   {
     "id": "book-zoo-otsuichi",
@@ -2341,7 +2373,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "1421525879",
       "isbn13": "9781421525877",
@@ -2358,7 +2390,8 @@
     "year": 2009,
     "pages": 257,
     "publisher": "Haikasoru",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-zoo-otsuichi.jpg"
   },
   {
     "id": "book-salt-a-world-history-mark-kurlansky",
@@ -2432,7 +2465,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "isbn10": "0141026286",
       "isbn13": "9780141026282",
@@ -2449,7 +2482,8 @@
     "year": 2006,
     "pages": 72,
     "publisher": "Penguin Books Limited",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-the-epic-of-gilgamesh-unknown.jpg"
   },
   {
     "id": "book-walden-civil-disobedience-henry-david-thoreau",
@@ -2461,7 +2495,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0451529456",
       "isbn13": "9780451529459",
@@ -2478,7 +2512,8 @@
     "year": 2004,
     "pages": 320,
     "publisher": "Signet Classics",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-walden-civil-disobedience-henry-david-thoreau.jpg"
   },
   {
     "id": "book-homo-deus-a-brief-history-of-tomorrow-a-nyt-bestselling-popular-scienc-yuval-noah-harari",
@@ -2489,7 +2524,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0062464310",
       "isbn13": "9780062464316",
@@ -2506,7 +2541,8 @@
     "year": 2017,
     "pages": 449,
     "publisher": "Harper",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-homo-deus-a-brief-history-of-tomorrow-a-nyt-bestselling-popular-scienc-yuval-noah-harari.jpg"
   },
   {
     "id": "book-faust-first-part-johann-wolfgang-von-goethe",
@@ -2518,7 +2554,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0553213482",
       "isbn13": "9780553213485",
@@ -2535,7 +2571,8 @@
     "year": 1988,
     "pages": 327,
     "publisher": "Bantam Classics",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-faust-first-part-johann-wolfgang-von-goethe.jpg"
   },
   {
     "id": "book-infinite-jest-david-foster-wallace",
@@ -2546,7 +2583,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "6759"
     },
@@ -2574,7 +2611,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0060776099",
       "isbn13": "9780060776091",
@@ -2591,7 +2628,8 @@
     "year": 2005,
     "pages": 340,
     "publisher": "Harper Perennial Modern Classics",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-brave-new-world-and-brave-new-world-revisited-aldous-huxley.jpg"
   },
   {
     "id": "book-wuthering-heights-emily-bront",
@@ -2606,7 +2644,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 3.0,
+    "rating": 3,
     "identifiers": {
       "goodreads": "6185"
     },
@@ -2632,7 +2670,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "227463"
     },
@@ -2658,7 +2696,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "039480001X",
       "isbn13": "9780394800011",
@@ -2675,7 +2713,8 @@
     "year": 1985,
     "pages": 61,
     "publisher": "Random House Books for Young Readers",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-the-cat-in-the-hat-cat-in-the-hat-1-dr-seuss.jpg"
   },
   {
     "id": "book-the-hitchhiker-s-guide-to-the-galaxy-hitchhiker-s-guide-to-the-galaxy-douglas-adams",
@@ -2686,7 +2725,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "11"
     },
@@ -2713,7 +2752,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0066238501",
       "isbn13": "9780066238500",
@@ -2730,7 +2769,8 @@
     "year": 2014,
     "pages": 767,
     "publisher": "HarperCollins",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-the-chronicles-of-narnia-the-chronicles-of-narnia-1-7-c-s-lewis.jpg"
   },
   {
     "id": "book-jane-eyre-charlotte-bront",
@@ -2742,7 +2782,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0142437204",
       "isbn13": "9780142437209",
@@ -2759,7 +2799,8 @@
     "year": 2003,
     "pages": 532,
     "publisher": "Penguin",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-jane-eyre-charlotte-bront.jpg"
   },
   {
     "id": "book-kafka-on-the-shore-haruki-murakami",
@@ -2771,7 +2812,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "4929"
     },
@@ -2798,7 +2839,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0847826465",
       "isbn13": "9780847826469",
@@ -2815,7 +2856,8 @@
     "year": 2004,
     "pages": 438,
     "publisher": "Rizzoli",
-    "updatedAt": "2018-10-24"
+    "updatedAt": "2018-10-24",
+    "cover": "/images/reads/book-history-of-beauty-umberto-eco.jpg"
   },
   {
     "id": "book-the-call-of-the-wild-white-fang-jack-london",
@@ -2826,7 +2868,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "1587263890",
       "isbn13": "9781587263897",
@@ -2843,7 +2885,8 @@
     "year": 2006,
     "pages": 292,
     "publisher": "Ann Arbor Media",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-call-of-the-wild-white-fang-jack-london.jpg"
   },
   {
     "id": "book-faust-johann-wolfgang-von-goethe",
@@ -2855,7 +2898,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0385031149",
       "isbn13": "9780385031141",
@@ -2872,7 +2915,8 @@
     "year": 1962,
     "pages": 503,
     "publisher": "Vintage",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-faust-johann-wolfgang-von-goethe.jpg"
   },
   {
     "id": "book-ulysses-james-joyce",
@@ -2887,7 +2931,7 @@
     "tags": [
       "to-read"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "338798"
     },
@@ -2913,7 +2957,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "1892295490",
       "isbn13": "9781892295491",
@@ -2930,7 +2974,8 @@
     "year": 2003,
     "pages": 188,
     "publisher": "Green Integer Books",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-heart-of-darkness-joseph-conrad.jpg"
   },
   {
     "id": "book-invisible-man-ralph-ellison",
@@ -2943,7 +2988,7 @@
     "tags": [
       "to-read"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "16981"
     },
@@ -2971,7 +3016,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0192833987",
       "isbn13": "9780192833983",
@@ -2988,7 +3033,8 @@
     "year": 1998,
     "pages": 1392,
     "publisher": "Oxford University Press",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-war-and-peace-leo-tolstoy.jpg"
   },
   {
     "id": "book-four-tragedies-hamlet-othello-king-lear-and-macbeth-william-shakespeare",
@@ -3001,7 +3047,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0553212834",
       "isbn13": "9780553212839",
@@ -3018,7 +3064,8 @@
     "year": 1988,
     "pages": 955,
     "publisher": "Bantam Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-four-tragedies-hamlet-othello-king-lear-and-macbeth-william-shakespeare.jpg"
   },
   {
     "id": "book-sapiens-a-brief-history-of-humankind-yuval-noah-harari",
@@ -3029,7 +3076,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "23692271"
     },
@@ -3056,7 +3103,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "11989"
     },
@@ -3112,7 +3159,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0140448071",
       "isbn13": "9780140448078",
@@ -3129,7 +3176,8 @@
     "year": 2004,
     "pages": 464,
     "publisher": "Penguin Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-dead-souls-nikolai-gogol.jpg"
   },
   {
     "id": "book-tender-is-the-night-f-scott-fitzgerald",
@@ -3171,7 +3219,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0679774386",
       "isbn13": "9780679774389",
@@ -3188,7 +3236,8 @@
     "year": 1997,
     "pages": 592,
     "publisher": "Pantheon",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-doctor-zhivago-boris-pasternak.jpg"
   },
   {
     "id": "book-the-problem-of-china-bertrand-russell",
@@ -3199,7 +3248,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "142647458X",
       "isbn13": "9781426474583",
@@ -3258,7 +3307,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0374500010",
       "isbn13": "9780374500016",
@@ -3275,7 +3324,8 @@
     "year": 2006,
     "pages": 120,
     "publisher": "Hill & Wang",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-night-elie-wiesel.jpg"
   },
   {
     "id": "book-of-mice-and-men-john-steinbeck",
@@ -3317,7 +3367,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "12996"
     },
@@ -3348,7 +3398,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0937832383",
       "isbn13": "9780937832387",
@@ -3365,7 +3415,8 @@
     "year": 2014,
     "pages": 144,
     "publisher": "Dante University Press",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-prince-niccol-machiavelli.jpg"
   },
   {
     "id": "book-the-scarlet-letter-nathaniel-hawthorne",
@@ -3378,7 +3429,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0142437263",
       "isbn13": "9780142437261",
@@ -3395,7 +3446,8 @@
     "year": 2002,
     "pages": 279,
     "publisher": "Penguin Books",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-scarlet-letter-nathaniel-hawthorne.jpg"
   },
   {
     "id": "book-a-game-of-thrones-a-song-of-ice-and-fire-1-george-r-r-martin",
@@ -3406,7 +3458,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "13496"
     },
@@ -3432,7 +3484,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0060935464",
       "isbn13": "9780060935467",
@@ -3449,7 +3501,8 @@
     "year": 2006,
     "pages": 323,
     "publisher": "Harper Perennial Modern Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-to-kill-a-mockingbird-harper-lee.jpg"
   },
   {
     "id": "book-the-count-of-monte-cristo-alexandre-dumas",
@@ -3461,7 +3514,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0140449264",
       "isbn13": "9780140449266",
@@ -3478,7 +3531,8 @@
     "year": 2003,
     "pages": 1276,
     "publisher": "Penguin Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-count-of-monte-cristo-alexandre-dumas.jpg"
   },
   {
     "id": "book-the-grapes-of-wrath-john-steinbeck",
@@ -3489,7 +3543,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "067001690X",
       "isbn13": "9780670016907",
@@ -3506,7 +3560,8 @@
     "year": 2014,
     "pages": 536,
     "publisher": "Viking",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-grapes-of-wrath-john-steinbeck.jpg"
   },
   {
     "id": "book-the-dead-james-joyce",
@@ -3604,7 +3659,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0374528373",
       "isbn13": "9780374528379",
@@ -3621,7 +3676,8 @@
     "year": 2002,
     "pages": 796,
     "publisher": "Farrar, Straus and Giroux",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-brothers-karamazov-fyodor-dostoevsky.jpg"
   },
   {
     "id": "book-a-farewell-to-arms-ernest-hemingway",
@@ -3634,7 +3690,7 @@
     "tags": [
       "to-read"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0099910101",
       "isbn13": "9780099910107",
@@ -3663,7 +3719,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0553213695",
       "isbn13": "9780553213690",
@@ -3680,7 +3736,8 @@
     "year": 1972,
     "pages": 201,
     "publisher": "Bantam Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-metamorphosis-franz-kafka.jpg"
   },
   {
     "id": "book-frankenstein-mary-wollstonecraft-shelley",
@@ -3720,7 +3777,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "1580495931",
       "isbn13": "9781580495936",
@@ -3737,7 +3794,8 @@
     "year": 2004,
     "pages": 75,
     "publisher": "Prestwick House Inc",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-oedipus-rex-the-theban-plays-1-sophocles.jpg"
   },
   {
     "id": "book-the-call-of-the-wild-jack-london",
@@ -3749,7 +3807,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "1852"
     },
@@ -3776,7 +3834,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "320"
     },
@@ -3803,7 +3861,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "goodreads": "16902"
     },
@@ -3829,7 +3887,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0751504386",
       "isbn13": "9780751504385",
@@ -3846,7 +3904,8 @@
     "year": 2002,
     "pages": 672,
     "publisher": "Time Warner Paperbacks",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-skeleton-crew-stephen-king.jpg"
   },
   {
     "id": "book-2666-roberto-bola-o",
@@ -3857,7 +3916,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "843396867X",
       "isbn13": "9788433968678",
@@ -3874,7 +3933,8 @@
     "year": 2004,
     "pages": 1128,
     "publisher": "Anagrama",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-2666-roberto-bola-o.jpg"
   },
   {
     "id": "book-the-phantom-of-the-opera-gaston-leroux",
@@ -3885,7 +3945,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0060809248",
       "isbn13": "9780060809249",
@@ -3902,7 +3962,8 @@
     "year": 1987,
     "pages": 360,
     "publisher": "Harper Perennial",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-phantom-of-the-opera-gaston-leroux.jpg"
   },
   {
     "id": "book-1984-george-orwell",
@@ -3913,7 +3974,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "5470"
     },
@@ -3968,7 +4029,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "9806"
     },
@@ -3995,7 +4056,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "015603297X",
       "isbn13": "9780156032971",
@@ -4012,7 +4073,8 @@
     "year": 2007,
     "pages": 623,
     "publisher": "Mariner Books",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-foucault-s-pendulum-umberto-eco.jpg"
   },
   {
     "id": "book-the-prague-cemetery-umberto-eco",
@@ -4024,7 +4086,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0547577532",
       "isbn13": "9780547577531",
@@ -4041,7 +4103,8 @@
     "year": 2011,
     "pages": 445,
     "publisher": "Houghton Mifflin Harcourt",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-prague-cemetery-umberto-eco.jpg"
   },
   {
     "id": "book-the-name-of-the-rose-umberto-eco",
@@ -4053,7 +4116,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0156001314",
       "isbn13": "9780156001311",
@@ -4070,7 +4133,8 @@
     "year": 1994,
     "pages": 552,
     "publisher": "Houghton Mifflin Harcourt",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-name-of-the-rose-umberto-eco.jpg"
   },
   {
     "id": "book-brave-new-world-aldous-huxley",
@@ -4081,7 +4145,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0060929871",
       "isbn13": "9780060929879",
@@ -4098,7 +4162,8 @@
     "year": 1998,
     "pages": 288,
     "publisher": "HarperPerennial / Perennial Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-brave-new-world-aldous-huxley.jpg"
   },
   {
     "id": "book-anna-karenina-leo-tolstoy",
@@ -4114,7 +4179,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0345803922",
       "isbn13": "9780345803924",
@@ -4131,7 +4196,8 @@
     "year": 2012,
     "pages": 964,
     "publisher": "Vintage",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-anna-karenina-leo-tolstoy.jpg"
   },
   {
     "id": "book-the-time-machine-the-invisible-man-h-g-wells",
@@ -4143,7 +4209,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "1593083254",
       "isbn13": "9781593083250",
@@ -4160,7 +4226,8 @@
     "year": 2005,
     "pages": 288,
     "publisher": "Barnes & Noble Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-time-machine-the-invisible-man-h-g-wells.jpg"
   },
   {
     "id": "book-the-strange-case-of-dr-jekyll-and-mr-hyde-and-other-tales-of-terror-robert-louis-stevenson",
@@ -4172,7 +4239,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0141439734",
       "isbn13": "9780141439730",
@@ -4189,7 +4256,8 @@
     "year": 2003,
     "pages": 224,
     "publisher": "Penguin Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-strange-case-of-dr-jekyll-and-mr-hyde-and-other-tales-of-terror-robert-louis-stevenson.jpg"
   },
   {
     "id": "book-perfume-the-story-of-a-murderer-patrick-s-skind",
@@ -4201,7 +4269,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "343"
     },
@@ -4228,7 +4296,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "5297"
     },
@@ -4255,7 +4323,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0152023984",
       "isbn13": "9780152023980",
@@ -4272,7 +4340,8 @@
     "year": 2000,
     "pages": 96,
     "publisher": "Harcourt, Inc.",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-little-prince-antoine-de-saint-exup-ry.jpg"
   },
   {
     "id": "book-life-the-universe-and-everything-the-hitchhiker-s-guide-to-the-galaxy-douglas-adams",
@@ -4283,7 +4352,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0345418905",
       "isbn13": "9780345418906",
@@ -4300,7 +4369,8 @@
     "year": 1997,
     "pages": 224,
     "publisher": "Random House Worlds",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-life-the-universe-and-everything-the-hitchhiker-s-guide-to-the-galaxy-douglas-adams.jpg"
   },
   {
     "id": "book-pride-and-prejudice-jane-austen",
@@ -4312,7 +4382,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "1441341706",
       "isbn13": "9781441341709",
@@ -4340,7 +4410,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0517189607",
       "isbn13": "9780517189603",
@@ -4357,7 +4427,8 @@
     "year": 1998,
     "pages": 331,
     "publisher": "Children's Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-secret-garden-frances-hodgson-burnett.jpg"
   },
   {
     "id": "book-les-mis-rables-victor-hugo",
@@ -4372,7 +4443,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0451525264",
       "isbn13": "9780451525260",
@@ -4389,7 +4460,8 @@
     "year": 1987,
     "pages": 1488,
     "publisher": "Signet Classics",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-les-mis-rables-victor-hugo.jpg"
   },
   {
     "id": "book-the-stranger-albert-camus",
@@ -4401,7 +4473,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "49552"
     },
@@ -4427,7 +4499,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 4.0,
+    "rating": 4,
     "identifiers": {
       "isbn10": "0743273567",
       "isbn13": "9780743273565",
@@ -4444,7 +4516,8 @@
     "year": 2025,
     "pages": 180,
     "publisher": "Scribner",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-great-gatsby-f-scott-fitzgerald.jpg"
   },
   {
     "id": "book-the-catcher-in-the-rye-j-d-salinger",
@@ -4455,7 +4528,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "isbn10": "0316769177",
       "isbn13": "9780316769174",
@@ -4472,7 +4545,8 @@
     "year": 2001,
     "pages": 277,
     "publisher": "Back Bay Books",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-catcher-in-the-rye-j-d-salinger.jpg"
   },
   {
     "id": "book-animal-farm-george-orwell",
@@ -4485,7 +4559,7 @@
     ],
     "status": "completed",
     "tags": [],
-    "rating": 5.0,
+    "rating": 5,
     "identifiers": {
       "goodreads": "7613"
     },

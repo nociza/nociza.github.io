@@ -1,7 +1,8 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const path = resolve(process.cwd(), "public/data/reads.json");
+const publicDirectory = resolve(process.cwd(), "public");
 const entries = JSON.parse(await readFile(path, "utf8"));
 const kinds = new Set(["book", "paper"]);
 const statuses = new Set(["planned", "active", "paused", "completed", "abandoned"]);
@@ -25,6 +26,14 @@ for (const [index, entry] of entries.entries()) {
   if (entry.kind === "book" && !formats.has(entry.format)) throw new Error(`${label}.format is invalid`);
   if (entry.kind === "paper" && !entry.url && !entry.identifiers?.arxiv && !entry.identifiers?.doi) throw new Error(`${label} needs a URL, arXiv ID, or DOI`);
   if (entry.progress?.percent != null && (typeof entry.progress.percent !== "number" || entry.progress.percent < 0 || entry.progress.percent > 100)) throw new Error(`${label}.progress.percent is invalid`);
+  if (entry.cover) {
+    if (typeof entry.cover !== "string" || !entry.cover.startsWith("/images/reads/") || entry.cover.includes("..")) throw new Error(`${label}.cover must be a local reading-cover path`);
+    try {
+      await access(resolve(publicDirectory, `.${entry.cover}`));
+    } catch {
+      throw new Error(`${label}.cover does not exist: ${entry.cover}`);
+    }
+  }
   for (const link of entry.links ?? []) {
     if (!link.label || !/^https?:\/\//.test(link.url)) throw new Error(`${label}.links contains an invalid link`);
   }

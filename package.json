@@ -19,6 +19,7 @@
     "validate:content": "npm run validate:sips && npm run validate:reads",
     "validate:sips": "node scripts/validate-sips.mjs",
     "validate:reads": "node scripts/validate-reads.mjs",
+    "fetch:read-covers": "node scripts/fetch-read-covers.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "deploy": "npm run export && touch out/CNAME && echo 'www.nociza.com' > out/CNAME && gh-pages -d out -t true",
     "typecheck": "tsc --noEmit"

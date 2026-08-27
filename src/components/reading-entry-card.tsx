@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, FileText, Headphones } from "lucide-react";
-import { useState } from "react";
 import {
   bookFormatLabel,
   readDate,
@@ -13,9 +10,11 @@ import {
 export default function ReadingEntryCard({
   entry,
   compact = false,
+  eagerCover = false,
 }: {
   entry: ReadEntry;
   compact?: boolean;
+  eagerCover?: boolean;
 }) {
   const Icon = entry.kind === "paper" ? FileText : entry.format === "audiobook" ? Headphones : BookOpen;
   const typeLabel = entry.kind === "paper" ? "Paper" : bookFormatLabel(entry.format);
@@ -24,11 +23,7 @@ export default function ReadingEntryCard({
   const tags = entry.kind === "paper" ? entry.categories ?? entry.tags ?? [] : entry.tags ?? [];
   const primaryLink = entry.links?.[0] ?? (entry.kind === "paper" && entry.url ? { label: "Source", url: entry.url } : null);
   const isbn = entry.kind === "book" ? entry.identifiers?.isbn13 ?? entry.identifiers?.isbn10 : undefined;
-  const derivedCover = entry.kind === "book" && isbn
-    ? `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-M.jpg?default=false`
-    : undefined;
-  const cover = entry.cover ?? derivedCover;
-  const [coverFailed, setCoverFailed] = useState(false);
+  const cover = entry.cover;
 
   return (
     <article
@@ -39,15 +34,15 @@ export default function ReadingEntryCard({
         <div className={entry.kind === "book" ? "grid grid-cols-[4.25rem_minmax(0,1fr)] items-start gap-4 sm:block" : undefined}>
           {entry.kind === "book" && (
             <div className="aspect-[2/3] w-full overflow-hidden rounded-sm border border-black/10 bg-black/[0.035] shadow-sm">
-              {cover && !coverFailed ? (
+              {cover ? (
                 isbn ? (
                   <Link href={`https://openlibrary.org/isbn/${isbn}`} target="_blank" rel="noopener noreferrer" aria-label={`Open Library edition for ${entry.title}`} className="block h-full w-full">
                     <img
                       src={cover}
                       alt={`Cover of ${entry.title}`}
                       className="h-full w-full object-cover"
-                      loading="lazy"
-                      onError={() => setCoverFailed(true)}
+                      loading={eagerCover ? "eager" : "lazy"}
+                      fetchPriority={eagerCover ? "high" : "auto"}
                     />
                   </Link>
                 ) : (
@@ -55,8 +50,8 @@ export default function ReadingEntryCard({
                     src={cover}
                     alt={`Cover of ${entry.title}`}
                     className="h-full w-full object-cover"
-                    loading="lazy"
-                    onError={() => setCoverFailed(true)}
+                    loading={eagerCover ? "eager" : "lazy"}
+                    fetchPriority={eagerCover ? "high" : "auto"}
                   />
                 )
               ) : (
