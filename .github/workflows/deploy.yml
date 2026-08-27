@@ -47,18 +47,7 @@ jobs:
           echo "Looking for image files:"
           find public -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" 2>/dev/null || echo "No images in public"
 
-      - name: Fetch Notion data
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_COFFEE_DATABASE_ID: ${{ secrets.NOTION_COFFEE_DATABASE_ID }}
-          NOTION_PAPERS_DATABASE_ID: ${{ secrets.NOTION_PAPERS_DATABASE_ID }}
-        run: npm run fetch-data
-
       - name: Build with Next.js
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_COFFEE_DATABASE_ID: ${{ secrets.NOTION_COFFEE_DATABASE_ID }}
-          NOTION_PAPERS_DATABASE_ID: ${{ secrets.NOTION_PAPERS_DATABASE_ID }}
         run: npm run build:static
 
       - name: Manually copy public files to out directory

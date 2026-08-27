@@ -1,6 +1,5 @@
 import coffeeCurrentJson from "../../public/data/coffee-current.json";
 import coffeeJson from "../../public/data/coffee.json";
-import papersJson from "../../public/data/papers.json";
 
 export interface CoffeeEntry {
   id: string;
@@ -17,18 +16,5 @@ export interface CoffeeEntry {
   roasterLink?: string;
 }
 
-export interface ArxivPaper {
-  id: string;
-  arxivId: string;
-  url: string;
-  title: string;
-  authors: string[];
-  abstract: string;
-  publishedDate: string;
-  categories: string[];
-  status?: string;
-}
-
 export const coffeeEntries = coffeeJson as CoffeeEntry[];
 export const currentlyDrinking = coffeeCurrentJson as CoffeeEntry[];
-export const papers = papersJson as ArxivPaper[];
