@@ -56,14 +56,14 @@ export default function ReadingArchive({
 
         <header className="grid gap-8 py-14 sm:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(17rem,0.65fr)] lg:items-end">
           <div className="max-w-2xl">
-            <p className="mb-4 text-sm text-neutral-500">{books ? "Books and audiobooks" : "Research reading"}</p>
+            <p className="mb-4 text-sm text-neutral-500">{books ? "Finished books and audiobooks" : "Research reading"}</p>
             <h1 className="font-serif text-4xl font-medium leading-[1.03] tracking-[-0.035em] sm:text-5xl">
-              {books ? "The reading shelf." : "Papers worth keeping."}
+              {books ? "The finished shelf." : "Papers worth keeping."}
             </h1>
           </div>
           <p className="max-w-md text-sm leading-7 text-neutral-600 lg:justify-self-end">
             {books
-              ? "A working shelf of books in progress, finished, paused, and waiting their turn."
+              ? "A searchable record of books and audiobooks I have completed."
               : "A small, searchable record of research ideas I want to return to."}
           </p>
         </header>

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, FileText, Headphones } from "lucide-react";
+import { useState } from "react";
 import {
   bookFormatLabel,
   readDate,
@@ -20,20 +23,57 @@ export default function ReadingEntryCard({
   const description = entry.reflection ?? entry.excerpt ?? (entry.kind === "paper" ? entry.abstract : undefined);
   const tags = entry.kind === "paper" ? entry.categories ?? entry.tags ?? [] : entry.tags ?? [];
   const primaryLink = entry.links?.[0] ?? (entry.kind === "paper" && entry.url ? { label: "Source", url: entry.url } : null);
+  const isbn = entry.kind === "book" ? entry.identifiers?.isbn13 ?? entry.identifiers?.isbn10 : undefined;
+  const derivedCover = entry.kind === "book" && isbn
+    ? `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-M.jpg?default=false`
+    : undefined;
+  const cover = entry.cover ?? derivedCover;
+  const [coverFailed, setCoverFailed] = useState(false);
 
   return (
     <article
       id={entry.id}
       className={`group border-t border-black/10 ${compact ? "py-5" : "py-7 sm:py-9"}`}
     >
-      <div className="grid gap-5 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-8">
-        <div>
-          <div className="flex items-center gap-2 text-xs text-neutral-500">
-            <Icon aria-hidden="true" className="h-3.5 w-3.5 stroke-[1.5]" />
-            <span>{typeLabel}</span>
+      <div className={`grid gap-5 ${entry.kind === "book" ? "sm:grid-cols-[6.5rem_minmax(0,1fr)]" : "sm:grid-cols-[8.5rem_minmax(0,1fr)]"} sm:gap-8`}>
+        <div className={entry.kind === "book" ? "grid grid-cols-[4.25rem_minmax(0,1fr)] items-start gap-4 sm:block" : undefined}>
+          {entry.kind === "book" && (
+            <div className="aspect-[2/3] w-full overflow-hidden rounded-sm border border-black/10 bg-black/[0.035] shadow-sm">
+              {cover && !coverFailed ? (
+                isbn ? (
+                  <Link href={`https://openlibrary.org/isbn/${isbn}`} target="_blank" rel="noopener noreferrer" aria-label={`Open Library edition for ${entry.title}`} className="block h-full w-full">
+                    <img
+                      src={cover}
+                      alt={`Cover of ${entry.title}`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      onError={() => setCoverFailed(true)}
+                    />
+                  </Link>
+                ) : (
+                  <img
+                    src={cover}
+                    alt={`Cover of ${entry.title}`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    onError={() => setCoverFailed(true)}
+                  />
+                )
+              ) : (
+                <div className="flex h-full items-center justify-center text-neutral-300">
+                  <BookOpen aria-hidden="true" className="h-5 w-5 stroke-[1.25]" />
+                </div>
+              )}
+            </div>
+          )}
+          <div className={entry.kind === "book" ? "sm:mt-4" : undefined}>
+            <div className="flex items-center gap-2 text-xs text-neutral-500">
+              <Icon aria-hidden="true" className="h-3.5 w-3.5 stroke-[1.5]" />
+              <span>{typeLabel}</span>
+            </div>
+            <p className="mt-2 text-xs font-medium text-neutral-800">{readStatusLabel(entry.status)}</p>
+            {date && <time className="mt-1 block text-xs text-neutral-500">{date}</time>}
           </div>
-          <p className="mt-2 text-xs font-medium text-neutral-800">{readStatusLabel(entry.status)}</p>
-          {date && <time className="mt-1 block text-xs text-neutral-500">{date}</time>}
         </div>
 
         <div className="min-w-0">
