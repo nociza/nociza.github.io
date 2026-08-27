@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
-import ReadingEntryCard from "@/components/reading-entry-card";
+import BookShelfCard from "@/components/book-shelf-card";
 import { completedBookReads } from "@/data/read-data";
 
 export default function BooksSection() {
@@ -26,8 +26,8 @@ export default function BooksSection() {
         </div>
 
         {visible.length ? (
-          <div>
-            {visible.map((entry) => <ReadingEntryCard key={entry.id} entry={entry} compact eagerCover />)}
+          <div className="grid grid-cols-2 gap-x-5 gap-y-10 border-b border-black/10 py-8 sm:grid-cols-3 sm:gap-x-8 sm:py-10">
+            {visible.map((entry) => <BookShelfCard key={entry.id} entry={entry} eagerCover />)}
           </div>
         ) : (
           <div className="border-b border-black/10 py-16 text-center">

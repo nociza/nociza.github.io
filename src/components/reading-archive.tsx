@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useDeferredValue, useMemo, useState } from "react";
 import { ArrowLeft, Search } from "lucide-react";
+import BookShelfCard from "@/components/book-shelf-card";
 import ReadingEntryCard from "@/components/reading-entry-card";
-import { ReadEntry } from "@/data/read-data";
+import { BookRead, ReadEntry } from "@/data/read-data";
 
 function searchableText(entry: ReadEntry): string {
   return [
@@ -42,7 +43,7 @@ export default function ReadingArchive({
 
   return (
     <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
-      <div className="mx-auto max-w-5xl px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7">
+      <div className={`mx-auto px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7 ${books ? "max-w-6xl" : "max-w-5xl"}`}>
         <nav className="flex items-center justify-between border-b border-black/10 pb-5 text-sm text-neutral-600">
           <Link href="/me" className="inline-flex items-center gap-2 transition hover:text-neutral-950">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
@@ -87,9 +88,17 @@ export default function ReadingArchive({
           </div>
 
           {filtered.length ? (
-            <div>
-              {filtered.map((entry, index) => <ReadingEntryCard key={entry.id} entry={entry} eagerCover={index < 4} />)}
-            </div>
+            books ? (
+              <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-8">
+                {(filtered as BookRead[]).map((entry, index) => (
+                  <BookShelfCard key={entry.id} entry={entry} eagerCover={index < 4} />
+                ))}
+              </div>
+            ) : (
+              <div>
+                {filtered.map((entry) => <ReadingEntryCard key={entry.id} entry={entry} />)}
+              </div>
+            )
           ) : (
             <div className="border-b border-black/10 py-20 text-center">
               <p className="font-serif text-2xl text-neutral-800">Nothing matched that search.</p>
