@@ -1,21 +1,345 @@
 [
   {
+    "id": "book-the-history-of-sexuality-volume-1-an-introduction-michel-foucault",
+    "kind": "book",
+    "title": "The History of Sexuality, Volume 1: An Introduction",
+    "authors": [
+      "Michel Foucault",
+      "Robert Hurley"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0679724699",
+      "isbn13": "9780679724698",
+      "goodreads": "1875"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1875"
+      }
+    ],
+    "addedAt": "2026-08-27",
+    "format": "physical",
+    "year": 1990,
+    "pages": 176,
+    "publisher": "Vintage",
+    "updatedAt": "2026-08-27"
+  },
+  {
+    "id": "book-the-house-of-government-a-saga-of-the-russian-revolution-yuri-slezkine",
+    "kind": "book",
+    "title": "The House of Government: A Saga of the Russian Revolution",
+    "authors": [
+      "Yuri Slezkine"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0691176949",
+      "isbn13": "9780691176949",
+      "goodreads": "33198390"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/33198390"
+      }
+    ],
+    "addedAt": "2026-08-27",
+    "format": "physical",
+    "year": 2017,
+    "pages": 1096,
+    "publisher": "Princeton University Press",
+    "updatedAt": "2026-08-27"
+  },
+  {
+    "id": "book-oranges-are-not-the-only-fruit-jeanette-winterson",
+    "kind": "book",
+    "title": "Oranges Are Not the Only Fruit",
+    "authors": [
+      "Jeanette Winterson"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "goodreads": "15055"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/15055"
+      }
+    ],
+    "addedAt": "2026-08-27",
+    "format": "physical",
+    "year": 1997,
+    "pages": 176,
+    "publisher": "Grove Press",
+    "updatedAt": "2026-08-27"
+  },
+  {
+    "id": "book-the-human-condition-hannah-arendt",
+    "kind": "book",
+    "title": "The Human Condition",
+    "authors": [
+      "Hannah Arendt",
+      "Margaret Canovan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0226025985",
+      "isbn13": "9780226025988",
+      "goodreads": "127227"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/127227"
+      }
+    ],
+    "completedAt": "2026-08-01",
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 1998,
+    "pages": 349,
+    "publisher": "The University of Chicago Press",
+    "updatedAt": "2026-08-01"
+  },
+  {
+    "id": "book-the-life-of-the-mind-hannah-arendt",
+    "kind": "book",
+    "title": "The Life of the Mind",
+    "authors": [
+      "Hannah Arendt",
+      "Mary McCarthy"
+    ],
+    "status": "active",
+    "tags": [
+      "currently-reading"
+    ],
+    "identifiers": {
+      "isbn10": "0156519925",
+      "isbn13": "9780156519922",
+      "goodreads": "127233"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/127233"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 1981,
+    "pages": 521,
+    "publisher": "Harvest Books",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-this-is-water-some-thoughts-delivered-on-a-significant-occasion-about-david-foster-wallace",
+    "kind": "book",
+    "title": "This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life",
+    "authors": [
+      "David Foster Wallace"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0316068225",
+      "isbn13": "9780316068222",
+      "goodreads": "5986375"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5986375"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 2009,
+    "pages": 138,
+    "publisher": "Little, Brown and Company",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-a-thousand-brains-a-new-theory-of-intelligence-jeff-hawkins",
+    "kind": "book",
+    "title": "A Thousand Brains: A New Theory of Intelligence",
+    "authors": [
+      "Jeff Hawkins",
+      "Richard Dawkins"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1541675819",
+      "isbn13": "9781541675810",
+      "goodreads": "54503521"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/54503521"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 2021,
+    "pages": 288,
+    "publisher": "Basic Books",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-the-laws-of-thought-the-quest-for-a-mathematical-theory-of-the-mind-tom-griffiths",
+    "kind": "book",
+    "title": "The Laws of Thought: The Quest for a Mathematical Theory of the Mind",
+    "authors": [
+      "Tom  Griffiths"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "1250358353",
+      "isbn13": "9781250358356",
+      "goodreads": "231127455"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/231127455"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 2026,
+    "pages": 400,
+    "publisher": "Henry Holt and Co.",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-my-name-is-red-orhan-pamuk",
+    "kind": "book",
+    "title": "My Name Is Red",
+    "authors": [
+      "Orhan Pamuk",
+      "Erdağ M. Göknar"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "2517"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2517"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 2002,
+    "pages": 417,
+    "publisher": "Vintage",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-deng-xiaoping-and-the-transformation-of-china-ezra-f-vogel",
+    "kind": "book",
+    "title": "Deng Xiaoping and the Transformation of China",
+    "authors": [
+      "Ezra F. Vogel"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0674055446",
+      "isbn13": "9780674055445",
+      "goodreads": "11472345"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11472345"
+      }
+    ],
+    "addedAt": "2026-06-20",
+    "format": "physical",
+    "year": 2011,
+    "pages": 928,
+    "publisher": "Belknap Press: An Imprint of Harvard University Press",
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "book-principles-life-and-work-ray-dalio",
+    "kind": "book",
+    "title": "Principles: Life and Work",
+    "authors": [
+      "Ray Dalio",
+      "Jeremy Bobb"
+    ],
+    "status": "planned",
+    "tags": [
+      "did-not-finish"
+    ],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1508243247",
+      "isbn13": "9781508243243",
+      "goodreads": "34536488"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/34536488"
+      }
+    ],
+    "completedAt": "2026-06-20",
+    "addedAt": "2019-07-08",
+    "format": "audiobook",
+    "year": 2017,
+    "pages": 16,
+    "publisher": "Simon & Schuster Audio",
+    "updatedAt": "2026-06-20"
+  },
+  {
     "id": "book-jerusalem-alan-moore",
     "kind": "book",
     "title": "Jerusalem",
     "authors": [
       "Alan Moore"
     ],
-    "status": "active",
-    "format": "audiobook",
-    "progress": {
-      "percent": 15,
-      "label": "Chapter 12: The Breeze That Plucks Her Apron",
-      "remaining": "47 hours 23 minutes"
-    },
+    "status": "completed",
     "tags": [],
-    "addedAt": "2025-05-27",
-    "updatedAt": "2025-05-27"
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "38246560"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/38246560"
+      }
+    ],
+    "completedAt": "2026-01-20",
+    "addedAt": "2020-12-08",
+    "format": "audiobook",
+    "updatedAt": "2026-01-20"
   },
   {
     "id": "221cb2de-72bc-80fc-b11f-f7864597aa0d",
@@ -29,11 +353,6 @@
       "Llion Jones"
     ],
     "status": "completed",
-    "abstract": "Biological brains demonstrate complex neural activity, where the timing and interplay between neurons is critical to how brains process information. Most deep learning architectures simplify neural activity by abstracting away temporal dynamics. In this paper we challenge that paradigm. By incorporating neuron-level processing and synchronization, we can effectively reintroduce neural timing as a foundational element. We present the Continuous Thought Machine (CTM), a model designed to leverage neural dynamics as its core representation. The CTM has two core innovations: (1) neuron-level temporal processing, where each neuron uses unique weight parameters to process a history of incoming signals; and (2) neural synchronization employed as a latent representation. The CTM aims to strike a balance between oversimplified neuron abstractions that improve computational efficiency, and biological realism. It operates at a level of abstraction that effectively captures essential temporal dynamics while remaining computationally tractable for deep learning. We demonstrate the CTM's strong performance and versatility across a range of challenging tasks, including ImageNet-1K classification, solving 2D mazes, sorting, parity computation, question-answering, and RL tasks. Beyond displaying rich internal representations and offering a natural avenue for interpretation owing to its internal process, the CTM is able to perform tasks that require complex sequential reasoning. The CTM can also leverage adaptive compute, where it can stop earlier for simpler tasks, or keep computing when faced with more challenging instances. The goal of this work is to share the CTM and its associated innovations, rather than pushing for new state-of-the-art results. To that end, we believe the CTM represents a significant step toward developing more biologically plausible and powerful artificial intelligence systems.",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
     "identifiers": {
       "arxiv": "2505.05522"
     },
@@ -43,9 +362,14 @@
         "url": "https://arxiv.org/abs/2505.05522"
       }
     ],
-    "url": "https://arxiv.org/abs/2505.05522",
     "publishedAt": "2025-05-08T06:31:54Z",
     "addedAt": "2025-05-27",
+    "abstract": "Biological brains demonstrate complex neural activity, where the timing and interplay between neurons is critical to how brains process information. Most deep learning architectures simplify neural activity by abstracting away temporal dynamics. In this paper we challenge that paradigm. By incorporating neuron-level processing and synchronization, we can effectively reintroduce neural timing as a foundational element. We present the Continuous Thought Machine (CTM), a model designed to leverage neural dynamics as its core representation. The CTM has two core innovations: (1) neuron-level temporal processing, where each neuron uses unique weight parameters to process a history of incoming signals; and (2) neural synchronization employed as a latent representation. The CTM aims to strike a balance between oversimplified neuron abstractions that improve computational efficiency, and biological realism. It operates at a level of abstraction that effectively captures essential temporal dynamics while remaining computationally tractable for deep learning. We demonstrate the CTM's strong performance and versatility across a range of challenging tasks, including ImageNet-1K classification, solving 2D mazes, sorting, parity computation, question-answering, and RL tasks. Beyond displaying rich internal representations and offering a natural avenue for interpretation owing to its internal process, the CTM is able to perform tasks that require complex sequential reasoning. The CTM can also leverage adaptive compute, where it can stop earlier for simpler tasks, or keep computing when faced with more challenging instances. The goal of this work is to share the CTM and its associated innovations, rather than pushing for new state-of-the-art results. To that end, we believe the CTM represents a significant step toward developing more biologically plausible and powerful artificial intelligence systems.",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "url": "https://arxiv.org/abs/2505.05522",
     "updatedAt": "2025-07-01"
   },
   {
@@ -60,11 +384,6 @@
       "Sameer Singh"
     ],
     "status": "completed",
-    "abstract": "The remarkable success of pretrained language models has motivated the study of what kinds of knowledge these models learn during pretraining. Reformulating tasks as fill-in-the-blanks problems (e.g., cloze tests) is a natural approach for gauging such knowledge, however, its usage is limited by the manual effort and guesswork required to write suitable prompts. To address this, we develop AutoPrompt, an automated method to create prompts for a diverse set of tasks, based on a gradient-guided search. Using AutoPrompt, we show that masked language models (MLMs) have an inherent capability to perform sentiment analysis and natural language inference without additional parameters or finetuning, sometimes achieving performance on par with recent state-of-the-art supervised models. We also show that our prompts elicit more accurate factual knowledge from MLMs than the manually created prompts on the LAMA benchmark, and that MLMs can be used as relation extractors more effectively than supervised relation extraction models. These results demonstrate that automatically generated prompts are a viable parameter-free alternative to existing probing methods, and as pretrained LMs become more sophisticated and capable, potentially a replacement for finetuning.",
-    "categories": [
-      "cs.CL",
-      "cs.LG"
-    ],
     "identifiers": {
       "arxiv": "2010.15980"
     },
@@ -74,9 +393,14 @@
         "url": "https://arxiv.org/abs/2010.15980"
       }
     ],
-    "url": "https://arxiv.org/abs/2010.15980",
     "publishedAt": "2020-10-29T22:54:00Z",
     "addedAt": "2025-05-27",
+    "abstract": "The remarkable success of pretrained language models has motivated the study of what kinds of knowledge these models learn during pretraining. Reformulating tasks as fill-in-the-blanks problems (e.g., cloze tests) is a natural approach for gauging such knowledge, however, its usage is limited by the manual effort and guesswork required to write suitable prompts. To address this, we develop AutoPrompt, an automated method to create prompts for a diverse set of tasks, based on a gradient-guided search. Using AutoPrompt, we show that masked language models (MLMs) have an inherent capability to perform sentiment analysis and natural language inference without additional parameters or finetuning, sometimes achieving performance on par with recent state-of-the-art supervised models. We also show that our prompts elicit more accurate factual knowledge from MLMs than the manually created prompts on the LAMA benchmark, and that MLMs can be used as relation extractors more effectively than supervised relation extraction models. These results demonstrate that automatically generated prompts are a viable parameter-free alternative to existing probing methods, and as pretrained LMs become more sophisticated and capable, potentially a replacement for finetuning.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "url": "https://arxiv.org/abs/2010.15980",
     "updatedAt": "2025-07-01"
   },
   {
@@ -97,12 +421,6 @@
       "Jared Q. Davis"
     ],
     "status": "completed",
-    "abstract": "Despite the significant strides made by generative AI in just a few short years, its future progress is constrained by the challenge of building modular and robust systems. This capability has been a cornerstone of past technological revolutions, which relied on combining components to create increasingly sophisticated and reliable systems. Cars, airplanes, computers, and software consist of components-such as engines, wheels, CPUs, and libraries-that can be assembled, debugged, and replaced. A key tool for building such reliable and modular systems is specification: the precise description of the expected behavior, inputs, and outputs of each component. However, the generality of LLMs and the inherent ambiguity of natural language make defining specifications for LLM-based components (e.g., agents) both a challenging and urgent problem. In this paper, we discuss the progress the field has made so far-through advances like structured outputs, process supervision, and test-time compute-and outline several future directions for research to enable the development of modular and reliable LLM-based systems through improved specifications.",
-    "categories": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CL"
-    ],
     "identifiers": {
       "arxiv": "2412.05299"
     },
@@ -112,9 +430,4076 @@
         "url": "https://arxiv.org/abs/2412.05299"
       }
     ],
-    "url": "https://arxiv.org/abs/2412.05299",
     "publishedAt": "2024-11-25T07:48:31Z",
     "addedAt": "2025-05-27",
+    "abstract": "Despite the significant strides made by generative AI in just a few short years, its future progress is constrained by the challenge of building modular and robust systems. This capability has been a cornerstone of past technological revolutions, which relied on combining components to create increasingly sophisticated and reliable systems. Cars, airplanes, computers, and software consist of components-such as engines, wheels, CPUs, and libraries-that can be assembled, debugged, and replaced. A key tool for building such reliable and modular systems is specification: the precise description of the expected behavior, inputs, and outputs of each component. However, the generality of LLMs and the inherent ambiguity of natural language make defining specifications for LLM-based components (e.g., agents) both a challenging and urgent problem. In this paper, we discuss the progress the field has made so far-through advances like structured outputs, process supervision, and test-time compute-and outline several future directions for research to enable the development of modular and reliable LLM-based systems through improved specifications.",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "url": "https://arxiv.org/abs/2412.05299",
     "updatedAt": "2025-07-01"
+  },
+  {
+    "id": "book-j-r-william-gaddis",
+    "kind": "book",
+    "title": "J R",
+    "authors": [
+      "William Gaddis",
+      "John David Smith",
+      "Frederick R. Karl"
+    ],
+    "status": "active",
+    "tags": [
+      "currently-reading"
+    ],
+    "identifiers": {
+      "isbn10": "0140187073",
+      "isbn13": "9780140187076",
+      "goodreads": "28434"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28434"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 1993,
+    "pages": 752,
+    "publisher": "Penguin Books",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-lanark-a-life-in-four-books-alasdair-gray",
+    "kind": "book",
+    "title": "Lanark: A Life in Four Books",
+    "authors": [
+      "Alasdair Gray"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1847673740",
+      "isbn13": "9781847673749",
+      "goodreads": "16565937"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/16565937"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "ebook",
+    "year": 2007,
+    "pages": 573,
+    "publisher": "Canongate Books",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-dhalgren-samuel-r-delany",
+    "kind": "book",
+    "title": "Dhalgren",
+    "authors": [
+      "Samuel R. Delany",
+      "William Gibson"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1480461784",
+      "isbn13": "9781480461789",
+      "goodreads": "40963358"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/40963358"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "ebook",
+    "year": 2014,
+    "pages": 836,
+    "publisher": "Open Road Media Sci-Fi & Fantasy",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-women-and-men-joseph-mcelroy",
+    "kind": "book",
+    "title": "Women and Men",
+    "authors": [
+      "Joseph McElroy"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1564780236",
+      "isbn13": "9781564780232",
+      "goodreads": "888888"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/888888"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 1993,
+    "pages": 1192,
+    "publisher": "Dalkey Archive Press",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-the-sot-weed-factor-john-barth",
+    "kind": "book",
+    "title": "The Sot-Weed Factor",
+    "authors": [
+      "John Barth"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1903809509",
+      "isbn13": "9781903809501",
+      "goodreads": "24835"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/24835"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 2002,
+    "pages": 756,
+    "publisher": "Atlantic Books",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-understanding-aleister-crowley-s-thoth-tarot-an-authoritative-examinat-lon-milo-duquette",
+    "kind": "book",
+    "title": "Understanding Aleister Crowley's Thoth Tarot: An Authoritative Examination of the World's Most Fascinating and Magical Tarot Cards",
+    "authors": [
+      "Lon Milo DuQuette"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1578632765",
+      "isbn13": "9781578632763",
+      "goodreads": "123662"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/123662"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 2003,
+    "pages": 330,
+    "publisher": "Weiser Books",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-the-book-of-disappearance-ibtisam-azem",
+    "kind": "book",
+    "title": "The Book of Disappearance",
+    "authors": [
+      "Ibtisam Azem",
+      "Sinan Antoon"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0815611110",
+      "isbn13": "9780815611110",
+      "goodreads": "42921509"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/42921509"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 2019,
+    "pages": 242,
+    "publisher": "Syracuse University Press",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-underworld-don-delillo",
+    "kind": "book",
+    "title": "Underworld",
+    "authors": [
+      "Don DeLillo"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0330369954",
+      "isbn13": "9780330369954",
+      "goodreads": "11761"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11761"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 1999,
+    "pages": 827,
+    "publisher": "Picador",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-solenoid-mircea-c-rt-rescu",
+    "kind": "book",
+    "title": "Solenoid",
+    "authors": [
+      "Mircea Cărtărescu"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "9735050595",
+      "isbn13": "9789735050597",
+      "goodreads": "27826456"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/27826456"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 2015,
+    "pages": 840,
+    "publisher": "Humanitas",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-satantango-apocalypse-quartet-1-l-szl-krasznahorkai",
+    "kind": "book",
+    "title": "Satantango (Apocalypse Quartet, #1)",
+    "authors": [
+      "László Krasznahorkai",
+      "George Szirtes"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0811217345",
+      "isbn13": "9780811217347",
+      "goodreads": "11455485"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11455485"
+      }
+    ],
+    "addedAt": "2025-06-16",
+    "format": "physical",
+    "year": 2012,
+    "pages": 274,
+    "publisher": "New Directions",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-on-intelligence-how-a-new-understanding-of-the-brain-will-lead-to-the-jeff-hawkins",
+    "kind": "book",
+    "title": "On Intelligence: How a New Understanding of the Brain Will Lead to the Creation of Truly Intelligent Machines",
+    "authors": [
+      "Jeff Hawkins",
+      "Sandra Blakeslee"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "18753110"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/18753110"
+      }
+    ],
+    "completedAt": "2025-06-16",
+    "addedAt": "2024-06-28",
+    "format": "ebook",
+    "year": 2007,
+    "pages": 284,
+    "publisher": "Times Books",
+    "updatedAt": "2025-06-16"
+  },
+  {
+    "id": "book-the-hero-with-a-thousand-faces-joseph-campbell",
+    "kind": "book",
+    "title": "The Hero with a Thousand Faces",
+    "authors": [
+      "Joseph Campbell"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0691017840",
+      "isbn13": "9780691017846",
+      "goodreads": "588138"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/588138"
+      }
+    ],
+    "addedAt": "2025-03-31",
+    "format": "physical",
+    "year": 1972,
+    "pages": 416,
+    "publisher": "Princeton University Press",
+    "updatedAt": "2025-03-31"
+  },
+  {
+    "id": "book-the-order-of-time-carlo-rovelli",
+    "kind": "book",
+    "title": "The Order of Time",
+    "authors": [
+      "Carlo Rovelli"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "073521610X",
+      "isbn13": "9780735216105",
+      "goodreads": "36442813"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/36442813"
+      }
+    ],
+    "addedAt": "2025-03-31",
+    "format": "physical",
+    "year": 2018,
+    "pages": 224,
+    "publisher": "Riverhead Books",
+    "updatedAt": "2025-03-31"
+  },
+  {
+    "id": "book-the-pale-king-david-foster-wallace",
+    "kind": "book",
+    "title": "The Pale King",
+    "authors": [
+      "David Foster Wallace"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0316074233",
+      "isbn13": "9780316074230",
+      "goodreads": "9443405"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/9443405"
+      }
+    ],
+    "completedAt": "2024-02-04",
+    "addedAt": "2023-02-01",
+    "format": "physical",
+    "year": 2011,
+    "pages": 548,
+    "publisher": "Little, Brown & Company",
+    "updatedAt": "2024-02-04"
+  },
+  {
+    "id": "book-slaughterhouse-five-kurt-vonnegut-jr",
+    "kind": "book",
+    "title": "Slaughterhouse-Five",
+    "authors": [
+      "Kurt Vonnegut Jr."
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "4981"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/4981"
+      }
+    ],
+    "completedAt": "2023-11-14",
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 1999,
+    "pages": 275,
+    "publisher": "Dial Press",
+    "updatedAt": "2023-11-14"
+  },
+  {
+    "id": "book-the-crying-of-lot-49-thomas-pynchon",
+    "kind": "book",
+    "title": "The Crying of Lot 49",
+    "authors": [
+      "Thomas Pynchon"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "goodreads": "2794"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2794"
+      }
+    ],
+    "completedAt": "2023-01-08",
+    "addedAt": "2023-02-01",
+    "format": "physical",
+    "year": 2006,
+    "pages": 152,
+    "publisher": "Harper Perennial Modern Classics",
+    "updatedAt": "2023-01-08"
+  },
+  {
+    "id": "book-consider-the-lobster-and-other-essays-david-foster-wallace",
+    "kind": "book",
+    "title": "Consider the Lobster: And Other Essays",
+    "authors": [
+      "David Foster Wallace"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "0316013323",
+      "isbn13": "9780316013321",
+      "goodreads": "690051"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/690051"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 2007,
+    "pages": 344,
+    "publisher": "Little, Brown Paperbacks",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-artemis-andy-weir",
+    "kind": "book",
+    "title": "Artemis",
+    "authors": [
+      "Andy Weir"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0553448129",
+      "isbn13": "9780553448122",
+      "goodreads": "34928122"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/34928122"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 2017,
+    "pages": 305,
+    "publisher": "Crown",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-plato-and-a-platypus-walk-into-a-bar-understanding-philosophy-through-thomas-cathcart",
+    "kind": "book",
+    "title": "Plato and a Platypus Walk into a Bar... Understanding Philosophy Through Jokes",
+    "authors": [
+      "Thomas Cathcart",
+      "Daniel Klein"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0143113879",
+      "isbn13": "9780143113874",
+      "goodreads": "3538130"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/3538130"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 2008,
+    "pages": 215,
+    "publisher": "Penguin Books",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-chronicles-of-a-liquid-society-posthumous-essays-on-culture-politics-a-umberto-eco",
+    "kind": "book",
+    "title": "Chronicles Of A Liquid Society: Posthumous Essays on Culture, Politics, and Ideas by the Author of The Name of the Rose",
+    "authors": [
+      "Umberto Eco"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1328505855",
+      "isbn13": "9781328505859",
+      "goodreads": "37570509"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/37570509"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 2018,
+    "pages": 320,
+    "publisher": "HarperVia",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-dictionary-of-the-khazars-milorad-pavi",
+    "kind": "book",
+    "title": "Dictionary of the Khazars",
+    "authors": [
+      "Milorad Pavić"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "067972754X",
+      "isbn13": "9780679727545",
+      "goodreads": "321567"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/321567"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 1989,
+    "pages": 338,
+    "publisher": "Vintage International",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-a-random-walk-down-wall-street-the-time-tested-strategy-for-successful-burton-g-malkiel",
+    "kind": "book",
+    "title": "A Random Walk Down Wall Street: The Time-Tested Strategy for Successful Investing",
+    "authors": [
+      "Burton G. Malkiel"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0393358380",
+      "isbn13": "9780393358384",
+      "goodreads": "48574083"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/48574083"
+      }
+    ],
+    "addedAt": "2022-11-02",
+    "format": "physical",
+    "year": 2020,
+    "pages": 480,
+    "publisher": "W. W. Norton & Company",
+    "updatedAt": "2022-11-02"
+  },
+  {
+    "id": "book-klara-and-the-sun-kazuo-ishiguro",
+    "kind": "book",
+    "title": "Klara and the Sun",
+    "authors": [
+      "Kazuo Ishiguro"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "059331817X",
+      "isbn13": "9780593318171",
+      "goodreads": "54120408"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/54120408"
+      }
+    ],
+    "addedAt": "2021-12-30",
+    "format": "physical",
+    "year": 2021,
+    "pages": 303,
+    "publisher": "Alfred A. Knopf",
+    "updatedAt": "2021-12-30"
+  },
+  {
+    "id": "book-thinking-fast-and-slow-daniel-kahneman",
+    "kind": "book",
+    "title": "Thinking, Fast and Slow",
+    "authors": [
+      "Daniel Kahneman"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0374275637",
+      "isbn13": "9780374275631",
+      "goodreads": "11468377"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11468377"
+      }
+    ],
+    "addedAt": "2021-12-30",
+    "format": "physical",
+    "year": 2011,
+    "pages": 499,
+    "publisher": "Farrar, Straus and Giroux",
+    "updatedAt": "2021-12-30"
+  },
+  {
+    "id": "book-romeo-and-juliet-william-shakespeare",
+    "kind": "book",
+    "title": "Romeo and Juliet",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "status": "completed",
+    "tags": [],
+    "identifiers": {
+      "isbn10": "0743477111",
+      "isbn13": "9780743477116",
+      "goodreads": "18135"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/18135"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2002,
+    "pages": 281,
+    "publisher": "Washington Square Press",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-algorithms-to-live-by-the-computer-science-of-human-decisions-brian-christian",
+    "kind": "book",
+    "title": "Algorithms to Live By: The Computer Science of Human Decisions",
+    "authors": [
+      "Brian  Christian",
+      "Tom  Griffiths"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1627790365",
+      "isbn13": "9781627790369",
+      "goodreads": "25666050"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/25666050"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2016,
+    "pages": 368,
+    "publisher": "Henry Holt and Co.",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-lightning-thief-the-graphic-novel-percy-jackson-and-the-olympians-robert-venditti",
+    "kind": "book",
+    "title": "The Lightning Thief: The Graphic Novel (Percy Jackson and the Olympians: The Graphic Novels, #1)",
+    "authors": [
+      "Robert Venditti",
+      "Rick Riordan",
+      "José Villarrubia",
+      "Attila Futaki"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1423116968",
+      "isbn13": "9781423116967",
+      "goodreads": "7736086"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7736086"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2010,
+    "pages": 135,
+    "publisher": "Disney-Hyperion",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-war-of-the-worlds-h-g-wells",
+    "kind": "book",
+    "title": "The War of the Worlds",
+    "authors": [
+      "H.G. Wells",
+      "Arthur C. Clarke"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0375759239",
+      "isbn13": "9780375759239",
+      "goodreads": "8909"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/8909"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2002,
+    "pages": 192,
+    "publisher": "Random House Publishing Group",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-2001-a-space-odyssey-space-odyssey-1-arthur-c-clarke",
+    "kind": "book",
+    "title": "2001: A Space Odyssey (Space Odyssey, #1)",
+    "authors": [
+      "Arthur C. Clarke"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "70535"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/70535"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2000,
+    "pages": 297,
+    "publisher": "Roc",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-time-machine-h-g-wells",
+    "kind": "book",
+    "title": "The Time Machine",
+    "authors": [
+      "H.G. Wells",
+      "Greg Bear",
+      "Carlo Pagetti"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "2493"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2493"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2002,
+    "pages": 118,
+    "publisher": "Signet Classics",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-neuromancer-sprawl-1-william-gibson",
+    "kind": "book",
+    "title": "Neuromancer (Sprawl, #1)",
+    "authors": [
+      "William Gibson",
+      "Jack Womack"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "6088007"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/6088007"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "ebook",
+    "year": 2018,
+    "pages": 268,
+    "publisher": "Ace",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-old-man-and-the-sea-ernest-hemingway",
+    "kind": "book",
+    "title": "The Old Man and the Sea",
+    "authors": [
+      "Ernest Hemingway"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0684830493",
+      "isbn13": "9780684830490",
+      "goodreads": "2165"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2165"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 1996,
+    "pages": 96,
+    "publisher": "Scribner",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-a-thousand-splendid-suns-khaled-hosseini",
+    "kind": "book",
+    "title": "A Thousand Splendid Suns",
+    "authors": [
+      "Khaled Hosseini"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1594489505",
+      "isbn13": "9781594489501",
+      "goodreads": "128029"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/128029"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2007,
+    "pages": 372,
+    "publisher": "Riverhead Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-adventures-of-tom-sawyer-mark-twain",
+    "kind": "book",
+    "title": "The Adventures of Tom Sawyer",
+    "authors": [
+      "Mark Twain",
+      "Guy Cardwell",
+      "John Seelye",
+      "Mark Hallaq",
+      "Amanda Lee"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn13": "9780143039563",
+      "goodreads": "24583"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/24583"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 244,
+    "publisher": "Penguin Classics",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-lost-hero-the-heroes-of-olympus-1-rick-riordan",
+    "kind": "book",
+    "title": "The Lost Hero (The Heroes of Olympus, #1)",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "142311339X",
+      "isbn13": "9781423113393",
+      "goodreads": "7736182"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7736182"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2010,
+    "pages": 576,
+    "publisher": "Disney-Hyperion Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-battle-of-the-labyrinth-percy-jackson-and-the-olympians-4-rick-riordan",
+    "kind": "book",
+    "title": "The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "1423101464",
+      "isbn13": "9781423101468",
+      "goodreads": "2120932"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2120932"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2008,
+    "pages": 361,
+    "publisher": "Hyperion Books for Children",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-titan-s-curse-percy-jackson-and-the-olympians-3-rick-riordan",
+    "kind": "book",
+    "title": "The Titan’s Curse (Percy Jackson and the Olympians, #3)",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "561456"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/561456"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "ebook",
+    "year": 2007,
+    "pages": 352,
+    "publisher": "Puffin Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-harry-potter-and-the-prisoner-of-azkaban-harry-potter-3-j-k-rowling",
+    "kind": "book",
+    "title": "Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)",
+    "authors": [
+      "J.K. Rowling",
+      "Mary GrandPré"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "043965548X",
+      "isbn13": "9780439655484",
+      "goodreads": "5"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2004,
+    "pages": 547,
+    "publisher": "Scholastic Inc.",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-catch-22-joseph-heller",
+    "kind": "book",
+    "title": "Catch-22",
+    "authors": [
+      "Joseph Heller"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0684833395",
+      "isbn13": "9780684833392",
+      "goodreads": "168668"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/168668"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2004,
+    "pages": 453,
+    "publisher": "Simon & Schuster",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-sea-of-monsters-percy-jackson-and-the-olympians-2-rick-riordan",
+    "kind": "book",
+    "title": "The Sea of Monsters (Percy Jackson and the Olympians, #2)",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0786856866",
+      "isbn13": "9780786856862",
+      "goodreads": "28186"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28186"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 279,
+    "publisher": "Hyperion Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-da-vinci-code-robert-langdon-2-dan-brown",
+    "kind": "book",
+    "title": "The Da Vinci Code (Robert Langdon, #2)",
+    "authors": [
+      "Dan    Brown"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "968"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/968"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 489,
+    "publisher": "Anchor",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-harry-potter-and-the-chamber-of-secrets-harry-potter-2-j-k-rowling",
+    "kind": "book",
+    "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+    "authors": [
+      "J.K. Rowling",
+      "Mary GrandPré"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "goodreads": "15881"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/15881"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 1999,
+    "pages": 341,
+    "publisher": "Arthur A. Levine Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-city-of-bones-the-mortal-instruments-1-cassandra-clare",
+    "kind": "book",
+    "title": "City of Bones (The Mortal Instruments, #1)",
+    "authors": [
+      "Cassandra Clare"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1416914285",
+      "isbn13": "9781416914280",
+      "goodreads": "256683"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/256683"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2007,
+    "pages": 485,
+    "publisher": "Margaret K. McElderry Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-me-before-you-me-before-you-1-jojo-moyes",
+    "kind": "book",
+    "title": "Me Before You (Me Before You, #1)",
+    "authors": [
+      "Jojo Moyes"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0670026603",
+      "isbn13": "9780670026609",
+      "goodreads": "17347634"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/17347634"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2012,
+    "pages": 369,
+    "publisher": "Pamela Dorman Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-lightning-thief-percy-jackson-and-the-olympians-1-rick-riordan",
+    "kind": "book",
+    "title": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0786838655",
+      "isbn13": "9780786838653",
+      "goodreads": "28187"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28187"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 377,
+    "publisher": "Disney Hyperion Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-fault-in-our-stars-john-green",
+    "kind": "book",
+    "title": "The Fault in Our Stars",
+    "authors": [
+      "John  Green"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "goodreads": "11870085"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11870085"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2012,
+    "pages": 313,
+    "publisher": "Dutton Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-all-the-light-we-cannot-see-anthony-doerr",
+    "kind": "book",
+    "title": "All the Light We Cannot See",
+    "authors": [
+      "Anthony Doerr"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1476746583",
+      "isbn13": "9781476746586",
+      "goodreads": "18143977"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/18143977"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2014,
+    "pages": 531,
+    "publisher": "Scribner",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-the-giver-giver-1-lois-lowry",
+    "kind": "book",
+    "title": "The Giver (Giver, #1)",
+    "authors": [
+      "Lois Lowry"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0385732554",
+      "isbn13": "9780385732550",
+      "goodreads": "3636"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/3636"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 208,
+    "publisher": "Ember",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-fahrenheit-451-ray-bradbury",
+    "kind": "book",
+    "title": "Fahrenheit 451",
+    "authors": [
+      "Ray Bradbury"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "13079982"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/13079982"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2011,
+    "pages": 249,
+    "publisher": "Simon & Schuster",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-harry-potter-and-the-sorcerer-s-stone-harry-potter-1-j-k-rowling",
+    "kind": "book",
+    "title": "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)",
+    "authors": [
+      "J.K. Rowling"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0439554934",
+      "isbn13": "9780439554930",
+      "goodreads": "3"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/3"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2003,
+    "pages": 309,
+    "publisher": "Scholastic Inc",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-project-hail-mary-andy-weir",
+    "kind": "book",
+    "title": "Project Hail Mary",
+    "authors": [
+      "Andy Weir"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0593135202",
+      "isbn13": "9780593135204",
+      "goodreads": "54493401"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/54493401"
+      }
+    ],
+    "addedAt": "2021-12-29",
+    "format": "physical",
+    "year": 2021,
+    "pages": 476,
+    "publisher": "Ballantine Books",
+    "updatedAt": "2021-12-29"
+  },
+  {
+    "id": "book-gravity-s-rainbow-thomas-pynchon",
+    "kind": "book",
+    "title": "Gravity’s Rainbow",
+    "authors": [
+      "Thomas Pynchon"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0143039946",
+      "isbn13": "9780143039945",
+      "goodreads": "415"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/415"
+      }
+    ],
+    "completedAt": "2021-10-25",
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2006,
+    "pages": 776,
+    "publisher": "Penguin Books",
+    "updatedAt": "2021-10-25"
+  },
+  {
+    "id": "book-doctor-faustus-thomas-mann",
+    "kind": "book",
+    "title": "Doctor Faustus",
+    "authors": [
+      "Thomas Mann",
+      "John E. Woods"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0375701168",
+      "isbn13": "9780375701160",
+      "goodreads": "34440"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/34440"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 1999,
+    "pages": 535,
+    "publisher": "Vintage",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-the-glass-bead-game-hermann-hesse",
+    "kind": "book",
+    "title": "The Glass Bead Game",
+    "authors": [
+      "Hermann Hesse",
+      "Richard Winston",
+      "Clara Winston",
+      "Theodore Ziolkowski"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "0312278497",
+      "isbn13": "9780312278496",
+      "goodreads": "16634"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/16634"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 1998,
+    "pages": 558,
+    "publisher": "Holt Paperbacks",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-the-magic-mountain-thomas-mann",
+    "kind": "book",
+    "title": "The Magic Mountain",
+    "authors": [
+      "Thomas Mann",
+      "John E. Woods"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn13": "9780593688137",
+      "goodreads": "88077"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/88077"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "ebook",
+    "year": 1996,
+    "pages": 706,
+    "publisher": "Vintage",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-the-master-and-margarita-mikhail-bulgakov",
+    "kind": "book",
+    "title": "The Master and Margarita",
+    "authors": [
+      "Mikhail Bulgakov",
+      "Diana Lewis Burgin",
+      "Katherine Tiernan O'Connor",
+      "Ellendea Proffer",
+      "Hans Fronius",
+      "Михаил Булгаков"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0679760806",
+      "isbn13": "9780679760801",
+      "goodreads": "117833"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/117833"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 1996,
+    "pages": 372,
+    "publisher": "Vintage International",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-bestiario-julio-cort-zar",
+    "kind": "book",
+    "title": "Bestiario",
+    "authors": [
+      "Julio Cortázar"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "8466309896",
+      "isbn13": "9788466309899",
+      "goodreads": "191373"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/191373"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2006,
+    "pages": 130,
+    "publisher": "Punto de Lectura",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-ficciones-jorge-luis-borges",
+    "kind": "book",
+    "title": "Ficciones",
+    "authors": [
+      "Jorge Luis Borges",
+      "Anthony Kerrigan",
+      "Anthony Bonner"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0802130305",
+      "isbn13": "9780802130303",
+      "goodreads": "426504"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/426504"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 1994,
+    "pages": 174,
+    "publisher": "Grove Press",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-q-luther-blissett",
+    "kind": "book",
+    "title": "Q",
+    "authors": [
+      "Luther Blissett",
+      "Shaun Whiteside"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0156031965",
+      "isbn13": "9780156031967",
+      "goodreads": "94034"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/94034"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2005,
+    "pages": 675,
+    "publisher": "Harper Paperbacks",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-on-ugliness-umberto-eco",
+    "kind": "book",
+    "title": "On Ugliness",
+    "authors": [
+      "Umberto Eco",
+      "Alastair McEwen"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0847829863",
+      "isbn13": "9780847829866",
+      "goodreads": "520738"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/520738"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2007,
+    "pages": 456,
+    "publisher": "Rizzoli",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-the-recognitions-william-gaddis",
+    "kind": "book",
+    "title": "The Recognitions",
+    "authors": [
+      "William Gaddis",
+      "William H. Gass"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0140187081",
+      "isbn13": "9780140187083",
+      "goodreads": "395058"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/395058"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 1993,
+    "pages": 976,
+    "publisher": "Penguin Classics",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-south-of-the-border-west-of-the-sun-haruki-murakami",
+    "kind": "book",
+    "title": "South of the Border, West of the Sun",
+    "authors": [
+      "Haruki Murakami",
+      "Philip Gabriel"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0099448572",
+      "isbn13": "9780099448570",
+      "goodreads": "17799"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/17799"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2006,
+    "pages": 190,
+    "publisher": "Vintage",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-killing-commendatore-haruki-murakami",
+    "kind": "book",
+    "title": "Killing Commendatore",
+    "authors": [
+      "Haruki Murakami"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "052552004X",
+      "isbn13": "9780525520047",
+      "goodreads": "38820047"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/38820047"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2018,
+    "pages": 681,
+    "publisher": "Knopf",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-the-elegant-universe-superstrings-hidden-dimensions-and-the-quest-for-brian-greene",
+    "kind": "book",
+    "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
+    "authors": [
+      "Brian Greene"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "039333810X",
+      "isbn13": "9780393338102",
+      "goodreads": "8049273"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/8049273"
+      }
+    ],
+    "addedAt": "2020-12-06",
+    "format": "physical",
+    "year": 2010,
+    "pages": 464,
+    "publisher": "W. W. Norton & Company",
+    "updatedAt": "2020-12-06"
+  },
+  {
+    "id": "book-snow-country-yasunari-kawabata",
+    "kind": "book",
+    "title": "雪国 [Snow Country]",
+    "authors": [
+      "Yasunari Kawabata"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "45868714"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/45868714"
+      }
+    ],
+    "addedAt": "2019-07-10",
+    "format": "physical",
+    "year": 1948,
+    "updatedAt": "2019-07-10"
+  },
+  {
+    "id": "book-1q84-1q84-1-3-haruki-murakami",
+    "kind": "book",
+    "title": "1Q84 (1Q84, #1-3)",
+    "authors": [
+      "Haruki Murakami",
+      "Jay Rubin",
+      "Philip Gabriel"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0307593312",
+      "isbn13": "9780307593313",
+      "goodreads": "10357575"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/10357575"
+      }
+    ],
+    "addedAt": "2019-07-10",
+    "format": "physical",
+    "year": 2011,
+    "pages": 944,
+    "publisher": "Knopf",
+    "updatedAt": "2019-07-10"
+  },
+  {
+    "id": "book-zoo-otsuichi",
+    "kind": "book",
+    "title": "Zoo",
+    "authors": [
+      "Otsuichi",
+      "Terry Gallagher"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "1421525879",
+      "isbn13": "9781421525877",
+      "goodreads": "6149338"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/6149338"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2009,
+    "pages": 257,
+    "publisher": "Haikasoru",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-salt-a-world-history-mark-kurlansky",
+    "kind": "book",
+    "title": "Salt: A World History",
+    "authors": [
+      "Mark Kurlansky"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0142001619",
+      "isbn13": "9780142001615",
+      "goodreads": "2715"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2715"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2003,
+    "pages": 484,
+    "publisher": "Penguin Books",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-the-black-swan-the-impact-of-the-highly-improbable-nassim-nicholas-taleb",
+    "kind": "book",
+    "title": "The Black Swan: The Impact of the Highly Improbable",
+    "authors": [
+      "Nassim Nicholas Taleb"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1400063515",
+      "isbn13": "9781400063512",
+      "goodreads": "242472"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/242472"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2007,
+    "pages": 480,
+    "publisher": "Random House",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-the-epic-of-gilgamesh-unknown",
+    "kind": "book",
+    "title": "The Epic of Gilgamesh",
+    "authors": [
+      "Unknown",
+      "N.K. Sandars",
+      "John Maier",
+      "Herbert Mason",
+      "John H. Marks",
+      "Morris Jastrow Jr."
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "isbn10": "0141026286",
+      "isbn13": "9780141026282",
+      "goodreads": "19351"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/19351"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2006,
+    "pages": 72,
+    "publisher": "Penguin Books Limited",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-walden-civil-disobedience-henry-david-thoreau",
+    "kind": "book",
+    "title": "Walden & Civil Disobedience",
+    "authors": [
+      "Henry David Thoreau",
+      "W.S. Merwin"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0451529456",
+      "isbn13": "9780451529459",
+      "goodreads": "116020"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/116020"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2004,
+    "pages": 320,
+    "publisher": "Signet Classics",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-homo-deus-a-brief-history-of-tomorrow-a-nyt-bestselling-popular-scienc-yuval-noah-harari",
+    "kind": "book",
+    "title": "Homo Deus: A Brief History of Tomorrow ― A NYT Bestselling Popular Science Book on Upgrading Humanity to Godhood",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0062464310",
+      "isbn13": "9780062464316",
+      "goodreads": "30363345"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/30363345"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 2017,
+    "pages": 449,
+    "publisher": "Harper",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-faust-first-part-johann-wolfgang-von-goethe",
+    "kind": "book",
+    "title": "Faust, First Part",
+    "authors": [
+      "Johann Wolfgang von Goethe",
+      "Peter Salm"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0553213482",
+      "isbn13": "9780553213485",
+      "goodreads": "14706"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/14706"
+      }
+    ],
+    "addedAt": "2019-07-08",
+    "format": "physical",
+    "year": 1988,
+    "pages": 327,
+    "publisher": "Bantam Classics",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-infinite-jest-david-foster-wallace",
+    "kind": "book",
+    "title": "Infinite Jest",
+    "authors": [
+      "David Foster Wallace"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "6759"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/6759"
+      }
+    ],
+    "completedAt": "2019-07-08",
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2005,
+    "pages": 1088,
+    "publisher": "Back Bay Books",
+    "updatedAt": "2019-07-08"
+  },
+  {
+    "id": "book-brave-new-world-and-brave-new-world-revisited-aldous-huxley",
+    "kind": "book",
+    "title": "Brave New World and Brave New World Revisited",
+    "authors": [
+      "Aldous Huxley",
+      "Christopher Hitchens"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0060776099",
+      "isbn13": "9780060776091",
+      "goodreads": "5479"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5479"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2005,
+    "pages": 340,
+    "publisher": "Harper Perennial Modern Classics",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-wuthering-heights-emily-bront",
+    "kind": "book",
+    "title": "Wuthering Heights",
+    "authors": [
+      "Emily Brontë",
+      "Richard J. Dunn",
+      "Charlotte Brontë",
+      "John Bugg",
+      "Robert Heindel"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 3.0,
+    "identifiers": {
+      "goodreads": "6185"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/6185"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2002,
+    "pages": 464,
+    "publisher": "Norton",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-a-clockwork-orange-anthony-burgess",
+    "kind": "book",
+    "title": "A Clockwork Orange",
+    "authors": [
+      "Anthony Burgess"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "227463"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/227463"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 1986,
+    "pages": 192,
+    "publisher": "W. W. Norton & Company",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-the-cat-in-the-hat-cat-in-the-hat-1-dr-seuss",
+    "kind": "book",
+    "title": "The Cat in the Hat (Cat in the Hat, #1)",
+    "authors": [
+      "Dr. Seuss"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "039480001X",
+      "isbn13": "9780394800011",
+      "goodreads": "233093"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/233093"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 1985,
+    "pages": 61,
+    "publisher": "Random House Books for Young Readers",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-the-hitchhiker-s-guide-to-the-galaxy-hitchhiker-s-guide-to-the-galaxy-douglas-adams",
+    "kind": "book",
+    "title": "The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1)",
+    "authors": [
+      "Douglas Adams"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "11"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2005,
+    "pages": 216,
+    "publisher": "Del Rey Books",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-the-chronicles-of-narnia-the-chronicles-of-narnia-1-7-c-s-lewis",
+    "kind": "book",
+    "title": "The Chronicles of Narnia (The Chronicles of Narnia, #1-7)",
+    "authors": [
+      "C.S. Lewis",
+      "Pauline Baynes"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0066238501",
+      "isbn13": "9780066238500",
+      "goodreads": "11127"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11127"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2014,
+    "pages": 767,
+    "publisher": "HarperCollins",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-jane-eyre-charlotte-bront",
+    "kind": "book",
+    "title": "Jane Eyre",
+    "authors": [
+      "Charlotte Brontë",
+      "Michael Mason"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0142437204",
+      "isbn13": "9780142437209",
+      "goodreads": "10210"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/10210"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2003,
+    "pages": 532,
+    "publisher": "Penguin",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-kafka-on-the-shore-haruki-murakami",
+    "kind": "book",
+    "title": "Kafka on the Shore",
+    "authors": [
+      "Haruki Murakami",
+      "Philip Gabriel"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "4929"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/4929"
+      }
+    ],
+    "addedAt": "2018-10-29",
+    "format": "physical",
+    "year": 2006,
+    "pages": 467,
+    "publisher": "Vintage International",
+    "updatedAt": "2018-10-29"
+  },
+  {
+    "id": "book-history-of-beauty-umberto-eco",
+    "kind": "book",
+    "title": "History of Beauty",
+    "authors": [
+      "Umberto Eco",
+      "Alastair McEwen"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0847826465",
+      "isbn13": "9780847826469",
+      "goodreads": "10505"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/10505"
+      }
+    ],
+    "addedAt": "2018-10-24",
+    "format": "physical",
+    "year": 2004,
+    "pages": 438,
+    "publisher": "Rizzoli",
+    "updatedAt": "2018-10-24"
+  },
+  {
+    "id": "book-the-call-of-the-wild-white-fang-jack-london",
+    "kind": "book",
+    "title": "The Call of the Wild / White Fang",
+    "authors": [
+      "Jack London"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "1587263890",
+      "isbn13": "9781587263897",
+      "goodreads": "37677"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/37677"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2006,
+    "pages": 292,
+    "publisher": "Ann Arbor Media",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-faust-johann-wolfgang-von-goethe",
+    "kind": "book",
+    "title": "Faust",
+    "authors": [
+      "Johann Wolfgang von Goethe",
+      "Walter Kaufmann"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0385031149",
+      "isbn13": "9780385031141",
+      "goodreads": "406373"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/406373"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1962,
+    "pages": 503,
+    "publisher": "Vintage",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-ulysses-james-joyce",
+    "kind": "book",
+    "title": "Ulysses",
+    "authors": [
+      "James Joyce",
+      "Morris L. Ernst",
+      "John M. Woolsey"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "338798"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/338798"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1990,
+    "pages": 783,
+    "publisher": "Vintage",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-heart-of-darkness-joseph-conrad",
+    "kind": "book",
+    "title": "Heart of Darkness",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "1892295490",
+      "isbn13": "9781892295491",
+      "goodreads": "4900"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/4900"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 188,
+    "publisher": "Green Integer Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-invisible-man-ralph-ellison",
+    "kind": "book",
+    "title": "Invisible Man",
+    "authors": [
+      "Ralph Ellison"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "16981"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/16981"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1995,
+    "pages": 581,
+    "publisher": "Vintage",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-war-and-peace-leo-tolstoy",
+    "kind": "book",
+    "title": "War and Peace",
+    "authors": [
+      "Leo Tolstoy",
+      "Aylmer Maude",
+      "Louise Maude"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0192833987",
+      "isbn13": "9780192833983",
+      "goodreads": "656"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/656"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1998,
+    "pages": 1392,
+    "publisher": "Oxford University Press",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-four-tragedies-hamlet-othello-king-lear-and-macbeth-william-shakespeare",
+    "kind": "book",
+    "title": "Four Tragedies: Hamlet, Othello, King Lear and Macbeth",
+    "authors": [
+      "William Shakespeare",
+      "David Bevington",
+      "David Scott Kastan"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0553212834",
+      "isbn13": "9780553212839",
+      "goodreads": "58061"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/58061"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1988,
+    "pages": 955,
+    "publisher": "Bantam Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-sapiens-a-brief-history-of-humankind-yuval-noah-harari",
+    "kind": "book",
+    "title": "Sapiens: A Brief History of Humankind",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "23692271"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/23692271"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2015,
+    "pages": 512,
+    "publisher": "Vintage",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-plague-albert-camus",
+    "kind": "book",
+    "title": "The Plague",
+    "authors": [
+      "Albert Camus",
+      "Stuart Gilbert"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "11989"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/11989"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1991,
+    "pages": 308,
+    "publisher": "Vintage International",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-death-of-a-naturalist-seamus-heaney",
+    "kind": "book",
+    "title": "Death of a Naturalist",
+    "authors": [
+      "Seamus Heaney"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0571202403",
+      "isbn13": "9780571202409",
+      "goodreads": "335140"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/335140"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1999,
+    "pages": 57,
+    "publisher": "Faber & Faber",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-dead-souls-nikolai-gogol",
+    "kind": "book",
+    "title": "Dead Souls",
+    "authors": [
+      "Nikolai Gogol",
+      "Robert A. Maguire"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0140448071",
+      "isbn13": "9780140448078",
+      "goodreads": "28381"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28381"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 464,
+    "publisher": "Penguin Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-tender-is-the-night-f-scott-fitzgerald",
+    "kind": "book",
+    "title": "Tender Is the Night",
+    "authors": [
+      "F. Scott Fitzgerald",
+      "Amor Towles"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "goodreads": "46164"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/46164"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1995,
+    "pages": 430,
+    "publisher": "Scribner",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-doctor-zhivago-boris-pasternak",
+    "kind": "book",
+    "title": "Doctor Zhivago",
+    "authors": [
+      "Boris Pasternak",
+      "John Bayley",
+      "Max Hayward",
+      "Manya Harari"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0679774386",
+      "isbn13": "9780679774389",
+      "goodreads": "130440"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/130440"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1997,
+    "pages": 592,
+    "publisher": "Pantheon",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-problem-of-china-bertrand-russell",
+    "kind": "book",
+    "title": "The Problem of China",
+    "authors": [
+      "Bertrand Russell"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "142647458X",
+      "isbn13": "9781426474583",
+      "goodreads": "1258011"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1258011"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2007,
+    "pages": 200,
+    "publisher": "BiblioBazaar",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-spqr-a-history-of-ancient-rome-mary-beard",
+    "kind": "book",
+    "title": "SPQR: A History of Ancient Rome",
+    "authors": [
+      "Mary Beard"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "1631492225",
+      "isbn13": "9781631492228",
+      "goodreads": "28789711"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28789711"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2016,
+    "pages": 606,
+    "publisher": "Liveright",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-night-elie-wiesel",
+    "kind": "book",
+    "title": "Night",
+    "authors": [
+      "Elie Wiesel",
+      "Marion Wiesel",
+      "François Mauriac"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0374500010",
+      "isbn13": "9780374500016",
+      "goodreads": "1617"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1617"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2006,
+    "pages": 120,
+    "publisher": "Hill & Wang",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-of-mice-and-men-john-steinbeck",
+    "kind": "book",
+    "title": "Of Mice and Men",
+    "authors": [
+      "John Steinbeck"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0142000671",
+      "isbn13": "9780142000670",
+      "goodreads": "890"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/890"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2002,
+    "pages": 107,
+    "publisher": "Penguin Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-othello-william-shakespeare",
+    "kind": "book",
+    "title": "Othello",
+    "authors": [
+      "William Shakespeare",
+      "Barbara A. Mowat",
+      "Paul Werstine"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "12996"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/12996"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 319,
+    "publisher": "Simon & Schuster",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-prince-niccol-machiavelli",
+    "kind": "book",
+    "title": "The Prince",
+    "authors": [
+      "Niccolò Machiavelli",
+      "Rufus Goodwin",
+      "Benjamin Martinez",
+      "W.K. Marriott",
+      "Denis Daly",
+      "Μαρία Κασωτάκη"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0937832383",
+      "isbn13": "9780937832387",
+      "goodreads": "28862"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28862"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2014,
+    "pages": 144,
+    "publisher": "Dante University Press",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-scarlet-letter-nathaniel-hawthorne",
+    "kind": "book",
+    "title": "The Scarlet Letter",
+    "authors": [
+      "Nathaniel Hawthorne",
+      "Nina Baym",
+      "Thomas E. Connolly"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0142437263",
+      "isbn13": "9780142437261",
+      "goodreads": "12296"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/12296"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2002,
+    "pages": 279,
+    "publisher": "Penguin Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-a-game-of-thrones-a-song-of-ice-and-fire-1-george-r-r-martin",
+    "kind": "book",
+    "title": "A Game of Thrones (A Song of Ice and Fire, #1)",
+    "authors": [
+      "George R.R. Martin"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "13496"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/13496"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2005,
+    "pages": 835,
+    "publisher": "Bantam",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-to-kill-a-mockingbird-harper-lee",
+    "kind": "book",
+    "title": "To Kill a Mockingbird",
+    "authors": [
+      "Harper Lee"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0060935464",
+      "isbn13": "9780060935467",
+      "goodreads": "2657"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2657"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2006,
+    "pages": 323,
+    "publisher": "Harper Perennial Modern Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-count-of-monte-cristo-alexandre-dumas",
+    "kind": "book",
+    "title": "The Count of Monte Cristo",
+    "authors": [
+      "Alexandre Dumas",
+      "Robin Buss"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0140449264",
+      "isbn13": "9780140449266",
+      "goodreads": "7126"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7126"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 1276,
+    "publisher": "Penguin Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-grapes-of-wrath-john-steinbeck",
+    "kind": "book",
+    "title": "The Grapes of Wrath",
+    "authors": [
+      "John Steinbeck"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "067001690X",
+      "isbn13": "9780670016907",
+      "goodreads": "18114322"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/18114322"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2014,
+    "pages": 536,
+    "publisher": "Viking",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-dead-james-joyce",
+    "kind": "book",
+    "title": "The Dead",
+    "authors": [
+      "James Joyce"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn13": "9780974960906",
+      "goodreads": "23289"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/23289"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2011,
+    "pages": 100,
+    "publisher": "Melville House Publishing",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-mythologies-w-b-yeats",
+    "kind": "book",
+    "title": "Mythologies",
+    "authors": [
+      "W.B. Yeats"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0684826216",
+      "isbn13": "9780684826219",
+      "goodreads": "694807"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/694807"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1998,
+    "pages": 368,
+    "publisher": "Touchstone Simon & Schuster",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-a-portrait-of-the-artist-as-a-young-man-james-joyce",
+    "kind": "book",
+    "title": "A Portrait of the Artist as a Young Man",
+    "authors": [
+      "James Joyce",
+      "Seamus Deane"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "goodreads": "54104"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/54104"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2000,
+    "pages": 329,
+    "publisher": "Penguin Books /Penguin Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-brothers-karamazov-fyodor-dostoevsky",
+    "kind": "book",
+    "title": "The Brothers Karamazov",
+    "authors": [
+      "Fyodor Dostoevsky",
+      "Richard Pevear",
+      "Larissa Volokhonsky"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0374528373",
+      "isbn13": "9780374528379",
+      "goodreads": "4934"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/4934"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2002,
+    "pages": 796,
+    "publisher": "Farrar, Straus and Giroux",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-a-farewell-to-arms-ernest-hemingway",
+    "kind": "book",
+    "title": "A Farewell to Arms",
+    "authors": [
+      "Ernest Hemingway"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0099910101",
+      "isbn13": "9780099910107",
+      "goodreads": "10799"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/10799"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 304,
+    "publisher": "Arrow Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-metamorphosis-franz-kafka",
+    "kind": "book",
+    "title": "The Metamorphosis",
+    "authors": [
+      "Franz Kafka",
+      "Stanley Corngold"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0553213695",
+      "isbn13": "9780553213690",
+      "goodreads": "485894"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/485894"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1972,
+    "pages": 201,
+    "publisher": "Bantam Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-frankenstein-mary-wollstonecraft-shelley",
+    "kind": "book",
+    "title": "Frankenstein",
+    "authors": [
+      "Mary Wollstonecraft Shelley"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "goodreads": "18490"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/18490"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 288,
+    "publisher": "Penguin",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-oedipus-rex-the-theban-plays-1-sophocles",
+    "kind": "book",
+    "title": "Oedipus Rex  (The Theban Plays, #1)",
+    "authors": [
+      "Sophocles",
+      "J.E. Thomas",
+      "Elizabeth Osborne"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "1580495931",
+      "isbn13": "9781580495936",
+      "goodreads": "1554"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1554"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 75,
+    "publisher": "Prestwick House Inc",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-call-of-the-wild-jack-london",
+    "kind": "book",
+    "title": "The Call of the Wild",
+    "authors": [
+      "Jack London",
+      "Avi"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "1852"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1852"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2001,
+    "pages": 172,
+    "publisher": "Scholastic",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-one-hundred-years-of-solitude-gabriel-garc-a-m-rquez",
+    "kind": "book",
+    "title": "One Hundred Years of Solitude",
+    "authors": [
+      "Gabriel García Márquez",
+      "Gregory Rabassa"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "320"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/320"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 417,
+    "publisher": "Harper",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-walden-or-life-in-the-woods-henry-david-thoreau",
+    "kind": "book",
+    "title": "Walden or, Life in the Woods",
+    "authors": [
+      "Henry David Thoreau",
+      "Bill McKibben"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "goodreads": "16902"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/16902"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 352,
+    "publisher": "Princeton University Press",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-skeleton-crew-stephen-king",
+    "kind": "book",
+    "title": "Skeleton Crew",
+    "authors": [
+      "Stephen  King"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0751504386",
+      "isbn13": "9780751504385",
+      "goodreads": "13440"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/13440"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2002,
+    "pages": 672,
+    "publisher": "Time Warner Paperbacks",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-2666-roberto-bola-o",
+    "kind": "book",
+    "title": "2666",
+    "authors": [
+      "Roberto Bolaño"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "843396867X",
+      "isbn13": "9788433968678",
+      "goodreads": "63032"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/63032"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 1128,
+    "publisher": "Anagrama",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-phantom-of-the-opera-gaston-leroux",
+    "kind": "book",
+    "title": "The Phantom of the Opera",
+    "authors": [
+      "Gaston Leroux"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0060809248",
+      "isbn13": "9780060809249",
+      "goodreads": "480204"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/480204"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1987,
+    "pages": 360,
+    "publisher": "Harper Perennial",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-1984-george-orwell",
+    "kind": "book",
+    "title": "1984",
+    "authors": [
+      "George Orwell"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "5470"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5470"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1950,
+    "pages": 328,
+    "publisher": "New American Library",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-lempri-re-s-dictionary-lawrence-norfolk",
+    "kind": "book",
+    "title": "Lemprière's Dictionary",
+    "authors": [
+      "Lawrence Norfolk"
+    ],
+    "status": "planned",
+    "tags": [
+      "to-read"
+    ],
+    "identifiers": {
+      "isbn10": "0517581841",
+      "isbn13": "9780517581841",
+      "goodreads": "984216"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/984216"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1992,
+    "pages": 626,
+    "publisher": "Harmony",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-our-ancestors-italo-calvino",
+    "kind": "book",
+    "title": "Our Ancestors",
+    "authors": [
+      "Italo Calvino"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "9806"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/9806"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1980,
+    "pages": 393,
+    "publisher": "Picador",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-foucault-s-pendulum-umberto-eco",
+    "kind": "book",
+    "title": "Foucault’s Pendulum",
+    "authors": [
+      "Umberto Eco",
+      "William Weaver"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "015603297X",
+      "isbn13": "9780156032971",
+      "goodreads": "17841"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/17841"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2007,
+    "pages": 623,
+    "publisher": "Mariner Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-prague-cemetery-umberto-eco",
+    "kind": "book",
+    "title": "The Prague Cemetery",
+    "authors": [
+      "Umberto Eco",
+      "Richard Dixon"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0547577532",
+      "isbn13": "9780547577531",
+      "goodreads": "10314376"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/10314376"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2011,
+    "pages": 445,
+    "publisher": "Houghton Mifflin Harcourt",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-name-of-the-rose-umberto-eco",
+    "kind": "book",
+    "title": "The Name of the Rose",
+    "authors": [
+      "Umberto Eco",
+      "William Weaver"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0156001314",
+      "isbn13": "9780156001311",
+      "goodreads": "119073"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/119073"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1994,
+    "pages": 552,
+    "publisher": "Houghton Mifflin Harcourt",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-brave-new-world-aldous-huxley",
+    "kind": "book",
+    "title": "Brave New World",
+    "authors": [
+      "Aldous Huxley"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0060929871",
+      "isbn13": "9780060929879",
+      "goodreads": "5129"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5129"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1998,
+    "pages": 288,
+    "publisher": "HarperPerennial / Perennial Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-anna-karenina-leo-tolstoy",
+    "kind": "book",
+    "title": "Anna Karenina",
+    "authors": [
+      "Leo Tolstoy",
+      "Aylmer Maude",
+      "Louise Maude",
+      "Dieter Wellershoff",
+      "Bruno Goetz",
+      "Lev Tolstoj"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0345803922",
+      "isbn13": "9780345803924",
+      "goodreads": "15823480"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/15823480"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2012,
+    "pages": 964,
+    "publisher": "Vintage",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-time-machine-the-invisible-man-h-g-wells",
+    "kind": "book",
+    "title": "The Time Machine / The Invisible Man",
+    "authors": [
+      "H.G. Wells",
+      "Alfred Mac Adam"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "1593083254",
+      "isbn13": "9781593083250",
+      "goodreads": "17136"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/17136"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2005,
+    "pages": 288,
+    "publisher": "Barnes & Noble Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-strange-case-of-dr-jekyll-and-mr-hyde-and-other-tales-of-terror-robert-louis-stevenson",
+    "kind": "book",
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde and Other Tales of Terror",
+    "authors": [
+      "Robert Louis Stevenson",
+      "Robert Mighall"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0141439734",
+      "isbn13": "9780141439730",
+      "goodreads": "51497"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/51497"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 224,
+    "publisher": "Penguin Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-perfume-the-story-of-a-murderer-patrick-s-skind",
+    "kind": "book",
+    "title": "Perfume: The Story of a Murderer",
+    "authors": [
+      "Patrick Süskind",
+      "John E. Woods"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "343"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/343"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1987,
+    "pages": 263,
+    "publisher": "Penguin Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-picture-of-dorian-gray-oscar-wilde",
+    "kind": "book",
+    "title": "The Picture of Dorian Gray",
+    "authors": [
+      "Oscar Wilde",
+      "Jeffrey Eugenides"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "5297"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5297"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2004,
+    "pages": 272,
+    "publisher": "Random House: Modern Library",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-little-prince-antoine-de-saint-exup-ry",
+    "kind": "book",
+    "title": "The Little Prince",
+    "authors": [
+      "Antoine de Saint-Exupéry",
+      "Richard Howard"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0152023984",
+      "isbn13": "9780152023980",
+      "goodreads": "157993"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/157993"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2000,
+    "pages": 96,
+    "publisher": "Harcourt, Inc.",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-life-the-universe-and-everything-the-hitchhiker-s-guide-to-the-galaxy-douglas-adams",
+    "kind": "book",
+    "title": "Life, the Universe and Everything (The Hitchhiker's Guide to the Galaxy, #3)",
+    "authors": [
+      "Douglas Adams"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0345418905",
+      "isbn13": "9780345418906",
+      "goodreads": "8694"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/8694"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1997,
+    "pages": 224,
+    "publisher": "Random House Worlds",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-pride-and-prejudice-jane-austen",
+    "kind": "book",
+    "title": "Pride and Prejudice",
+    "authors": [
+      "Jane Austen",
+      "Anna Quindlen"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "1441341706",
+      "isbn13": "9781441341709",
+      "goodreads": "1885"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1885"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2023,
+    "pages": 279,
+    "publisher": "Modern Library",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-secret-garden-frances-hodgson-burnett",
+    "kind": "book",
+    "title": "The Secret Garden",
+    "authors": [
+      "Frances Hodgson Burnett"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0517189607",
+      "isbn13": "9780517189603",
+      "goodreads": "2998"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/2998"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1998,
+    "pages": 331,
+    "publisher": "Children's Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-les-mis-rables-victor-hugo",
+    "kind": "book",
+    "title": "Les Misérables",
+    "authors": [
+      "Victor Hugo",
+      "Norman MacAfee",
+      "Charles E. Wilbour",
+      "Lee Fahnestock",
+      "Isabel Florence Hapgood"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0451525264",
+      "isbn13": "9780451525260",
+      "goodreads": "24280"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/24280"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1987,
+    "pages": 1488,
+    "publisher": "Signet Classics",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-stranger-albert-camus",
+    "kind": "book",
+    "title": "The Stranger",
+    "authors": [
+      "Albert Camus",
+      "Matthew  Ward"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "49552"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/49552"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 1989,
+    "pages": 123,
+    "publisher": "Vintage International",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-great-gatsby-f-scott-fitzgerald",
+    "kind": "book",
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 4.0,
+    "identifiers": {
+      "isbn10": "0743273567",
+      "isbn13": "9780743273565",
+      "goodreads": "4671"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/4671"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2025,
+    "pages": 180,
+    "publisher": "Scribner",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-the-catcher-in-the-rye-j-d-salinger",
+    "kind": "book",
+    "title": "The Catcher in the Rye",
+    "authors": [
+      "J.D. Salinger"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "isbn10": "0316769177",
+      "isbn13": "9780316769174",
+      "goodreads": "5107"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/5107"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2001,
+    "pages": 277,
+    "publisher": "Back Bay Books",
+    "updatedAt": "2018-07-27"
+  },
+  {
+    "id": "book-animal-farm-george-orwell",
+    "kind": "book",
+    "title": "Animal Farm",
+    "authors": [
+      "George Orwell",
+      "Ann Patchett",
+      "Téa Obreht"
+    ],
+    "status": "completed",
+    "tags": [],
+    "rating": 5.0,
+    "identifiers": {
+      "goodreads": "7613"
+    },
+    "links": [
+      {
+        "label": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7613"
+      }
+    ],
+    "addedAt": "2018-07-27",
+    "format": "physical",
+    "year": 2003,
+    "pages": 129,
+    "publisher": "Plume",
+    "updatedAt": "2018-07-27"
   }
 ]
