@@ -92,5 +92,6 @@ export function bookFormatLabel(format: BookFormat): string {
 
 export function readDate(value?: string): string | null {
   if (!value) return null;
+  if (/^\d{4}$/.test(value)) return value;
   return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value));
 }
