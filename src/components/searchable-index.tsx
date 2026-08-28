@@ -84,7 +84,10 @@ export default function SearchableIndex<T>({
               <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
               <span className="sr-only">Search {title}</span>
               <input
-                type="search"
+                type="text"
+                inputMode="search"
+                role="searchbox"
+                autoComplete="off"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
                 className="h-11 w-full border-0 bg-transparent pl-7 pr-10 text-sm text-neutral-900 outline-none placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-0"
