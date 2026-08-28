@@ -19,6 +19,7 @@ function searchableText(entry: ReadEntry): string {
     ...Object.values(entry.identifiers ?? {}),
     entry.progress?.label,
     entry.progress?.remaining,
+    entry.favoriteRank ? "favorite permanent shelf" : undefined,
     ...(entry.kind === "paper" ? [entry.abstract, entry.venue, ...(entry.categories ?? [])] : [entry.publisher, ...(entry.narrators ?? [])]),
   ]
     .filter(Boolean)
@@ -42,7 +43,10 @@ export default function ReadingArchive({
   const books = kind === "book";
   const filteredBooks = books ? filtered as BookRead[] : [];
   const currentBooks = filteredBooks.filter((entry) => entry.status === "active");
-  const finishedBooks = filteredBooks.filter((entry) => entry.status === "completed");
+  const favoriteBooks = filteredBooks
+    .filter((entry) => entry.status === "completed" && entry.favoriteRank != null)
+    .sort((left, right) => (left.favoriteRank ?? 0) - (right.favoriteRank ?? 0));
+  const finishedBooks = filteredBooks.filter((entry) => entry.status === "completed" && entry.favoriteRank == null);
 
   return (
     <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
@@ -107,15 +111,32 @@ export default function ReadingArchive({
                   </section>
                 )}
 
+                {favoriteBooks.length > 0 && (
+                  <section aria-labelledby="favorite-books-heading" className={currentBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
+                    <div className="flex items-end justify-between gap-4 border-b border-black/10 pb-3">
+                      <div>
+                        <h2 id="favorite-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">The permanent shelf</h2>
+                        <p className="mt-1.5 text-xs text-neutral-500">Books I keep returning to.</p>
+                      </div>
+                      <span className="text-xs text-neutral-500">{favoriteBooks.length}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-6 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-8">
+                      {favoriteBooks.map((entry, index) => (
+                        <BookShelfCard key={entry.id} entry={entry} eagerCover={currentBooks.length === 0 && index < 4} />
+                      ))}
+                    </div>
+                  </section>
+                )}
+
                 {finishedBooks.length > 0 && (
-                  <section aria-labelledby="finished-books-heading" className={currentBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
+                  <section aria-labelledby="finished-books-heading" className={currentBooks.length > 0 || favoriteBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
                     <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-3">
                       <h2 id="finished-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">Finished</h2>
                       <span className="text-xs text-neutral-500">{finishedBooks.length}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-8">
                       {finishedBooks.map((entry, index) => (
-                        <BookShelfCard key={entry.id} entry={entry} eagerCover={currentBooks.length === 0 && index < 4} />
+                        <BookShelfCard key={entry.id} entry={entry} eagerCover={currentBooks.length === 0 && favoriteBooks.length === 0 && index < 4} />
                       ))}
                     </div>
                   </section>

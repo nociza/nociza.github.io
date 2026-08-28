@@ -34,6 +34,7 @@ interface ReadBase {
   excerpt?: string;
   reflection?: string;
   tags?: string[];
+  favoriteRank?: number;
   rating?: number;
   progress?: ReadProgress;
   identifiers?: ReadIdentifiers;

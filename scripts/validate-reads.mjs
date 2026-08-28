@@ -20,6 +20,7 @@ function validDate(value) {
 if (!Array.isArray(entries)) throw new Error("reads.json must contain an array");
 
 const ids = new Set();
+const favoriteRanks = new Set();
 for (const [index, entry] of entries.entries()) {
   const label = `reads.json[${index}]`;
   if (!entry || typeof entry !== "object" || Array.isArray(entry)) throw new Error(`${label} must be an object`);
@@ -37,6 +38,14 @@ for (const [index, entry] of entries.entries()) {
   }
   if (entry.kind === "book" && !formats.has(entry.format)) throw new Error(`${label}.format is invalid`);
   if (entry.kind === "paper" && !entry.url && !entry.identifiers?.arxiv && !entry.identifiers?.doi) throw new Error(`${label} needs a URL, arXiv ID, or DOI`);
+  const favorite = entry.tags?.includes("permanent-shelf") ?? false;
+  if (entry.favoriteRank != null) {
+    if (entry.kind !== "book" || entry.status !== "completed" || !favorite || !entry.cover || !Number.isInteger(entry.favoriteRank) || entry.favoriteRank < 1) throw new Error(`${label}.favoriteRank is invalid`);
+    if (favoriteRanks.has(entry.favoriteRank)) throw new Error(`${label}.favoriteRank is duplicated`);
+    favoriteRanks.add(entry.favoriteRank);
+  } else if (favorite) {
+    throw new Error(`${label} permanent-shelf tag requires favoriteRank`);
+  }
   if (entry.progress?.percent != null && (typeof entry.progress.percent !== "number" || entry.progress.percent < 0 || entry.progress.percent > 100)) throw new Error(`${label}.progress.percent is invalid`);
   if (entry.cover) {
     if (typeof entry.cover !== "string" || !entry.cover.startsWith("/images/reads/") || entry.cover.includes("..")) throw new Error(`${label}.cover must be a local reading-cover path`);

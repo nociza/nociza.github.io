@@ -94,7 +94,10 @@
       "Margaret Canovan"
     ],
     "status": "completed",
-    "tags": [],
+    "tags": [
+      "permanent-shelf"
+    ],
+    "favoriteRank": 4,
     "rating": 5,
     "identifiers": {
       "isbn10": "0226025985",
@@ -330,7 +333,10 @@
       "Alan Moore"
     ],
     "status": "completed",
-    "tags": [],
+    "tags": [
+      "permanent-shelf"
+    ],
+    "favoriteRank": 1,
     "rating": 5,
     "identifiers": {
       "goodreads": "38246560"
@@ -344,7 +350,8 @@
     "completedAt": "2026-01-20",
     "addedAt": "2020-12-08",
     "format": "audiobook",
-    "updatedAt": "2026-01-20"
+    "updatedAt": "2026-01-20",
+    "cover": "/images/reads/book-jerusalem-alan-moore.jpg"
   },
   {
     "id": "221cb2de-72bc-80fc-b11f-f7864597aa0d",
@@ -2611,7 +2618,10 @@
       "David Foster Wallace"
     ],
     "status": "completed",
-    "tags": [],
+    "tags": [
+      "permanent-shelf"
+    ],
+    "favoriteRank": 2,
     "rating": 5,
     "identifiers": {
       "goodreads": "6759"
@@ -2628,7 +2638,8 @@
     "year": 2005,
     "pages": 1088,
     "publisher": "Back Bay Books",
-    "updatedAt": "2019-07-08"
+    "updatedAt": "2019-07-08",
+    "cover": "/images/reads/book-infinite-jest-david-foster-wallace.jpg"
   },
   {
     "id": "book-brave-new-world-and-brave-new-world-revisited-aldous-huxley",
@@ -4084,7 +4095,10 @@
       "William Weaver"
     ],
     "status": "completed",
-    "tags": [],
+    "tags": [
+      "permanent-shelf"
+    ],
+    "favoriteRank": 3,
     "rating": 5,
     "identifiers": {
       "isbn10": "015603297X",
