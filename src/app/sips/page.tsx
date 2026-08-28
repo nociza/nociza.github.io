@@ -68,15 +68,27 @@ export default function SipsPage() {
               This journal is published with{" "}
               <a
                 href="https://github.com/nociza/siplogue"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1 text-neutral-700 underline decoration-black/20 underline-offset-4 transition hover:text-neutral-950 hover:decoration-black/50"
               >
                 Sip <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
               </a>{", an open-source skill that turns a photo and rough notes into a polished entry."}
             </p>
           </div>
-          <Link href="/coffee" className="inline-flex items-center gap-1.5 transition hover:text-neutral-950">
-            Legacy coffee archive <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-          </Link>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 sm:justify-end">
+            <a
+              href="https://www.goodreads.com/user/show/84703211-alex-zhang"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 transition hover:text-neutral-950"
+            >
+              Goodreads <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+            </a>
+            <Link href="/coffee" className="inline-flex items-center gap-1.5 transition hover:text-neutral-950">
+              Legacy coffee archive <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </footer>
       </div>
     </main>
