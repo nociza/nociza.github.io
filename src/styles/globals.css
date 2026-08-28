@@ -70,15 +70,55 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
   body {
-    @apply bg-background text-foreground font-inconsolata;
+    @apply bg-[#f4f4f1] text-foreground font-inconsolata antialiased;
+    min-height: 100dvh;
+  }
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+  a,
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: 2px solid rgba(23, 23, 23, 0.9);
+    outline-offset: 4px;
+  }
+  ::selection {
+    background: rgba(194, 116, 38, 0.2);
+    color: rgb(23, 23, 23);
   }
 }
 
 /* Custom styles for the original design */
 .page-container {
-  padding: 96px;
+  min-height: 100dvh;
+  padding: clamp(1.5rem, 7.5vw, 6rem);
   font-family: var(--font-mono);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 9999px;
+  background: rgb(23, 23, 23);
+  color: white;
+  padding: 0.65rem 1rem;
+  font-size: 0.75rem;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .heading-normal {
@@ -200,8 +240,9 @@
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
-  height: 100vh;
+  height: 100dvh;
   position: relative;
+  overscroll-behavior-y: contain;
   /* Hide scrollbar for cleaner look */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -214,10 +255,10 @@
 .scroll-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   content-visibility: auto;
-  contain-intrinsic-size: 100vh;
+  contain-intrinsic-size: 100dvh;
   /* Add subtle transition for smoother feel */
   transition: transform 0.3s ease-out;
 }
@@ -226,6 +267,32 @@
 .scroll-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
+}
+
+@media (max-width: 640px) {
+  .scroll-container {
+    scroll-snap-type: y proximity;
+  }
+
+  .scroll-section {
+    scroll-snap-stop: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .scroll-container {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

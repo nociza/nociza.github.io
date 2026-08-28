@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface CollapsibleSectionProps {
   title: string;
@@ -15,20 +16,33 @@ export default function CollapsibleSection({
   onToggle,
   children,
 }: CollapsibleSectionProps) {
+  const panelId = `resume-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
   return (
-    <div className="flex flex-col items-start gap-1">
+    <div className="flex w-full max-w-xl flex-col items-start gap-1">
       <button
-        className="text-left transition-all hover:underline"
+        type="button"
+        className="group flex min-h-10 w-full items-center justify-between gap-4 rounded-sm py-1 text-left transition-colors hover:text-orange-700"
         onClick={onToggle}
+        aria-expanded={isOpen}
+        aria-controls={panelId}
       >
-        {title}
+        <span>{title}</span>
+        <ChevronDown
+          aria-hidden="true"
+          className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        id={panelId}
+        aria-hidden={!isOpen}
+        className={`grid w-full transition-[grid-template-rows,opacity] duration-300 ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="text-sm font-light font-inconsolata">{children}</div>
+        <div className="overflow-hidden">
+          <div className={`${isOpen ? "visible" : "invisible"} pb-3 pr-6 text-sm font-light leading-6 font-inconsolata`}>{children}</div>
+        </div>
       </div>
     </div>
   );

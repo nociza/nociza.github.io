@@ -55,10 +55,10 @@ export default function SipEntryPage({ params }: { params: { slug: string } }) {
       <article>
         <div className="mx-auto max-w-5xl px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7">
           <nav className="flex items-center justify-between border-b border-black/10 pb-5 text-sm text-neutral-600">
-            <Link href="/sips" className="inline-flex items-center gap-2 transition hover:text-neutral-950">
+            <Link href="/sips" className="inline-flex min-h-10 items-center gap-2 transition hover:text-neutral-950">
               <ArrowLeft aria-hidden="true" className="h-4 w-4" /> Siplogue
             </Link>
-            <span className="capitalize">{entry.kind} entry</span>
+            <span className="inline-flex min-h-10 items-center capitalize">{entry.kind} entry</span>
           </nav>
 
           <header className="max-w-3xl pb-10 pt-14 sm:pb-12 sm:pt-20">
@@ -111,7 +111,7 @@ export default function SipEntryPage({ params }: { params: { slug: string } }) {
 
           <footer className="mt-20 flex items-center justify-between border-t border-black/10 pt-6 text-xs text-neutral-500">
             <span>Published {formatSipDate(entry.publishedAt)}</span>
-            <Link href="/sips" className="transition hover:text-neutral-950">More entries</Link>
+            <Link href="/sips" className="inline-flex min-h-10 items-center transition hover:text-neutral-950">More entries</Link>
           </footer>
         </div>
       </article>

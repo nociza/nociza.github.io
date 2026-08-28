@@ -38,7 +38,7 @@ const socialLinks: SocialLink[] = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-3 pt-5">
+    <div className="flex gap-2 pt-5">
       {socialLinks.map(({ href, label, icon: Icon }) => (
         <Link
           key={label}
@@ -46,7 +46,7 @@ export default function SocialLinks() {
           aria-label={label}
           target="_blank"
           rel="noreferrer"
-          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="flex h-11 w-11 items-center justify-center rounded-full text-neutral-700 transition-colors hover:bg-black/[0.045] hover:text-neutral-950"
         >
           <Icon size={20} strokeWidth={1.75} />
         </Link>

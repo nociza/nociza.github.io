@@ -1,8 +1,9 @@
-import { Suspense } from "react";
-import { Loader2 } from "lucide-react";
+import type { Metadata } from "next";
 import CoffeeDetailClient from "./coffee-detail-client";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { coffeeEntries } from "@/data/site-data";
+import { generateMetadata as makeMetadata } from "@/lib/seo";
 
 interface CoffeeEntry {
   id: string;
@@ -50,23 +51,24 @@ export async function generateStaticParams() {
   }
 }
 
+export function generateMetadata({ params }: { params: { id: string } }): Metadata {
+  const coffee = coffeeEntries.find((entry) => entry.id === params.id);
+  if (!coffee) return {};
+  return makeMetadata({
+    title: coffee.name,
+    description: coffee.notes && coffee.notes !== "No notes available"
+      ? coffee.notes
+      : `${coffee.name}, roasted by ${coffee.roaster}, in the coffee archive.`,
+    url: `/coffee/${coffee.id}`,
+    type: "article",
+    tags: ["coffee", coffee.roaster, coffee.origin, coffee.process].filter((tag): tag is string => Boolean(tag)),
+  });
+}
+
 export default function CoffeeDetailPage({
   params,
 }: {
   params: { id: string };
 }) {
-  return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen flex items-center justify-center page-container">
-          <div className="flex items-center gap-2">
-            <Loader2 className="w-6 h-6 animate-spin" />
-            <span className="font-inconsolata">Loading coffee details...</span>
-          </div>
-        </div>
-      }
-    >
-      <CoffeeDetailClient params={params} />
-    </Suspense>
-  );
+  return <CoffeeDetailClient params={params} />;
 }

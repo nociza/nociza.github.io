@@ -7,8 +7,8 @@ export default function BooksSection() {
   const visible = activeBookReads;
 
   return (
-    <div className="min-h-screen bg-[#f7f3ea]/80 px-6 py-20 sm:px-10">
-      <div className="mx-auto flex min-h-[calc(100vh-10rem)] max-w-6xl flex-col justify-center">
+    <div className="min-h-[100dvh] bg-[#f7f3ea]/80 px-6 py-20 sm:px-10">
+      <div className="mx-auto flex min-h-[calc(100dvh-10rem)] max-w-6xl flex-col justify-center">
         <div className="mb-9 flex flex-col gap-6 border-b border-stone-300/70 pb-8 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-orange-700">

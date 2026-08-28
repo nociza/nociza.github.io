@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#f4f4f1" />
         <meta name="color-scheme" content="light" />
 
         {/* Structured Data */}
@@ -43,7 +43,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={generateJsonLd(websiteStructuredData)}
         />
       </head>
-      <body className="font-inconsolata">{children}</body>
+      <body className="font-inconsolata">
+        <a href="#site-content" className="skip-link">
+          Skip to content
+        </a>
+        <div id="site-content" tabIndex={-1}>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

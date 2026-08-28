@@ -52,13 +52,13 @@ export default function ReadingArchive({
     <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
       <div className={`mx-auto px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7 ${books ? "max-w-6xl" : "max-w-5xl"}`}>
         <nav className="flex items-center justify-between border-b border-black/10 pb-5 text-sm text-neutral-600">
-          <Link href="/me" className="inline-flex items-center gap-2 transition hover:text-neutral-950">
+          <Link href="/me" className="inline-flex min-h-10 items-center gap-2 transition hover:text-neutral-950">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             nociza.com
           </Link>
           <div className="flex items-center gap-5">
-            <Link href="/books" className={books ? "font-medium text-neutral-950" : "transition hover:text-neutral-950"}>Books</Link>
-            <Link href="/papers" className={!books ? "font-medium text-neutral-950" : "transition hover:text-neutral-950"}>Papers</Link>
+            <Link href="/books" aria-current={books ? "page" : undefined} className={`inline-flex min-h-10 items-center px-1 ${books ? "font-medium text-neutral-950" : "transition hover:text-neutral-950"}`}>Books</Link>
+            <Link href="/papers" aria-current={!books ? "page" : undefined} className={`-mr-1 inline-flex min-h-10 items-center px-1 ${!books ? "font-medium text-neutral-950" : "transition hover:text-neutral-950"}`}>Papers</Link>
           </div>
         </nav>
 
@@ -78,7 +78,7 @@ export default function ReadingArchive({
 
         <section aria-label="Archive search">
           <div className="flex flex-col gap-4 border-y border-black/10 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <label className="relative block w-full max-w-xl">
+            <label className="relative block w-full max-w-xl rounded-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-4 focus-within:outline-neutral-900">
               <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
               <span className="sr-only">Search the archive</span>
               <input
@@ -86,7 +86,7 @@ export default function ReadingArchive({
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={books ? "Search title, author, format, notes…" : "Search title, author, abstract, topic…"}
-                className="h-10 w-full border-0 bg-transparent pl-7 pr-3 text-sm text-neutral-900 outline-none placeholder:text-neutral-400 focus:ring-0"
+                className="h-11 w-full border-0 bg-transparent pl-7 pr-3 text-sm text-neutral-900 outline-none placeholder:text-neutral-400 focus:ring-0"
               />
             </label>
             <p className="shrink-0 text-xs text-neutral-500">
@@ -150,7 +150,7 @@ export default function ReadingArchive({
           ) : (
             <div className="border-b border-black/10 py-20 text-center">
               <p className="font-serif text-2xl text-neutral-800">Nothing matched that search.</p>
-              <button type="button" onClick={() => setQuery("")} className="mt-3 text-sm text-neutral-500 underline underline-offset-4 transition hover:text-neutral-950">
+              <button type="button" onClick={() => setQuery("")} className="mt-3 min-h-10 text-sm text-neutral-500 underline underline-offset-4 transition hover:text-neutral-950">
                 Clear the search
               </button>
             </div>

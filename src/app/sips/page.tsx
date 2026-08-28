@@ -10,11 +10,11 @@ export default function SipsPage() {
     <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
       <div className="mx-auto max-w-5xl px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7">
         <nav className="flex items-center justify-between border-b border-black/10 pb-5 text-sm text-neutral-600">
-          <Link href="/me" className="inline-flex items-center gap-2 transition hover:text-neutral-950">
+          <Link href="/me" className="inline-flex min-h-10 items-center gap-2 transition hover:text-neutral-950">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             nociza.com
           </Link>
-          <span className="font-medium text-neutral-900">Siplogue</span>
+          <span className="inline-flex min-h-10 items-center font-medium text-neutral-900">Siplogue</span>
         </nav>
 
         <header className="grid gap-7 py-14 sm:py-20 lg:grid-cols-[minmax(0,1.25fr)_minmax(16rem,0.6fr)] lg:items-end">
@@ -70,7 +70,7 @@ export default function SipsPage() {
                 href="https://github.com/nociza/siplogue"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 text-neutral-700 underline decoration-black/20 underline-offset-4 transition hover:text-neutral-950 hover:decoration-black/50"
+                className="inline-flex min-h-10 items-center gap-1 text-neutral-700 underline decoration-black/20 underline-offset-4 transition hover:text-neutral-950 hover:decoration-black/50"
               >
                 Sip <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
               </a>{", an open-source skill that turns a photo and rough notes into a polished entry."}
@@ -81,11 +81,11 @@ export default function SipsPage() {
               href="https://www.goodreads.com/user/show/84703211-alex-zhang"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 transition hover:text-neutral-950"
+              className="inline-flex min-h-10 items-center gap-1.5 transition hover:text-neutral-950"
             >
               Goodreads <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
             </a>
-            <Link href="/coffee" className="inline-flex items-center gap-1.5 transition hover:text-neutral-950">
+            <Link href="/coffee" className="inline-flex min-h-10 items-center gap-1.5 transition hover:text-neutral-950">
               Legacy coffee archive <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
             </Link>
           </div>

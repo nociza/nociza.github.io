@@ -13,33 +13,26 @@ export default function NameHeader({
   altFirstName,
   lastName,
 }: NameHeaderProps) {
-  const [hovered, setHovered] = useState(false);
-
-  const nameStyle = {
-    color: hovered ? "rgba(255, 168, 68, 0.8)" : "rgba(20, 20, 20, 0.9)",
-    fontFamily: "'Times New Roman', 'Times', serif",
-    fontSize: "clamp(2.5rem, 7vw, 5rem)",
-    fontWeight: "600",
-    maxWidth: "68%",
-    letterSpacing: "-0.02em",
-    textShadow: "none",
-    transform: hovered ? "translateY(-2px)" : "translateY(0)",
-    lineHeight: "1.1",
-  };
+  const [showAlternate, setShowAlternate] = useState(false);
+  const [isPreviewing, setIsPreviewing] = useState(false);
+  const alternateVisible = showAlternate || isPreviewing;
 
   return (
-    <div className="w-full lg:w-[40vw]">
-      <div
-        className="w-full lg:w-[40vw] cursor-pointer transition-all duration-300"
-        style={nameStyle}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+    <h1 className="w-full font-serif text-[clamp(2.75rem,7vw,5rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-neutral-900 lg:w-[40vw]">
+      <button
+        type="button"
+        className="block rounded-sm text-left transition-colors hover:text-orange-700 focus-visible:text-orange-700"
+        aria-label={`Show ${alternateVisible ? firstName : altFirstName}`}
+        aria-pressed={showAlternate}
+        onClick={() => setShowAlternate((visible) => !visible)}
+        onMouseEnter={() => setIsPreviewing(true)}
+        onMouseLeave={() => setIsPreviewing(false)}
+        onFocus={() => setIsPreviewing(true)}
+        onBlur={() => setIsPreviewing(false)}
       >
-        {hovered ? altFirstName : firstName}
-      </div>
-      <div className="heading-normal" style={nameStyle}>
-        {lastName}
-      </div>
-    </div>
+        {alternateVisible ? altFirstName : firstName}
+      </button>
+      <span className="block">{lastName}</span>
+    </h1>
   );
 }

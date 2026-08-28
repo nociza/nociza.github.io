@@ -18,7 +18,7 @@ export default function SipCard({
     return (
       <Link
         href={`/sips/${entry.slug}`}
-        className="group grid overflow-hidden rounded-[1.75rem] border border-black/10 bg-white transition-colors hover:border-black/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 md:grid-cols-[1.15fr_0.85fr]"
+        className="group grid overflow-hidden rounded-[1.75rem] border border-black/10 bg-white transition-colors hover:border-black/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f4f4f1] md:grid-cols-[1.15fr_0.85fr]"
       >
         <div className="aspect-[4/3] overflow-hidden md:aspect-auto md:min-h-[26rem]">
           <SipMedia entry={entry} eager className="transition duration-500 group-hover:scale-[1.015]" />
@@ -47,7 +47,7 @@ export default function SipCard({
     return (
       <Link
         href={`/sips/${entry.slug}`}
-        className="group block border-t border-black/10 pt-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4"
+        className="group block border-t border-black/10 pt-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f4f4f1]"
       >
         <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-200">
           <SipMedia entry={entry} className="transition duration-500 group-hover:scale-[1.02]" />
@@ -67,7 +67,7 @@ export default function SipCard({
   return (
     <Link
       href={`/sips/${entry.slug}`}
-      className="group grid grid-cols-[5.5rem_minmax(0,1fr)] items-center gap-4 border-t border-black/10 py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 sm:grid-cols-[7rem_minmax(0,1fr)_auto] sm:gap-6 sm:py-6"
+      className="group grid grid-cols-[5.5rem_minmax(0,1fr)] items-center gap-4 border-t border-black/10 py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f4f4f1] sm:grid-cols-[7rem_minmax(0,1fr)_auto] sm:gap-6 sm:py-6"
     >
       <div className="aspect-square overflow-hidden rounded-xl bg-neutral-200">
         <SipMedia entry={entry} className="transition duration-500 group-hover:scale-[1.025]" />

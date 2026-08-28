@@ -35,6 +35,7 @@ export default function BookShelfCard({
   return (
     <article
       id={entry.id}
+      style={{ contentVisibility: "auto", containIntrinsicSize: compact ? "180px" : "420px" }}
       className={
         compact
           ? "group grid min-w-0 grid-cols-[6rem_minmax(0,1fr)] gap-4 border-t border-black/10 pt-4 sm:grid-cols-[7.5rem_minmax(0,1fr)] sm:gap-6"
@@ -78,7 +79,7 @@ export default function BookShelfCard({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${primaryLink.label}: ${entry.title}`}
-              className="mt-0.5 shrink-0 text-neutral-400 transition hover:-translate-y-0.5 hover:translate-x-0.5 hover:text-neutral-950"
+                className="-mr-2 -mt-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-neutral-400 transition hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-black/[0.04] hover:text-neutral-950"
             >
               <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
             </Link>

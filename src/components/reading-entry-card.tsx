@@ -30,6 +30,7 @@ export default function ReadingEntryCard({
   return (
     <article
       id={entry.id}
+      style={{ contentVisibility: "auto", containIntrinsicSize: compact ? "180px" : "240px" }}
       className={`group border-t border-black/10 ${compact ? "py-5" : "py-7 sm:py-9"}`}
     >
       <div className={`grid gap-5 ${entry.kind === "book" ? "sm:grid-cols-[6.5rem_minmax(0,1fr)]" : "sm:grid-cols-[8.5rem_minmax(0,1fr)]"} sm:gap-8`}>
@@ -89,7 +90,7 @@ export default function ReadingEntryCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${primaryLink.label}: ${entry.title}`}
-                className="mt-1 shrink-0 text-neutral-400 transition hover:-translate-y-0.5 hover:translate-x-0.5 hover:text-neutral-950"
+                className="-mr-2 -mt-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-neutral-400 transition hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-black/[0.04] hover:text-neutral-950"
               >
                 <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
               </Link>

@@ -18,6 +18,10 @@ export function useSwipe(handlers: SwipeHandlers) {
 
     useEffect(() => {
         const handleTouchStart = (e: TouchEvent) => {
+            if ((e.target as HTMLElement | null)?.closest("a, button, input, textarea, select")) {
+                touchStartRef.current = null;
+                return;
+            }
             const touch = e.touches[0];
             touchStartRef.current = {
                 x: touch.clientX,
@@ -44,11 +48,12 @@ export function useSwipe(handlers: SwipeHandlers) {
                     handlersRef.current.onSwipeLeft?.();
                 }
             } else if (absDeltaY > absDeltaX && absDeltaY > minSwipeDistance) {
-                // Vertical swipe
+                // A downward finger motion reveals the previous section; an
+                // upward finger motion advances to the next one.
                 if (deltaY > 0) {
-                    handlersRef.current.onSwipeDown?.();
-                } else {
                     handlersRef.current.onSwipeUp?.();
+                } else {
+                    handlersRef.current.onSwipeDown?.();
                 }
             }
 
