@@ -235,7 +235,8 @@
     "year": 2026,
     "pages": 400,
     "publisher": "Henry Holt and Co.",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-the-laws-of-thought-the-quest-for-a-mathematical-theory-of-the-mind-tom-griffiths.jpg"
   },
   {
     "id": "book-my-name-is-red-orhan-pamuk",
@@ -262,7 +263,8 @@
     "year": 2002,
     "pages": 417,
     "publisher": "Vintage",
-    "updatedAt": "2026-06-20"
+    "updatedAt": "2026-06-20",
+    "cover": "/images/reads/book-my-name-is-red-orhan-pamuk.jpg"
   },
   {
     "id": "book-deng-xiaoping-and-the-transformation-of-china-ezra-f-vogel",
@@ -775,7 +777,8 @@
     "year": 2007,
     "pages": 284,
     "publisher": "Times Books",
-    "updatedAt": "2025-06-16"
+    "updatedAt": "2025-06-16",
+    "cover": "/images/reads/book-on-intelligence-how-a-new-understanding-of-the-brain-will-lead-to-the-jeff-hawkins.jpg"
   },
   {
     "id": "book-the-hero-with-a-thousand-faces-joseph-campbell",
@@ -890,7 +893,8 @@
     "year": 1999,
     "pages": 275,
     "publisher": "Dial Press",
-    "updatedAt": "2023-11-14"
+    "updatedAt": "2023-11-14",
+    "cover": "/images/reads/book-slaughterhouse-five-kurt-vonnegut-jr.jpg"
   },
   {
     "id": "book-the-crying-of-lot-49-thomas-pynchon",
@@ -917,7 +921,8 @@
     "year": 2006,
     "pages": 152,
     "publisher": "Harper Perennial Modern Classics",
-    "updatedAt": "2023-01-08"
+    "updatedAt": "2023-01-08",
+    "cover": "/images/reads/book-the-crying-of-lot-49-thomas-pynchon.jpg"
   },
   {
     "id": "book-consider-the-lobster-and-other-essays-david-foster-wallace",
@@ -1299,7 +1304,8 @@
     "year": 2000,
     "pages": 297,
     "publisher": "Roc",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-2001-a-space-odyssey-space-odyssey-1-arthur-c-clarke.jpg"
   },
   {
     "id": "book-the-time-machine-h-g-wells",
@@ -1327,7 +1333,8 @@
     "year": 2002,
     "pages": 118,
     "publisher": "Signet Classics",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-time-machine-h-g-wells.jpg"
   },
   {
     "id": "book-neuromancer-sprawl-1-william-gibson",
@@ -1354,7 +1361,8 @@
     "year": 2018,
     "pages": 268,
     "publisher": "Ace",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-neuromancer-sprawl-1-william-gibson.jpg"
   },
   {
     "id": "book-the-old-man-and-the-sea-ernest-hemingway",
@@ -1537,7 +1545,8 @@
     "year": 2007,
     "pages": 352,
     "publisher": "Puffin Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-titan-s-curse-percy-jackson-and-the-olympians-3-rick-riordan.jpg"
   },
   {
     "id": "book-harry-potter-and-the-prisoner-of-azkaban-harry-potter-3-j-k-rowling",
@@ -1657,7 +1666,8 @@
     "year": 2006,
     "pages": 489,
     "publisher": "Anchor",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-da-vinci-code-robert-langdon-2-dan-brown.jpg"
   },
   {
     "id": "book-harry-potter-and-the-chamber-of-secrets-harry-potter-2-j-k-rowling",
@@ -1687,7 +1697,8 @@
     "year": 1999,
     "pages": 341,
     "publisher": "Arthur A. Levine Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-harry-potter-and-the-chamber-of-secrets-harry-potter-2-j-k-rowling.jpg"
   },
   {
     "id": "book-city-of-bones-the-mortal-instruments-1-cassandra-clare",
@@ -1803,7 +1814,8 @@
     "year": 2012,
     "pages": 313,
     "publisher": "Dutton Books",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-the-fault-in-our-stars-john-green.jpg"
   },
   {
     "id": "book-all-the-light-we-cannot-see-anthony-doerr",
@@ -1887,7 +1899,8 @@
     "year": 2011,
     "pages": 249,
     "publisher": "Simon & Schuster",
-    "updatedAt": "2021-12-29"
+    "updatedAt": "2021-12-29",
+    "cover": "/images/reads/book-fahrenheit-451-ray-bradbury.jpg"
   },
   {
     "id": "book-harry-potter-and-the-sorcerer-s-stone-harry-potter-1-j-k-rowling",
@@ -2366,7 +2379,8 @@
     "addedAt": "2019-07-10",
     "format": "physical",
     "year": 1948,
-    "updatedAt": "2019-07-10"
+    "updatedAt": "2019-07-10",
+    "cover": "/images/reads/book-snow-country-yasunari-kawabata.jpg"
   },
   {
     "id": "book-1q84-1q84-1-3-haruki-murakami",
@@ -2699,7 +2713,8 @@
     "year": 2002,
     "pages": 464,
     "publisher": "Norton",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-wuthering-heights-emily-bront.jpg"
   },
   {
     "id": "book-a-clockwork-orange-anthony-burgess",
@@ -2725,7 +2740,8 @@
     "year": 1986,
     "pages": 192,
     "publisher": "W. W. Norton & Company",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-a-clockwork-orange-anthony-burgess.jpg"
   },
   {
     "id": "book-the-cat-in-the-hat-cat-in-the-hat-1-dr-seuss",
@@ -2780,7 +2796,8 @@
     "year": 2005,
     "pages": 216,
     "publisher": "Del Rey Books",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-the-hitchhiker-s-guide-to-the-galaxy-hitchhiker-s-guide-to-the-galaxy-douglas-adams.jpg"
   },
   {
     "id": "book-the-chronicles-of-narnia-the-chronicles-of-narnia-1-7-c-s-lewis",
@@ -2867,7 +2884,8 @@
     "year": 2006,
     "pages": 467,
     "publisher": "Vintage International",
-    "updatedAt": "2018-10-29"
+    "updatedAt": "2018-10-29",
+    "cover": "/images/reads/book-kafka-on-the-shore-haruki-murakami.jpg"
   },
   {
     "id": "book-history-of-beauty-umberto-eco",
@@ -3131,7 +3149,8 @@
     "year": 2015,
     "pages": 512,
     "publisher": "Vintage",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-sapiens-a-brief-history-of-humankind-yuval-noah-harari.jpg"
   },
   {
     "id": "book-the-plague-albert-camus",
@@ -3158,7 +3177,8 @@
     "year": 1991,
     "pages": 308,
     "publisher": "Vintage International",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-plague-albert-camus.jpg"
   },
   {
     "id": "book-death-of-a-naturalist-seamus-heaney",
@@ -3305,7 +3325,8 @@
     "year": 2007,
     "pages": 200,
     "publisher": "BiblioBazaar",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-problem-of-china-bertrand-russell.jpg"
   },
   {
     "id": "book-spqr-a-history-of-ancient-rome-mary-beard",
@@ -3422,7 +3443,8 @@
     "year": 2003,
     "pages": 319,
     "publisher": "Simon & Schuster",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-othello-william-shakespeare.jpg"
   },
   {
     "id": "book-the-prince-niccol-machiavelli",
@@ -3513,7 +3535,8 @@
     "year": 2005,
     "pages": 835,
     "publisher": "Bantam",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-a-game-of-thrones-a-song-of-ice-and-fire-1-george-r-r-martin.jpg"
   },
   {
     "id": "book-to-kill-a-mockingbird-harper-lee",
@@ -3862,7 +3885,8 @@
     "year": 2001,
     "pages": 172,
     "publisher": "Scholastic",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-call-of-the-wild-jack-london.jpg"
   },
   {
     "id": "book-one-hundred-years-of-solitude-gabriel-garc-a-m-rquez",
@@ -3889,7 +3913,8 @@
     "year": 2003,
     "pages": 417,
     "publisher": "Harper",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-one-hundred-years-of-solitude-gabriel-garc-a-m-rquez.jpg"
   },
   {
     "id": "book-walden-or-life-in-the-woods-henry-david-thoreau",
@@ -3916,7 +3941,8 @@
     "year": 2004,
     "pages": 352,
     "publisher": "Princeton University Press",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-walden-or-life-in-the-woods-henry-david-thoreau.jpg"
   },
   {
     "id": "book-skeleton-crew-stephen-king",
@@ -4029,7 +4055,8 @@
     "year": 1950,
     "pages": 328,
     "publisher": "New American Library",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-1984-george-orwell.jpg"
   },
   {
     "id": "book-lempri-re-s-dictionary-lawrence-norfolk",
@@ -4084,7 +4111,8 @@
     "year": 1980,
     "pages": 393,
     "publisher": "Picador",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-our-ancestors-italo-calvino.jpg"
   },
   {
     "id": "book-foucault-s-pendulum-umberto-eco",
@@ -4327,7 +4355,8 @@
     "year": 1987,
     "pages": 263,
     "publisher": "Penguin Books",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-perfume-the-story-of-a-murderer-patrick-s-skind.jpg"
   },
   {
     "id": "book-the-picture-of-dorian-gray-oscar-wilde",
@@ -4354,7 +4383,8 @@
     "year": 2004,
     "pages": 272,
     "publisher": "Random House: Modern Library",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-picture-of-dorian-gray-oscar-wilde.jpg"
   },
   {
     "id": "book-the-little-prince-antoine-de-saint-exup-ry",
@@ -4442,7 +4472,8 @@
     "year": 2023,
     "pages": 279,
     "publisher": "Modern Library",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-pride-and-prejudice-jane-austen.jpg"
   },
   {
     "id": "book-the-secret-garden-frances-hodgson-burnett",
@@ -4531,7 +4562,8 @@
     "year": 1989,
     "pages": 123,
     "publisher": "Vintage International",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-the-stranger-albert-camus.jpg"
   },
   {
     "id": "book-the-great-gatsby-f-scott-fitzgerald",
@@ -4617,6 +4649,7 @@
     "year": 2003,
     "pages": 129,
     "publisher": "Plume",
-    "updatedAt": "2018-07-27"
+    "updatedAt": "2018-07-27",
+    "cover": "/images/reads/book-animal-farm-george-orwell.jpg"
   }
 ]
