@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 const destinations = [
-  { href: "/me", title: "Home", description: "Resume, current cups, and the books in progress." },
+  { href: "/me", title: "Home", description: "Resume, project gallery, current cups, and books in progress." },
   { href: "/sips", title: "Siplogue", description: "Tea, coffee, and brewing field notes." },
   { href: "/books", title: "The shelf", description: "Current reading, all-time favorites, and the archive." },
   { href: "/papers", title: "Papers", description: "Research reading worth returning to." },

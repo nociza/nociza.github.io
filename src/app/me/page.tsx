@@ -8,6 +8,7 @@ import SocialLinks from "../../components/social-links";
 import ResumeSection from "../../components/resume-section";
 import NavigationArrows from "../../components/navigation-arrows";
 import ProfilePicture from "../../components/profile-picture";
+import ProjectsSection from "../../components/projects-section";
 import { resumeData } from "../../data/resume-data";
 import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
@@ -59,15 +60,12 @@ export default function MePage() {
   const { isOpen, toggle } = useCollapsibleSections({
     education: false,
     experience: false,
-    projects: false,
-    skills: false,
-    classes: false,
   });
 
   const { currentAttractor, currentSection } = useSectionObserver();
   const scrollContainerRef = useScrollSnap();
 
-  const sections = ["resume", "coffee", "books"];
+  const sections = ["resume", "projects", "coffee", "books"];
 
   const handleSectionClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -100,6 +98,7 @@ export default function MePage() {
     // Navigate to the appropriate archive page based on current section
     const archiveRoutes = {
       resume: null, // No archive for resume
+      projects: null, // The gallery is already the full project view
       coffee: "/coffee",
       books: "/books",
       // music: "/music", // Temporarily hidden
@@ -141,7 +140,9 @@ export default function MePage() {
         sections={sections}
         onNavigate={handleNavigate}
         onSwipeRight={
-          currentSection !== "resume" ? handleSwipeRight : undefined
+          currentSection === "coffee" || currentSection === "books"
+            ? handleSwipeRight
+            : undefined
         }
       />
 
@@ -180,6 +181,11 @@ export default function MePage() {
               </div>
             </div>
           </main>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" aria-labelledby="projects-heading" className="scroll-section">
+          <ProjectsSection />
         </section>
 
         {/* Coffee Section */}

@@ -11,35 +11,33 @@ export default function ResumeSection({ items }: ResumeSectionProps) {
       {items.map((item, index) => (
         <li key={index}>
           {item.link && item.title === item.link.text ? (
-            // If title matches link text, just show the link
+            <Link
+              href={item.link.url}
+              target={item.link.url.startsWith("http") ? "_blank" : undefined}
+              rel={item.link.url.startsWith("http") ? "noreferrer" : undefined}
+              className="body-ref"
+            >
+              {item.link.text}
+            </Link>
+          ) : (
+            <span className="font-bold">{item.title}</span>
+          )}
+          {item.period && ` ${item.period}`}
+          {item.subtitle && item.title !== item.subtitle && <>: {item.subtitle}</>}
+          {item.link && item.title !== item.link.text && (
             <>
-              <Link href={item.link.url} className="body-ref">
+              :{" "}
+              <Link
+                href={item.link.url}
+                target={item.link.url.startsWith("http") ? "_blank" : undefined}
+                rel={item.link.url.startsWith("http") ? "noreferrer" : undefined}
+                className="body-ref"
+              >
                 {item.link.text}
               </Link>
-              {item.description && <>: {item.description}</>}
-            </>
-          ) : (
-            // Normal case
-            <>
-              <span className="font-bold">{item.title}</span>
-              {item.period && ` ${item.period}`}
-              {item.subtitle && (
-                <>
-                  {item.title !== item.subtitle && ": "}
-                  {item.subtitle}
-                </>
-              )}
-              {item.link && (
-                <>
-                  :{" "}
-                  <Link href={item.link.url} className="body-ref">
-                    {item.link.text}
-                  </Link>
-                </>
-              )}
-              {item.description && <>: {item.description}</>}
             </>
           )}
+          {item.description && <>: {item.description}</>}
         </li>
       ))}
     </ul>

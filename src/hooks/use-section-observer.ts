@@ -9,6 +9,7 @@ interface SectionConfig {
 
 const sectionConfigs: SectionConfig[] = [
     { id: 'resume', attractorType: 'lorenz' },
+    { id: 'projects', attractorType: 'lorenz-side' },
     { id: 'coffee', attractorType: 'rossler' },
     { id: 'books', attractorType: 'chua' },
     // { id: 'music', attractorType: 'lorenz-side' } // Temporarily hidden
