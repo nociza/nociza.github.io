@@ -61,8 +61,19 @@ export default function SipsPage() {
           </section>
         )}
 
-        <footer className="mt-20 flex flex-col gap-4 border-t border-black/10 pt-6 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>Written from the cup, kept in Git.</span>
+        <footer className="mt-20 flex flex-col gap-4 border-t border-black/10 pt-6 text-xs text-neutral-500 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-lg leading-5">
+            <p>Written from the cup, kept in Git.</p>
+            <p className="mt-1.5">
+              This journal is published with{" "}
+              <a
+                href="https://github.com/nociza/siplogue"
+                className="inline-flex items-center gap-1 text-neutral-700 underline decoration-black/20 underline-offset-4 transition hover:text-neutral-950 hover:decoration-black/50"
+              >
+                Sip <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
+              </a>{", an open-source skill that turns a photo and rough notes into a polished entry."}
+            </p>
+          </div>
           <Link href="/coffee" className="inline-flex items-center gap-1.5 transition hover:text-neutral-950">
             Legacy coffee archive <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
           </Link>
