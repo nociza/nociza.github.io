@@ -3,14 +3,12 @@
 import dynamic from "next/dynamic";
 import DeferredSection from "../../components/deferred-section";
 import NameHeader from "../../components/name-header";
-import CollapsibleSection from "../../components/collapsible-section";
 import SocialLinks from "../../components/social-links";
 import ResumeSection from "../../components/resume-section";
 import NavigationArrows from "../../components/navigation-arrows";
 import ProfilePicture from "../../components/profile-picture";
 import ProjectsSection from "../../components/projects-section";
 import { resumeData } from "../../data/resume-data";
-import { useCollapsibleSections } from "../../hooks/use-collapsible-sections";
 import { useSectionObserver } from "../../hooks/use-section-observer";
 import { useScrollSnap } from "../../hooks/use-scroll-snap";
 import { useSwipe } from "../../hooks/use-swipe";
@@ -57,11 +55,6 @@ function SectionPlaceholder({
 }
 
 export default function MePage() {
-  const { isOpen, toggle } = useCollapsibleSections({
-    education: false,
-    experience: false,
-  });
-
   const { currentAttractor, currentSection } = useSectionObserver();
   const scrollContainerRef = useScrollSnap();
 
@@ -149,8 +142,8 @@ export default function MePage() {
       <div ref={scrollContainerRef} className="scroll-container">
         {/* Resume Section */}
         <section id="resume" className="scroll-section">
-          <main className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <main className="page-container resume-container">
+            <div className="resume-grid grid grid-cols-1 gap-8 lg:grid-cols-2">
               {/* Left Column - Content */}
               <div className="w-full lg:w-[40vw]">
                 <NameHeader
@@ -159,24 +152,31 @@ export default function MePage() {
                   lastName="Zhang"
                 />
 
-                {/* Details Grid */}
-                <div className="flex flex-col gap-3 pt-10">
+                {/* Résumé details */}
+                <div className="flex flex-col gap-5 pt-8">
                   {Object.entries(resumeData).map(([key, section]) => (
-                    <CollapsibleSection
+                    <section
                       key={key}
-                      title={section.title}
-                      isOpen={isOpen(key)}
-                      onToggle={() => toggle(key)}
+                      aria-labelledby={`resume-${key}-heading`}
+                      className="w-full max-w-xl"
                     >
-                      <ResumeSection items={section.items} />
-                    </CollapsibleSection>
+                      <h2
+                        id={`resume-${key}-heading`}
+                        className="mb-2 font-medium text-neutral-800"
+                      >
+                        {section.title}
+                      </h2>
+                      <div className="pr-6 text-sm font-light leading-6 font-inconsolata">
+                        <ResumeSection items={section.items} />
+                      </div>
+                    </section>
                   ))}
                 </div>
               </div>
 
               {/* Right Column - Image and Social Links */}
-              <div className="flex flex-col items-center justify-center">
-                <ProfilePicture size={300} />
+              <div className="resume-profile-column flex flex-col items-center justify-center">
+                <ProfilePicture size={300} className="resume-portrait" />
                 <SocialLinks />
               </div>
             </div>

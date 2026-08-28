@@ -102,6 +102,10 @@
   font-family: var(--font-mono);
 }
 
+.resume-container {
+  padding-block: min(clamp(1.5rem, 7.5vw, 6rem), 5vh);
+}
+
 .skip-link {
   position: fixed;
   left: 1rem;
@@ -271,12 +275,20 @@
 }
 
 @media (max-width: 640px) {
-  .scroll-container {
-    scroll-snap-type: y proximity;
+  .resume-grid {
+    position: relative;
+    gap: 0.25rem;
   }
 
-  .scroll-section {
-    scroll-snap-stop: normal;
+  .resume-portrait {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4.5rem !important;
+  }
+
+  .resume-portrait img:first-child {
+    padding: 0.75rem;
   }
 }
 
