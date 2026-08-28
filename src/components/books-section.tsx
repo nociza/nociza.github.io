@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen } from "lucide-react";
 import BookShelfCard from "@/components/book-shelf-card";
 import { activeBookReads } from "@/data/read-data";
 
@@ -20,9 +20,19 @@ export default function BooksSection() {
               The books and audiobooks I am spending time with now.
             </p>
           </div>
-          <Link href="/books" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-700 transition hover:text-orange-900">
-            View the shelf <ArrowRight aria-hidden="true" className="h-4 w-4" />
-          </Link>
+          <div className="flex flex-col items-start gap-2 md:items-end">
+            <Link href="/books" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-700 transition hover:text-orange-900">
+              View the shelf <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+            <a
+              href="https://www.goodreads.com/user/show/84703211-alex-zhang"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-stone-500 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-950 hover:decoration-stone-500"
+            >
+              Reading on Goodreads <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
+            </a>
+          </div>
         </div>
 
         {visible.length ? (

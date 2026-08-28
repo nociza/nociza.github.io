@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Coffee, Leaf } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Coffee, Leaf } from "lucide-react";
 import SipCard from "@/components/sip-card";
 import { sipEntries } from "@/data/sip-data";
 
@@ -19,9 +19,22 @@ export default function CoffeeSection() {
               Cups worth remembering—polished from quick notes, kept as a small personal journal.
             </p>
           </div>
-          <Link href="/sips" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-700 transition hover:text-orange-900">
-            Open the journal <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="flex flex-col items-start gap-2 md:items-end">
+            <Link href="/sips" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-700 transition hover:text-orange-900">
+              Open the journal <ArrowRight className="h-4 w-4" />
+            </Link>
+            <p className="max-w-xs text-xs leading-5 text-stone-500 md:text-right">
+              Published with{" "}
+              <a
+                href="https://github.com/nociza/siplogue"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-950 hover:decoration-stone-500"
+              >
+                Sip <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
+              </a>{", an open-source photo-to-journal skill."}
+            </p>
+          </div>
         </div>
 
         {recentEntries.length > 0 ? (
