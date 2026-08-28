@@ -317,15 +317,8 @@ export default function LorenzCanvas({
     <canvas
       ref={canvasRef}
       id="canvas"
-      className="pointer-events-none absolute inset-0 -z-10"
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
-      }}
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 z-0 h-full w-full"
     />
   );
 }

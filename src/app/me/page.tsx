@@ -125,7 +125,7 @@ export default function MePage() {
   });
 
   return (
-    <div className="relative">
+    <div className="relative isolate min-h-[100dvh]">
       <LorenzCanvas attractorType={currentAttractor} />
 
       <NavigationArrows
@@ -139,7 +139,7 @@ export default function MePage() {
         }
       />
 
-      <div ref={scrollContainerRef} className="scroll-container">
+      <div ref={scrollContainerRef} className="scroll-container z-10">
         {/* Resume Section */}
         <section id="resume" className="scroll-section">
           <main className="page-container resume-container">

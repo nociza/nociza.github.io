@@ -259,13 +259,6 @@
   transform: translateX(4px);
 }
 
-/* Canvas styles */
-#canvas {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
 /* Scroll snap styles */
 .scroll-container {
   scroll-snap-type: y mandatory;

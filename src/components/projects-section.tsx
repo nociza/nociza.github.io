@@ -10,7 +10,7 @@ const categoryDetails: Record<ProjectCategory, { label: string; icon: typeof Box
 
 export default function ProjectsSection() {
   return (
-    <div className="min-h-[100dvh] bg-[#eef0ed] px-6 py-10 sm:px-10">
+    <div className="min-h-[100dvh] bg-[#eef0ed]/65 px-6 py-10 sm:px-10">
       <div className="mx-auto flex min-h-[calc(100dvh-5rem)] max-w-6xl flex-col justify-center">
         <header className="mb-5 grid gap-4 border-b border-black/10 pb-5 lg:grid-cols-[minmax(0,1fr)_minmax(17rem,0.55fr)] lg:items-end">
           <div>
