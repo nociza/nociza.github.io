@@ -19,7 +19,7 @@ function searchableText(entry: ReadEntry): string {
     ...Object.values(entry.identifiers ?? {}),
     entry.progress?.label,
     entry.progress?.remaining,
-    entry.favoriteRank ? "favorite permanent shelf" : undefined,
+    entry.favoriteRank ? "favorite all-time favorites" : undefined,
     ...(entry.kind === "paper" ? [entry.abstract, entry.venue, ...(entry.categories ?? [])] : [entry.publisher, ...(entry.narrators ?? [])]),
   ]
     .filter(Boolean)
@@ -115,7 +115,7 @@ export default function ReadingArchive({
                   <section aria-labelledby="favorite-books-heading" className={currentBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
                     <div className="flex items-end justify-between gap-4 border-b border-black/10 pb-3">
                       <div>
-                        <h2 id="favorite-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">The permanent shelf</h2>
+                        <h2 id="favorite-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">All-time favorites</h2>
                         <p className="mt-1.5 text-xs text-neutral-500">Books I keep returning to.</p>
                       </div>
                       <span className="text-xs text-neutral-500">{favoriteBooks.length}</span>
@@ -129,9 +129,9 @@ export default function ReadingArchive({
                 )}
 
                 {finishedBooks.length > 0 && (
-                  <section aria-labelledby="finished-books-heading" className={currentBooks.length > 0 || favoriteBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
+                  <section aria-labelledby="archive-books-heading" className={currentBooks.length > 0 || favoriteBooks.length > 0 ? "pt-16 sm:pt-20" : "pt-9"}>
                     <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-3">
-                      <h2 id="finished-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">Finished</h2>
+                      <h2 id="archive-books-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">Archive</h2>
                       <span className="text-xs text-neutral-500">{finishedBooks.length}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-11 pt-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-8">
