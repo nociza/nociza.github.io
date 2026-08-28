@@ -103,7 +103,35 @@
 }
 
 .resume-container {
-  padding-block: min(clamp(1.5rem, 7.5vw, 6rem), 5vh);
+  display: flex;
+  align-items: center;
+}
+
+.resume-grid {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "name"
+    "details"
+    "profile";
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.resume-name {
+  grid-area: name;
+}
+
+.resume-details {
+  grid-area: details;
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-profile-column {
+  grid-area: profile;
 }
 
 .skip-link {
@@ -275,11 +303,6 @@
 }
 
 @media (max-width: 640px) {
-  .resume-grid {
-    position: relative;
-    gap: 0.25rem;
-  }
-
   .resume-portrait {
     position: absolute;
     right: 0;
@@ -289,6 +312,49 @@
 
   .resume-portrait img:first-child {
     padding: 0.75rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .resume-grid {
+    grid-template-areas:
+      "name profile"
+      "details details";
+    grid-template-columns: minmax(0, 1fr) 16.25rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    align-items: start;
+  }
+
+  .resume-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .resume-profile-column {
+    align-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume-grid {
+    grid-template-areas:
+      "name profile"
+      "details profile";
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    grid-template-rows: auto auto;
+    column-gap: 5rem;
+    row-gap: 2rem;
+    align-items: start;
+  }
+
+  .resume-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .resume-profile-column {
+    align-self: start;
   }
 }
 

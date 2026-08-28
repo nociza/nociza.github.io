@@ -18,7 +18,7 @@ export default function NameHeader({
   const alternateVisible = showAlternate || isPreviewing;
 
   return (
-    <h1 className="w-full font-serif text-[clamp(2.75rem,7vw,5rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-neutral-900 lg:w-[40vw]">
+    <h1 className="w-full font-serif text-[clamp(2.75rem,7vw,5rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-neutral-900">
       <button
         type="button"
         className="block rounded-sm text-left transition-colors hover:text-orange-700 focus-visible:text-orange-700"

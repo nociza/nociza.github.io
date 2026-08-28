@@ -143,40 +143,37 @@ export default function MePage() {
         {/* Resume Section */}
         <section id="resume" className="scroll-section">
           <main className="page-container resume-container">
-            <div className="resume-grid grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {/* Left Column - Content */}
-              <div className="w-full lg:w-[40vw]">
+            <div className="resume-grid">
+              <div className="resume-name">
                 <NameHeader
                   firstName="Yueheng"
                   altFirstName="Alexander"
                   lastName="Zhang"
                 />
-
-                {/* Résumé details */}
-                <div className="flex flex-col gap-5 pt-8">
-                  {Object.entries(resumeData).map(([key, section]) => (
-                    <section
-                      key={key}
-                      aria-labelledby={`resume-${key}-heading`}
-                      className="w-full max-w-xl"
-                    >
-                      <h2
-                        id={`resume-${key}-heading`}
-                        className="mb-2 font-medium text-neutral-800"
-                      >
-                        {section.title}
-                      </h2>
-                      <div className="pr-6 text-sm font-light leading-6 font-inconsolata">
-                        <ResumeSection items={section.items} />
-                      </div>
-                    </section>
-                  ))}
-                </div>
               </div>
 
-              {/* Right Column - Image and Social Links */}
+              <div className="resume-details">
+                {Object.entries(resumeData).map(([key, section]) => (
+                  <section
+                    key={key}
+                    aria-labelledby={`resume-${key}-heading`}
+                    className="min-w-0"
+                  >
+                    <h2
+                      id={`resume-${key}-heading`}
+                      className="mb-2 font-medium text-neutral-800"
+                    >
+                      {section.title}
+                    </h2>
+                    <div className="text-sm font-light leading-6 font-inconsolata">
+                      <ResumeSection items={section.items} />
+                    </div>
+                  </section>
+                ))}
+              </div>
+
               <div className="resume-profile-column flex flex-col items-center justify-center">
-                <ProfilePicture size={300} className="resume-portrait" />
+                <ProfilePicture size={260} className="resume-portrait" />
                 <SocialLinks />
               </div>
             </div>
