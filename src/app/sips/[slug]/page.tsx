@@ -5,7 +5,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Coffee, Leaf, Star } from "lucide-react";
 import SipMedia from "@/components/sip-media";
-import { findSip, formatSipDate, formatSipLabel, formatSipValue } from "@/data/sip-data";
+import SipSetupLinks from "@/components/sip-setup-links";
+import { findSip, formatSipDate, formatSipLabel, formatSipShortDate, formatSipValue } from "@/data/sip-data";
 import { blogPostStructuredData, generateJsonLd, generateMetadata as makeMetadata } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -70,6 +71,11 @@ export default function SipEntryPage({ params }: { params: { slug: string } }) {
               {entry.title}
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-neutral-600 sm:text-lg">{entry.excerpt}</p>
+            <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-neutral-500">
+              <span>Noted {formatSipDate(entry.receivedAt)}</span>
+              {entry.activity.expiresAt && <span>Rotation through {formatSipShortDate(entry.activity.expiresAt)}</span>}
+            </div>
+            <SipSetupLinks setupIds={entry.setupIds} />
           </header>
 
           <figure className="aspect-[16/10] overflow-hidden rounded-[1.75rem] border border-black/10 bg-neutral-200 sm:aspect-[16/9]">

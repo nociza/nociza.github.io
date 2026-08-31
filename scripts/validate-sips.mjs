@@ -15,12 +15,15 @@ const allowedTopLevel = new Set([
   "body",
   "image",
   "observedAt",
+  "receivedAt",
   "publishedAt",
   "subject",
   "brew",
   "tastingNotes",
   "rating",
   "tags",
+  "setupIds",
+  "activity",
 ]);
 const allowedSubject = new Set(["name", "producer", "origin", "variety", "process", "style"]);
 const allowedBrew = new Set(["method", "temperature_c", "dose_g", "water_g", "steep_seconds", "grind", "infusions"]);
@@ -50,13 +53,17 @@ function assertFlatObject(value, label, allowedKeys) {
 if (!fs.existsSync(collectionPath)) fail(`missing ${path.relative(root, collectionPath)}`);
 
 let entries;
+let setups;
 try {
   entries = JSON.parse(fs.readFileSync(collectionPath, "utf8"));
+  setups = JSON.parse(fs.readFileSync(path.join(root, "public", "data", "brew-setups.json"), "utf8"));
 } catch (error) {
   fail(`cannot parse JSON: ${error.message}`);
 }
 
 if (!Array.isArray(entries)) fail("root must be an array");
+if (!Array.isArray(setups)) fail("brew setup collection must be an array");
+const setupIds = new Set(setups.filter((setup) => setup && typeof setup === "object").map((setup) => setup.id));
 
 const ids = new Set();
 const slugs = new Set();
@@ -68,13 +75,13 @@ for (const [index, entry] of entries.entries()) {
   for (const key of Object.keys(entry)) {
     if (!allowedTopLevel.has(key)) fail(`${label}.${key} is not a public schema field`);
   }
-  for (const key of ["id", "slug", "title", "kind", "excerpt", "body", "observedAt", "publishedAt"]) {
+  for (const key of ["id", "slug", "title", "kind", "excerpt", "body", "observedAt", "receivedAt", "publishedAt"]) {
     if (typeof entry[key] !== "string" || entry[key].trim() === "") fail(`${label}.${key} must be a non-empty string`);
   }
   if (!slugPattern.test(entry.slug) || entry.slug.length > 120) fail(`${label}.slug is invalid`);
   if (!['tea', 'coffee'].includes(entry.kind)) fail(`${label}.kind must be tea or coffee`);
   if (entry.title.length > 140 || entry.excerpt.length > 320 || entry.body.length > 12000) fail(`${label} exceeds a text limit`);
-  if (!isTimestamp(entry.observedAt) || !isTimestamp(entry.publishedAt)) fail(`${label} has an invalid timestamp`);
+  if (!isTimestamp(entry.observedAt) || !isTimestamp(entry.receivedAt) || !isTimestamp(entry.publishedAt)) fail(`${label} has an invalid timestamp`);
   if (ids.has(entry.id)) fail(`${label}.id is duplicated`);
   if (slugs.has(entry.slug)) fail(`${label}.slug is duplicated`);
   ids.add(entry.id);
@@ -100,6 +107,17 @@ for (const [index, entry] of entries.entries()) {
   }
   if (entry.rating !== null && (typeof entry.rating !== "number" || entry.rating < 0 || entry.rating > 10)) {
     fail(`${label}.rating must be null or a number from 0 to 10`);
+  }
+  if (!Array.isArray(entry.setupIds) || entry.setupIds.some((id) => typeof id !== "string" || !setupIds.has(id))) {
+    fail(`${label}.setupIds must reference known brew setups`);
+  }
+  if (!entry.activity || typeof entry.activity !== "object" || Array.isArray(entry.activity)) fail(`${label}.activity must be an object`);
+  if (!['current', 'archived'].includes(entry.activity.state)) fail(`${label}.activity.state must be current or archived`);
+  if (entry.activity.state === 'current') {
+    if (!isTimestamp(entry.activity.refreshedAt) || !isTimestamp(entry.activity.expiresAt)) fail(`${label}.activity current timestamps are invalid`);
+    if (Date.parse(entry.activity.expiresAt) <= Date.parse(entry.activity.refreshedAt)) fail(`${label}.activity expiry must follow refresh`);
+  } else if (entry.activity.refreshedAt !== null || entry.activity.expiresAt !== null) {
+    fail(`${label}.activity archived timestamps must be null`);
   }
 }
 

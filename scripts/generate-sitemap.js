@@ -13,6 +13,7 @@ function generateSitemapFile() {
     const coffeeDataPath = path.join(__dirname, "../public/data/coffee.json");
     let coffeeUrls = [];
     let sipUrls = [];
+    let setupUrls = [];
 
     if (fs.existsSync(coffeeDataPath)) {
       const coffeeData = JSON.parse(fs.readFileSync(coffeeDataPath, "utf8"));
@@ -35,6 +36,17 @@ function generateSitemapFile() {
       }));
     }
 
+    const setupDataPath = path.join(__dirname, "../public/data/brew-setups.json");
+    if (fs.existsSync(setupDataPath)) {
+      const setupData = JSON.parse(fs.readFileSync(setupDataPath, "utf8"));
+      setupUrls = setupData.map((setup) => ({
+        url: `https://www.nociza.com/sips/setups/${setup.slug}/`,
+        lastModified: new Date(setup.updatedAt || setup.publishedAt),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+    }
+
     // Update the lastModified dates to current date and combine with coffee URLs
     const updatedUrls = [
       ...siteUrls.map((url) => ({
@@ -43,6 +55,7 @@ function generateSitemapFile() {
       })),
       ...coffeeUrls,
       ...sipUrls,
+      ...setupUrls,
     ];
 
     const sitemap = generateSitemap(updatedUrls);

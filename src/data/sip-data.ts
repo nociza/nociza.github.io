@@ -15,12 +15,19 @@ export interface SipEntry {
     alt: string;
   };
   observedAt: string;
+  receivedAt: string;
   publishedAt: string;
   subject: Record<string, SipScalar>;
   brew: Record<string, SipScalar>;
   tastingNotes: string[];
   rating: number | null;
   tags: string[];
+  setupIds: string[];
+  activity: {
+    state: "current" | "archived";
+    refreshedAt: string | null;
+    expiresAt: string | null;
+  };
 }
 
 // The collection is validated before every build; the extra `unknown` hop
@@ -29,6 +36,22 @@ export const sipEntries = sipJson as unknown as SipEntry[];
 
 export function findSip(slug: string): SipEntry | undefined {
   return sipEntries.find((entry) => entry.slug === slug);
+}
+
+export function isSipCurrent(entry: SipEntry, now: number = Date.now()): boolean {
+  if (entry.activity.state !== "current" || !entry.activity.expiresAt) return false;
+  const expiry = Date.parse(entry.activity.expiresAt);
+  return Number.isFinite(expiry) && expiry > now;
+}
+
+export function formatSipShortDate(value: string): string {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
 }
 
 export function formatSipDate(value: string): string {
