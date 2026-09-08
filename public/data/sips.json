@@ -1,5 +1,53 @@
 [
   {
+    "activity": {
+      "expiresAt": "2026-09-22T18:16:48Z",
+      "refreshedAt": "2026-09-08T18:16:48Z",
+      "state": "current"
+    },
+    "body": "I brewed this older S&W Burundi on my Gaggia. Time has taken away much of its aromatic intensity, but the cup is still really enjoyable.\n\nWhat stands out is the texture: exceptionally smooth and silky, with a seriously good body. Even without a vivid aroma, that tactile richness makes it a coffee I’m very happy to drink.",
+    "brew": {
+      "method": "Gaggia espresso machine"
+    },
+    "excerpt": "Age has softened the aromatics, but this Gaggia brew still delivers an exceptionally smooth, silky body.",
+    "id": "telegram-6672098723-573",
+    "image": {
+      "alt": "A gold S&W Craft Roasting bag labeled Burundi Kayanza Ninga Bumba Anaerobic Honey, Lot 6, resting on a countertop.",
+      "src": "/images/sips/2026-09-08-silky-body-from-an-older-burundi-8723-573.jpg"
+    },
+    "kind": "coffee",
+    "observedAt": "2026-09-08T18:17:32Z",
+    "publishedAt": "2026-09-08T18:21:20Z",
+    "rating": null,
+    "receivedAt": "2026-09-08T18:16:48Z",
+    "setupIds": [],
+    "slug": "2026-09-08-silky-body-from-an-older-burundi",
+    "subject": {
+      "name": "Burundi Kayanza Ninga Bumba, Lot 6",
+      "origin": "Bumba Hill, Kayanza, Burundi; 2,200 m",
+      "process": "Anaerobic honey",
+      "producer": "S&W Craft Roasting",
+      "variety": "Bourbon"
+    },
+    "tags": [
+      "coffee",
+      "Burundi",
+      "Gaggia",
+      "older coffee"
+    ],
+    "tastingNotes": [
+      "smooth",
+      "silky body",
+      "subdued aroma"
+    ],
+    "title": "Silky Body from an Older Burundi"
+  },
+  {
+    "activity": {
+      "expiresAt": "2026-09-10T20:24:00Z",
+      "refreshedAt": "2026-08-27T20:24:00Z",
+      "state": "current"
+    },
     "body": "This was a genuinely unique coffee. The whiskey-barrel-aged process gives this Honduran lot a character that stands apart from an everyday filter brew.\n\nThe bag points toward tiramisu, milk chocolate, and a creamy body—a rich, dessert-like combination that suits the unusual processing. Made from Catuai and Caturra grown at 1,500–1,700 meters, it is a memorable light roast and one I wanted to make sure I noted down.",
     "brew": {},
     "excerpt": "A genuinely distinctive Honduran filter coffee, shaped by whiskey-barrel aging and a sweet, dessert-like profile.",
@@ -12,6 +60,8 @@
     "observedAt": "2026-08-27T20:24:00Z",
     "publishedAt": "2026-08-27T20:25:40Z",
     "rating": null,
+    "receivedAt": "2026-08-27T20:24:00Z",
+    "setupIds": [],
     "slug": "2026-08-27-a-whiskey-barrel-surprise-from-honduras",
     "subject": {
       "name": "S-4 Honduras Whiskey Barrel Aged",
@@ -32,16 +82,14 @@
       "milk chocolate",
       "creamy body"
     ],
-    "title": "A Whiskey-Barrel Surprise from Honduras",
-    "receivedAt": "2026-08-27T20:24:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "current",
-      "refreshedAt": "2026-08-27T20:24:00Z",
-      "expiresAt": "2026-09-10T20:24:00Z"
-    }
+    "title": "A Whiskey-Barrel Surprise from Honduras"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "The old coffee list recorded Chromatic Gamut as a blend on June 22, 2025. It was marked not started, and the archive contains no brew rating or tasting notes.\n\nI’m keeping it here as a shelf note rather than filling in a cup I never documented.",
     "brew": {},
     "excerpt": "An archived Chromatic blend, kept as a shelf note before a full tasting record was made.",
@@ -54,6 +102,8 @@
     "observedAt": "2025-06-22T12:00:00Z",
     "publishedAt": "2025-06-22T12:00:00Z",
     "rating": null,
+    "receivedAt": "2025-06-22T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-06-22-chromatic-gamut",
     "subject": {
       "name": "Chromatic Gamut",
@@ -66,16 +116,14 @@
       "not-started"
     ],
     "tastingNotes": [],
-    "title": "Chromatic Gamut",
-    "receivedAt": "2025-06-22T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Chromatic Gamut"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "This washed Ethiopian coffee from Equator entered the old list on June 22, 2025. The record says not started and does not include a rating or written tasting notes.\n\nIt belongs in the journal as an honest archive entry: a coffee I meant to explore, with the cup itself still undocumented.",
     "brew": {},
     "excerpt": "A washed Ethiopian coffee from Equator, preserved from the old list before it reached the brewer.",
@@ -88,6 +136,8 @@
     "observedAt": "2025-06-22T12:00:00Z",
     "publishedAt": "2025-06-22T12:00:00Z",
     "rating": null,
+    "receivedAt": "2025-06-22T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-06-22-equator-ethiopia-fair-trade",
     "subject": {
       "name": "Equator Ethiopia Fair Trade",
@@ -101,16 +151,14 @@
       "not-started"
     ],
     "tastingNotes": [],
-    "title": "Equator Ethiopia Fair Trade",
-    "receivedAt": "2025-06-22T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Equator Ethiopia Fair Trade"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "The old list records this Andytown coffee under Guji Kayon Mountain and includes an 8/10 Americano rating. The same record is marked not started, which conflicts with having a rating.\n\nI’m preserving both details instead of quietly resolving the mismatch. No tasting notes were attached to the original entry.",
     "brew": {
       "method": "Americano"
@@ -125,6 +173,8 @@
     "observedAt": "2025-06-02T17:23:00Z",
     "publishedAt": "2025-06-02T17:23:00Z",
     "rating": 8,
+    "receivedAt": "2025-06-02T17:23:00Z",
+    "setupIds": [],
     "slug": "2025-06-02-andytown-guji-kayon-mountain",
     "subject": {
       "name": "Guji Kayon Mountain",
@@ -137,16 +187,14 @@
       "americano"
     ],
     "tastingNotes": [],
-    "title": "Andytown Guji Kayon Mountain",
-    "receivedAt": "2025-06-02T17:23:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Andytown Guji Kayon Mountain"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "The archive lists this Fazenda coffee as an Ethiopian lot from Duram Village, dried on raised beds. I had it marked as currently brewing and recorded the pour-over at 8/10.\n\nThe original entry stops there, so I’m carrying the rating and process forward without inventing tasting notes that were never written down.",
     "brew": {
       "method": "Pour over"
@@ -161,6 +209,8 @@
     "observedAt": "2025-05-25T12:00:00Z",
     "publishedAt": "2025-05-25T12:00:00Z",
     "rating": 8,
+    "receivedAt": "2025-05-25T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-05-25-fazenda-ethiopia-duram-village",
     "subject": {
       "name": "Ethiopia Duram Village",
@@ -174,16 +224,14 @@
       "pour-over"
     ],
     "tastingNotes": [],
-    "title": "Fazenda Ethiopia Duram Village",
-    "receivedAt": "2025-05-25T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Fazenda Ethiopia Duram Village"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "Counter Culture Field Trip appears in the old archive as a blend I was actively brewing. The one clear judgment I recorded was an Americano rating of 9/10.\n\nThere are no surviving tasting notes in that entry, so this migration keeps the high rating visible without manufacturing the flavors behind it.",
     "brew": {
       "method": "Americano"
@@ -198,6 +246,8 @@
     "observedAt": "2025-05-08T12:00:00Z",
     "publishedAt": "2025-05-08T12:00:00Z",
     "rating": 9,
+    "receivedAt": "2025-05-08T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-05-08-counter-culture-field-trip",
     "subject": {
       "name": "Field Trip",
@@ -210,16 +260,14 @@
       "americano"
     ],
     "tastingNotes": [],
-    "title": "Counter Culture Field Trip",
-    "receivedAt": "2025-05-08T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Counter Culture Field Trip"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "The legacy list names this coffee Columbia SugarCane Decaf from Chromatic. I had it marked as currently brewing and gave the Americano a 9/10.\n\nThe original record contains no written tasting notes or process details beyond the name, so I’m leaving the rest of the cup undescribed.",
     "brew": {
       "method": "Americano"
@@ -234,6 +282,8 @@
     "observedAt": "2025-04-20T12:00:00Z",
     "publishedAt": "2025-04-20T12:00:00Z",
     "rating": 9,
+    "receivedAt": "2025-04-20T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-04-20-chromatic-columbia-sugarcane-decaf",
     "subject": {
       "name": "Columbia SugarCane Decaf",
@@ -248,16 +298,14 @@
       "decaf"
     ],
     "tastingNotes": [],
-    "title": "Chromatic Columbia Sugarcane Decaf",
-    "receivedAt": "2025-04-20T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Chromatic Columbia Sugarcane Decaf"
   },
   {
+    "activity": {
+      "expiresAt": null,
+      "refreshedAt": null,
+      "state": "archived"
+    },
     "body": "This Chromatic coffee from Papua New Guinea was marked finished in the old archive. The Americano received a 6/10 rating.\n\nNo tasting notes survived with the record, so this entry keeps the modest score and basic provenance without trying to explain more than I originally wrote down.",
     "brew": {
       "method": "Americano"
@@ -272,6 +320,8 @@
     "observedAt": "2025-04-20T12:00:00Z",
     "publishedAt": "2025-04-20T12:00:00Z",
     "rating": 6,
+    "receivedAt": "2025-04-20T12:00:00Z",
+    "setupIds": [],
     "slug": "2025-04-20-chromatic-papua-new-guinea-kunjin",
     "subject": {
       "name": "Papua New Guinea Kunjin",
@@ -285,13 +335,6 @@
       "finished"
     ],
     "tastingNotes": [],
-    "title": "Chromatic Papua New Guinea Kunjin",
-    "receivedAt": "2025-04-20T12:00:00Z",
-    "setupIds": [],
-    "activity": {
-      "state": "archived",
-      "refreshedAt": null,
-      "expiresAt": null
-    }
+    "title": "Chromatic Papua New Guinea Kunjin"
   }
 ]
