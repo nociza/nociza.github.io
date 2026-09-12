@@ -61,25 +61,20 @@ export default function ProjectsSection() {
                 ? "Explore reports"
                 : project.href.startsWith("https://github.com/") ? "View on GitHub" : "Visit project";
 
-              return (
-                <li key={project.title}>
-                  <Link
-                    href={project.href}
-                    target={external ? "_blank" : undefined}
-                    rel={external ? "noopener noreferrer" : undefined}
-                    className={styles.card}
-                  >
-                    <div className={styles.cardHeader}>
+              const body = <>                    <div className={styles.cardHeader}>
                       <span className={styles.topic}>{project.topic}</span>
                       <ArrowUpRight aria-hidden="true" className={styles.arrow} />
                     </div>
                     <h3 className={styles.projectTitle}>{project.title}</h3>
                     <p className={styles.description}>{project.description}</p>
                     <span className={styles.destination}>
-                      {destination}
+                      {project.unavailable ? "Archived · website currently unavailable" : destination}
                       {external && <span className="sr-only"> (opens in a new tab)</span>}
                     </span>
-                  </Link>
+</>;
+              return (
+                <li key={project.title}>
+                  {project.unavailable ? <article className={styles.card}>{body}</article> : <Link href={project.href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} className={styles.card}>{body}</Link>}
                 </li>
               );
             })}

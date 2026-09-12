@@ -30,12 +30,13 @@ export default function ComputerVisionProjectReports() {
           <p className="text-sm leading-7 text-neutral-600">Reports from CS 194/294-26, from image alignment to neural rendering.</p>
         </header>
 
+        <p className="mb-8 rounded-lg border border-black/15 p-4 text-sm leading-6 text-neutral-700">The original reports are hosted by Berkeley and currently return an access-denied response. Their titles are preserved below; the external links may require institutional access. Local archival copies are not yet available.</p>
         <ol className="border-b border-black/10">
           {projects.map(([number, title, href]) => (
             <li key={number} className="border-t border-black/10">
               <Link href={href} target="_blank" rel="noopener noreferrer" className="group grid min-h-24 grid-cols-[3.5rem_minmax(0,1fr)_auto] items-center gap-3 py-5 sm:grid-cols-[5rem_minmax(0,1fr)_auto] sm:gap-5">
                 <span className="text-xs text-neutral-400">{number}</span>
-                <span className="font-serif text-xl font-medium leading-snug tracking-[-0.02em] sm:text-2xl">{title}</span>
+                <span className="font-serif text-xl font-medium leading-snug tracking-[-0.02em] sm:text-2xl">{title}<small className="mt-2 block font-sans text-xs text-neutral-600">Original report · access currently restricted</small></span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-neutral-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-neutral-900" />
               </Link>
             </li>

@@ -19,8 +19,8 @@ export async function generateStaticParams() {
   return params.length > 0 ? params : [{ slug: "_empty" }];
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = findSip(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const entry = findSip((await params).slug);
   if (!entry) return {};
   return makeMetadata({
     title: entry.title,
@@ -35,8 +35,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function SipEntryPage({ params }: { params: { slug: string } }) {
-  const entry = findSip(params.slug);
+export default async function SipEntryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const entry = findSip((await params).slug);
   if (!entry) notFound();
   const KindIcon = entry.kind === "tea" ? Leaf : Coffee;
   const details = [...Object.entries(entry.subject), ...Object.entries(entry.brew)].filter(([, value]) => value !== null && value !== "");

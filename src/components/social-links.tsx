@@ -1,16 +1,11 @@
 import Link from "next/link";
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  LucideIcon,
-  Twitter,
-} from "lucide-react";
+import { FiGithub as Github, FiInstagram as Instagram, FiLinkedin as Linkedin, FiTwitter as Twitter } from "react-icons/fi";
+import type { IconType } from "react-icons";
 
 interface SocialLink {
   href: string;
   label: string;
-  icon: LucideIcon;
+  icon: IconType;
 }
 
 const socialLinks: SocialLink[] = [

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ResponsiveImage from "./responsive-image";
 import { ArrowUpRight, BookOpen, Headphones } from "lucide-react";
 import { bookFormatLabel, BookRead, readDate, readStatusLabel } from "@/data/read-data";
 
@@ -19,8 +20,9 @@ export default function BookShelfCard({
   const FormatIcon = entry.format === "audiobook" ? Headphones : BookOpen;
 
   const coverImage = entry.cover ? (
-    <img
+    <ResponsiveImage
       src={entry.cover}
+      sizes={compact ? "120px" : "(max-width: 640px) 44vw, 240px"}
       alt={`Cover of ${entry.title}`}
       className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.025]"
       loading={eagerCover ? "eager" : "lazy"}
@@ -45,10 +47,10 @@ export default function BookShelfCard({
       <div className="aspect-[2/3] overflow-hidden rounded-xl border border-black/10 bg-black/[0.035] shadow-[0_1px_2px_rgba(0,0,0,0.06)]">
         {isbn && entry.cover ? (
           <Link
-            href={`https://openlibrary.org/isbn/${isbn}`}
+            href={new Set(["9781250358356", "9781426474583", "9781441341709"]).has(isbn) ? `https://openlibrary.org/search?q=${encodeURIComponent(entry.title)}` : `https://openlibrary.org/isbn/${isbn}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Open Library edition for ${entry.title}`}
+            aria-label={`Find ${entry.title} on Open Library`}
             className="block h-full w-full"
           >
             {coverImage}

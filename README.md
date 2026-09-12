@@ -9,8 +9,8 @@ journal with a current rotation and photographed brew setups.
 
 ## Stack
 
-- Next.js 14 with the App Router and static export
-- React 18 and TypeScript
+- Next.js 16 with the App Router and static export
+- React 19 and TypeScript
 - Tailwind CSS
 - GitHub Pages with a custom domain
 - Structured JSON and checked-in media for public journal content
@@ -47,8 +47,14 @@ Edit `src/data/project-data.ts` to add or update projects. Each entry has a
 title, short topic label, complete description, destination URL, and category
 (`current`, `archive`, or `course`). The homepage gallery derives its filters
 and counts from this collection. Cards use a two-column desktop grid and a
-single-column mobile layout; oversized sections scroll naturally before
-snapping to the next screen.
+single-column mobile layout. Vertical wheel, touch, and keyboard scrolling stay
+native; CSS proximity snapping and explicit section arrows are optional aids.
+
+The shared header exposes Home, Reading, Siplogue and Index on every page.
+`npm run images:build` derives responsive WebP assets from published photos and
+book covers without altering originals. Derivatives and their manifest are build
+outputs, not new source media; development, typechecking and publishing prepare
+them automatically.
 
 Run `node --test scripts/test-section-scroll.cjs` to check the section-navigation
 boundary logic.

@@ -70,8 +70,6 @@ export function generateMetadata({
             images: [
                 {
                     url: seoImage,
-                    width: 1200,
-                    height: 630,
                     alt: title || defaultMetadata.title,
                 },
             ],
@@ -90,8 +88,8 @@ export function generateMetadata({
             title: seoTitle,
             description: seoDescription,
             images: [seoImage],
-            creator: '@nociza',
-            site: '@nociza',
+            creator: '@nociza68',
+            site: '@nociza68',
         },
         robots: {
             index: true,
@@ -109,9 +107,9 @@ export function generateMetadata({
     return metadata
 }
 
-export function generateJsonLd(data: any) {
+export function generateJsonLd(data: unknown) {
     return {
-        __html: JSON.stringify(data),
+        __html: JSON.stringify(data).replace(/</g, '\\u003c'),
     }
 }
 
@@ -123,9 +121,9 @@ export const personStructuredData = {
     url: 'https://www.nociza.com',
     image: 'https://www.nociza.com/linkedin_pic.jpg',
     sameAs: [
-        'https://linkedin.com/in/nociza',
+        'https://linkedin.com/in/azicon',
         'https://github.com/nociza',
-        'https://twitter.com/nociza',
+        'https://twitter.com/nociza68',
     ],
     jobTitle: 'Computer Vision Researcher',
     knowsAbout: [
@@ -138,7 +136,7 @@ export const personStructuredData = {
     ],
     alumniOf: {
         '@type': 'Organization',
-        name: 'University Name', // Update with actual university
+        name: 'University of California, Berkeley',
     },
 }
 

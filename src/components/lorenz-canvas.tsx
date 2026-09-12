@@ -118,7 +118,7 @@ export default function LorenzCanvas({
 }: LorenzCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const lineRef = useRef<ChaoticAttractor>(new ChaoticAttractor(attractorType));
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const viewportRef = useRef({ width: 0, height: 0 });
   const lastPointerRef = useRef({ x: 0, y: 0, time: 0 });
 
@@ -194,7 +194,7 @@ export default function LorenzCanvas({
     };
 
     const animate = () => {
-      if (document.hidden) {
+      if (document.hidden || performance.now() - lastPointerRef.current.time > 1000) {
         stopAnimation();
         return;
       }

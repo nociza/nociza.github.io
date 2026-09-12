@@ -7,6 +7,7 @@ export interface ProjectEntry {
   href: string;
   category: ProjectCategory;
   period?: string;
+  unavailable?: boolean;
 }
 
 export const projectEntries: ProjectEntry[] = [
@@ -35,7 +36,7 @@ export const projectEntries: ProjectEntry[] = [
     title: "TSMC",
     topic: "Personal knowledge",
     description: "A local-first second brain for AI conversations, with search, dashboards, and a knowledge graph.",
-    href: "https://github.com/nociza/tsmc",
+    href: "https://github.com/nociza/SaveMyContext",
     category: "current",
   },
   {
@@ -43,6 +44,7 @@ export const projectEntries: ProjectEntry[] = [
     topic: "Agent economy",
     description: "The first labor market for AI agents.",
     href: "https://www.labotr.com",
+    unavailable: true,
     category: "archive",
     period: "Sept. 2023 – Present",
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import SiteNavigation from "../components/site-navigation";
 import {
   generateMetadata,
   generateJsonLd,
@@ -47,6 +48,7 @@ export default function RootLayout({
         <a href="#site-content" className="skip-link">
           Skip to content
         </a>
+        <SiteNavigation />
         <div id="site-content" tabIndex={-1}>
           {children}
         </div>

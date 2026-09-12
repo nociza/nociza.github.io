@@ -14,8 +14,8 @@ export async function generateStaticParams() {
   return params.length ? params : [{ slug: "_empty" }];
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const setup = findBrewSetup(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const setup = findBrewSetup((await params).slug);
   if (!setup) return {};
   return makeMetadata({
     title: `${setup.name} — Brew Setup`,
@@ -30,8 +30,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function BrewSetupPage({ params }: { params: { slug: string } }) {
-  const setup = findBrewSetup(params.slug);
+export default async function BrewSetupPage({ params }: { params: Promise<{ slug: string }> }) {
+  const setup = findBrewSetup((await params).slug);
   if (!setup) notFound();
   const related = sipEntries.filter((entry) => entry.setupIds.includes(setup.id));
   const paragraphs = setup.description.split(/\n\s*\n/).map((paragraph) => paragraph.trim()).filter(Boolean);

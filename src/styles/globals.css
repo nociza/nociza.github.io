@@ -261,24 +261,22 @@
 
 /* Scroll snap styles */
 .scroll-container {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   overflow-y: auto;
-  height: 100dvh;
+  height: calc(100dvh - 48px);
   position: relative;
   overscroll-behavior-y: contain;
-  /* Hide scrollbar for cleaner look */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: thin;
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* WebKit */
+  width: 6px;
 }
 
 .scroll-section {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   min-height: 100dvh;
   position: relative;
   content-visibility: auto;
@@ -290,7 +288,7 @@
 /* Minimalistic design - remove hover effects */
 .scroll-section {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   min-height: 100dvh;
   position: relative;
 }
@@ -366,3 +364,12 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Shared, readable navigation across every archive and the portfolio. */
+.site-navigation { position: sticky; top: 0; z-index: 60; display: flex; gap: 2px; align-items: center; justify-content: center; min-height: 48px; background: #f4f4f1; border-bottom: 1px solid #d7d7d2; font-size: 14px; font-family: var(--font-sans); }
+.site-navigation a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; color: #565651; }
+.site-navigation a[aria-current] { color: #181818; text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 420px) { .site-navigation a { padding-inline: 6px; } }
+.text-neutral-400, .text-neutral-500 { color: #62625e; }
+:focus-visible { outline: 2px solid #525252; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .scroll-container { scroll-behavior: auto; scroll-snap-type: none; } }

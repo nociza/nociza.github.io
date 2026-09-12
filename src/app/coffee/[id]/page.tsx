@@ -51,8 +51,9 @@ export async function generateStaticParams() {
   }
 }
 
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
-  const coffee = coffeeEntries.find((entry) => entry.id === params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const coffee = coffeeEntries.find((entry) => entry.id === id);
   if (!coffee) return {};
   return makeMetadata({
     title: coffee.name,
@@ -65,10 +66,10 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   });
 }
 
-export default function CoffeeDetailPage({
+export default async function CoffeeDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  return <CoffeeDetailClient params={params} />;
+  return <CoffeeDetailClient params={await params} />;
 }

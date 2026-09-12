@@ -50,3 +50,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+# Reproducible image derivatives; never replace originals.
+.generated/
+public/images/variants/

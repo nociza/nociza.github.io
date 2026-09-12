@@ -1,4 +1,5 @@
 import { generateSitemap, siteUrls } from '../../lib/sitemap'
+export const dynamic = 'force-static'
 
 export async function GET() {
     // You can add dynamic content here, like coffee entries, papers, etc.

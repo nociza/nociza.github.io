@@ -80,7 +80,7 @@ export default function SearchableIndex<T>({
 
         <section aria-label={`Search ${title}`}>
           <div className="flex flex-col gap-3 border-y border-black/10 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <label className="relative block w-full max-w-2xl">
+            <label className="relative block w-full max-w-2xl rounded focus-within:outline focus-within:outline-2 focus-within:outline-offset-4 focus-within:outline-neutral-700">
               <Search aria-hidden="true" className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
               <span className="sr-only">Search {title}</span>
               <input

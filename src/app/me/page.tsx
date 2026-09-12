@@ -65,7 +65,7 @@ export default function MePage() {
     if (element && scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({
         top: element.offsetTop,
-        behavior: "smooth",
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
       });
     }
   };
@@ -92,7 +92,7 @@ export default function MePage() {
     const archiveRoutes = {
       resume: null, // No archive for resume
       projects: null, // The gallery is already the full project view
-      coffee: "/coffee",
+      coffee: "/sips",
       books: "/books",
       // music: "/music", // Temporarily hidden
     };
@@ -106,26 +106,11 @@ export default function MePage() {
   // Add swipe gesture support
   useSwipe({
     onSwipeRight: currentSection !== "resume" ? handleSwipeRight : undefined,
-    onSwipeUp: () => {
-      const currentIndex = sections.findIndex(
-        (section) => section === currentSection
-      );
-      if (currentIndex > 0) {
-        handleSectionClick(sections[currentIndex - 1]);
-      }
-    },
-    onSwipeDown: () => {
-      const currentIndex = sections.findIndex(
-        (section) => section === currentSection
-      );
-      if (currentIndex < sections.length - 1) {
-        handleSectionClick(sections[currentIndex + 1]);
-      }
-    },
+
   });
 
   return (
-    <div className="relative isolate min-h-[100dvh]">
+    <div className="relative isolate min-h-[calc(100dvh-48px)]">
       <LorenzCanvas attractorType={currentAttractor} />
 
       <NavigationArrows
@@ -139,7 +124,7 @@ export default function MePage() {
         }
       />
 
-      <div ref={scrollContainerRef} className="scroll-container z-10">
+      <div ref={scrollContainerRef} className="scroll-container z-10" tabIndex={0} aria-label="Portfolio sections">
         {/* Resume Section */}
         <section id="resume" className="scroll-section">
           <main className="page-container resume-container">

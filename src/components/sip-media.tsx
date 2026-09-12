@@ -1,5 +1,6 @@
 import { Coffee, Leaf } from "lucide-react";
 import type { SipEntry } from "@/data/sip-data";
+import ResponsiveImage from "./responsive-image";
 
 export function isSipArchivePlaceholder(entry: SipEntry): boolean {
   return entry.image.src.endsWith("/archive-coffee.svg");
@@ -40,7 +41,7 @@ export default function SipMedia({
   }
 
   return (
-    <img
+    <ResponsiveImage
       src={entry.image.src}
       alt={entry.image.alt}
       loading={eager ? "eager" : "lazy"}

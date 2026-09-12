@@ -43,7 +43,7 @@ export default function SiplogueIndex({ referenceNow }: { referenceNow: string }
           </p>
         </header>
 
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.65fr)_minmax(17rem,0.7fr)] lg:gap-12">
+        <div className={brewSetups.length ? "grid gap-14 lg:grid-cols-[minmax(0,1.65fr)_minmax(17rem,0.7fr)] lg:gap-12" : "grid gap-14"}>
           <section aria-labelledby="current-rotation-heading">
             <div className="flex items-end justify-between border-b border-black/10 pb-4">
               <div>
@@ -75,7 +75,7 @@ export default function SiplogueIndex({ referenceNow }: { referenceNow: string }
             )}
           </section>
 
-          <aside aria-labelledby="brew-shelf-heading">
+          {brewSetups.length > 0 && <aside aria-labelledby="brew-shelf-heading">
             <div className="border-b border-black/10 pb-4">
               <p className="mb-1.5 inline-flex items-center gap-1.5 text-xs text-neutral-500"><Wrench aria-hidden="true" className="h-3.5 w-3.5" /> Tools · machinery · methods</p>
               <h2 id="brew-shelf-heading" className="font-serif text-2xl font-medium tracking-[-0.025em]">The brew shelf</h2>
@@ -90,7 +90,7 @@ export default function SiplogueIndex({ referenceNow }: { referenceNow: string }
                 <p className="mt-3 text-xs leading-5 text-neutral-500">Send Teleclaw a setup photo and describe the equipment to add the first one.</p>
               </div>
             )}
-          </aside>
+          </aside>}
         </div>
 
         {archive.length > 0 && (
