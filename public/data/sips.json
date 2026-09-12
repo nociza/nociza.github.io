@@ -1,6 +1,50 @@
 [
   {
     "activity": {
+      "expiresAt": "2026-09-26T18:51:56Z",
+      "refreshedAt": "2026-09-12T18:51:56Z",
+      "state": "current"
+    },
+    "body": "Meno brought this Nomad Burundi Niemba back as a gift after picking it up in Europe, which makes the bag feel especially personal.\n\nI pulled it on the Gaggia as an 18 g turbo shot. The aroma was a little restrained, but the cup made up for it with plenty of body. What stood out most was the texture: exceptionally smooth from the first sip through the finish.",
+    "brew": {
+      "dose_g": 18,
+      "method": "Gaggia espresso machine, turbo shot"
+    },
+    "excerpt": "A turbo shot with restrained aroma, generous body, and an exceptionally smooth finish.",
+    "id": "telegram-6672098723-603",
+    "image": {
+      "alt": "A bag of Nomad Burundi Niemba coffee beside the brewing dose shown on a scale.",
+      "src": "/images/sips/2026-09-12-a-smooth-burundi-brought-back-by-meno-8723-603.jpg"
+    },
+    "kind": "coffee",
+    "observedAt": "2026-09-12T18:51:56Z",
+    "publishedAt": "2026-09-12T18:55:04Z",
+    "rating": null,
+    "receivedAt": "2026-09-12T18:51:56Z",
+    "setupIds": [],
+    "slug": "2026-09-12-a-smooth-burundi-brought-back-by-meno",
+    "subject": {
+      "name": "Burundi Niemba",
+      "origin": "Burundi",
+      "process": "honey",
+      "producer": "Nomad",
+      "variety": "Red Bourbon"
+    },
+    "tags": [
+      "coffee",
+      "espresso",
+      "turbo-shot",
+      "gift"
+    ],
+    "tastingNotes": [
+      "restrained aroma",
+      "full body",
+      "exceptionally smooth"
+    ],
+    "title": "A Smooth Burundi, Brought Back by Meno"
+  },
+  {
+    "activity": {
       "expiresAt": "2026-09-22T18:16:48Z",
       "refreshedAt": "2026-09-08T18:16:48Z",
       "state": "current"
