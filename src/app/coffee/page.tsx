@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { ArrowUpRight, Coffee, MapPin } from "lucide-react";
 import SearchableIndex from "../../components/searchable-index";
+import CoffeeMedia from "../../components/coffee-media";
 import { CoffeeEntry, coffeeEntries } from "../../data/site-data";
 
-function CoffeeCard({ coffee }: { coffee: CoffeeEntry }) {
+function CoffeeCard({ coffee, eager }: { coffee: CoffeeEntry; eager: boolean }) {
   const isCurrentlyDrinking = coffee.status === "currently_drinking" ||
     coffee.status === "Currently Drinking" ||
     coffee.status === "Currently Brewing" ||
@@ -14,41 +15,46 @@ function CoffeeCard({ coffee }: { coffee: CoffeeEntry }) {
   return (
     <Link
       href={`/coffee/${coffee.id}`}
-      className="group flex min-h-64 flex-col rounded-2xl border border-black/10 bg-white/65 p-5 transition hover:-translate-y-0.5 hover:border-black/20 hover:bg-white focus-visible:outline-none sm:p-6"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/65 transition hover:-translate-y-0.5 hover:border-black/20 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4"
     >
-      <div className="flex items-center justify-between gap-4 text-xs text-neutral-500">
-        <span className="inline-flex items-center gap-2">
-          <Coffee aria-hidden="true" className="h-3.5 w-3.5 stroke-[1.5]" />
-          {isCurrentlyDrinking ? "Currently brewing" : "Coffee note"}
-        </span>
-        <time dateTime={coffee.date}>{coffee.date}</time>
+      <div className="aspect-[4/3] overflow-hidden border-b border-black/10 bg-[#e8e8e3]">
+        <CoffeeMedia coffeeId={coffee.id} eager={eager} />
       </div>
-
-      <h2 className="mt-7 font-serif text-2xl font-medium leading-tight tracking-[-0.025em] text-neutral-950">
-        {coffee.name}
-      </h2>
-      <p className="mt-2 text-sm font-medium text-neutral-600">{coffee.roaster}</p>
-
-      {(coffee.origin || coffee.process) && (
-        <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-neutral-500">
-          {coffee.origin && (
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin aria-hidden="true" className="h-3.5 w-3.5" /> {coffee.origin}
-            </span>
-          )}
-          {coffee.process && <span>{coffee.process}</span>}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <div className="flex items-center justify-between gap-4 text-xs text-neutral-500">
+          <span className="inline-flex items-center gap-2">
+            <Coffee aria-hidden="true" className="h-3.5 w-3.5 stroke-[1.5]" />
+            {isCurrentlyDrinking ? "Currently brewing" : "Coffee note"}
+          </span>
+          <time dateTime={coffee.date}>{coffee.date}</time>
         </div>
-      )}
 
-      {coffee.notes && coffee.notes !== "No notes available" && (
-        <p className="mt-5 line-clamp-3 text-sm leading-6 text-neutral-600">{coffee.notes}</p>
-      )}
+        <h2 className="mt-7 font-serif text-2xl font-medium leading-tight tracking-[-0.025em] text-neutral-950">
+          {coffee.name}
+        </h2>
+        <p className="mt-2 text-sm font-medium text-neutral-600">{coffee.roaster}</p>
 
-      <div className="mt-auto flex items-end justify-between gap-4 pt-8 text-xs text-neutral-500">
-        <span>
-          {coffee.pourOverRating ? `Pour over ${coffee.pourOverRating}/10` : coffee.americanoRating ? `Americano ${coffee.americanoRating}/10` : "View details"}
-        </span>
-        <ArrowUpRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        {(coffee.origin || coffee.process) && (
+          <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-neutral-500">
+            {coffee.origin && (
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin aria-hidden="true" className="h-3.5 w-3.5" /> {coffee.origin}
+              </span>
+            )}
+            {coffee.process && <span>{coffee.process}</span>}
+          </div>
+        )}
+
+        {coffee.notes && coffee.notes !== "No notes available" && (
+          <p className="mt-5 line-clamp-3 text-sm leading-6 text-neutral-600">{coffee.notes}</p>
+        )}
+
+        <div className="mt-auto flex items-end justify-between gap-4 pt-8 text-xs text-neutral-500">
+          <span>
+            {coffee.pourOverRating ? `Pour over ${coffee.pourOverRating}/10` : coffee.americanoRating ? `Americano ${coffee.americanoRating}/10` : "View details"}
+          </span>
+          <ArrowUpRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        </div>
       </div>
     </Link>
   );
@@ -64,7 +70,7 @@ export default function CoffeeIndexPage() {
       items={coffeeEntries}
       searchFields={["name", "roaster", "notes", "origin", "process"]}
       placeholder="Search coffee, roaster, origin, process, notes…"
-      renderItem={(coffee: CoffeeEntry) => <CoffeeCard key={coffee.id} coffee={coffee} />}
+      renderItem={(coffee: CoffeeEntry, index) => <CoffeeCard key={coffee.id} coffee={coffee} eager={index < 2} />}
     />
   );
 }

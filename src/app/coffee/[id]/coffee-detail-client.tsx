@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Coffee, MapPin, Star } from "lucide-react";
 import { coffeeEntries } from "@/data/site-data";
+import CoffeeMedia from "@/components/coffee-media";
 
 function isCurrent(status?: string): boolean {
   return Boolean(status?.toLowerCase().includes("current"));
@@ -38,17 +39,22 @@ export default function CoffeeDetail({ params }: { params: { id: string } }) {
           </Link>
         </nav>
 
-        <header className="max-w-4xl pb-12 pt-14 sm:pb-16 sm:pt-20">
-          <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-neutral-500">
-            <span className="inline-flex items-center gap-2">
-              <Coffee aria-hidden="true" className="h-4 w-4 stroke-[1.5]" />
-              {isCurrent(coffee.status) ? "Currently brewing" : "Coffee note"}
-            </span>
-            <span aria-hidden="true">·</span>
-            <time dateTime={coffee.date}>{formatDate(coffee.date)}</time>
+        <header className="grid items-center gap-8 pb-12 pt-10 sm:gap-12 sm:pb-16 sm:pt-14 md:grid-cols-2">
+          <div>
+            <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-neutral-500">
+              <span className="inline-flex items-center gap-2">
+                <Coffee aria-hidden="true" className="h-4 w-4 stroke-[1.5]" />
+                {isCurrent(coffee.status) ? "Currently brewing" : "Coffee note"}
+              </span>
+              <span aria-hidden="true">·</span>
+              <time dateTime={coffee.date}>{formatDate(coffee.date)}</time>
+            </div>
+            <h1 className="font-serif text-4xl font-medium leading-[1.02] tracking-[-0.035em] sm:text-6xl">{coffee.name}</h1>
+            <p className="mt-5 text-base text-neutral-600 sm:text-lg">Roasted by {coffee.roaster}</p>
           </div>
-          <h1 className="font-serif text-4xl font-medium leading-[1.02] tracking-[-0.035em] sm:text-6xl">{coffee.name}</h1>
-          <p className="mt-5 text-base text-neutral-600 sm:text-lg">Roasted by {coffee.roaster}</p>
+          <figure className="aspect-[3/4] overflow-hidden rounded-xl border border-black/10 bg-[#e8e8e3]">
+            <CoffeeMedia coffeeId={coffee.id} eager />
+          </figure>
         </header>
 
         <div className="grid gap-12 border-y border-black/10 py-10 sm:py-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16">
