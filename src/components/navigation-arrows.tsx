@@ -28,7 +28,7 @@ export default function NavigationArrows({
         <button
           type="button"
           onClick={() => onNavigate("up")}
-          className="fixed right-3 top-3 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/80 text-neutral-500 shadow-sm backdrop-blur transition hover:border-black/20 hover:text-orange-700 sm:left-1/2 sm:right-auto sm:top-6 sm:-translate-x-1/2"
+          className="fixed right-3 top-[60px] z-50 flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/80 text-neutral-500 shadow-sm backdrop-blur transition hover:border-black/20 hover:text-orange-700 sm:left-1/2 sm:right-auto sm:top-[72px] sm:-translate-x-1/2"
           aria-label="Previous section"
         >
           <ChevronUp className="w-6 h-6" />
