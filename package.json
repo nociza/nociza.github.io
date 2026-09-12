@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "npm run validate:content && npm run images:build && npm run generate-sitemap && next build --webpack",
+    "build": "npm run validate:content && npm run images:build && npm run generate-sitemap && next build --webpack && node scripts/verify-static-export.mjs",
     "build:static": "npm run build",
     "start": "next start",
     "lint": "eslint src",
