@@ -41,6 +41,18 @@ images are committed here.
 
 ## Development
 
+### Project gallery
+
+Edit `src/data/project-data.ts` to add or update projects. Each entry has a
+title, short topic label, complete description, destination URL, and category
+(`current`, `archive`, or `course`). The homepage gallery derives its filters
+and counts from this collection. Cards use a two-column desktop grid and a
+single-column mobile layout; oversized sections scroll naturally before
+snapping to the next screen.
+
+Run `node --test scripts/test-section-scroll.cjs` to check the section-navigation
+boundary logic.
+
 Use the committed npm lockfile:
 
 ```sh

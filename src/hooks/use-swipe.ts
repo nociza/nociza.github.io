@@ -18,6 +18,13 @@ export function useSwipe(handlers: SwipeHandlers) {
 
     useEffect(() => {
         const handleTouchStart = (e: TouchEvent) => {
+            const section = (e.target as HTMLElement | null)?.closest<HTMLElement>(".scroll-section");
+            const container = section?.closest<HTMLElement>(".scroll-container");
+            if (section && container && section.offsetHeight > container.clientHeight + 4) {
+                // Let native scrolling and CSS snapping expose the whole gallery.
+                touchStartRef.current = null;
+                return;
+            }
             if ((e.target as HTMLElement | null)?.closest("a, button, input, textarea, select")) {
                 touchStartRef.current = null;
                 return;

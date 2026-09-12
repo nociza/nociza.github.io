@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { canScrollWithinSection, visibleSectionIndex } from "@/lib/section-scroll";
 
 export function useScrollSnap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,13 +13,13 @@ export function useScrollSnap() {
     let wheelTimeout: number | undefined;
     let unlockTimeout: number | undefined;
 
-    const currentIndex = () => {
-      const center = container.scrollTop + container.clientHeight / 2;
-      return sections.reduce((closest, section, index) => {
-        const sectionCenter = section.offsetTop + section.offsetHeight / 2;
-        const closestCenter = sections[closest].offsetTop + sections[closest].offsetHeight / 2;
-        return Math.abs(sectionCenter - center) < Math.abs(closestCenter - center) ? index : closest;
-      }, 0);
+    const currentIndex = () =>
+      visibleSectionIndex(sections, container.scrollTop, container.clientHeight);
+    const canScrollWithin = (direction: number) => {
+      const section = sections[currentIndex()];
+      return section && canScrollWithinSection(
+        section, container.scrollTop, container.clientHeight, direction,
+      );
     };
 
     const scrollToIndex = (index: number) => {
@@ -41,10 +42,15 @@ export function useScrollSnap() {
         return;
       }
 
-      event.preventDefault();
-      if (isSnapping) return;
-
       window.clearTimeout(wheelTimeout);
+      if (isSnapping) {
+        event.preventDefault();
+        return;
+      }
+      // Read every card in an oversized section before snapping onward.
+      if (canScrollWithin(event.deltaY)) return;
+
+      event.preventDefault();
       wheelTimeout = window.setTimeout(() => {
         scrollToIndex(currentIndex() + (event.deltaY > 0 ? 1 : -1));
       }, 50);
@@ -54,12 +60,24 @@ export function useScrollSnap() {
       const target = event.target as HTMLElement | null;
       if (target?.closest("input, textarea, select, button, a, [contenteditable='true']")) return;
 
-      if (["ArrowDown", "PageDown", " "].includes(event.key)) {
+      const direction = ["ArrowDown", "PageDown", " "].includes(event.key)
+        ? (event.key === " " && event.shiftKey ? -1 : 1)
+        : ["ArrowUp", "PageUp"].includes(event.key) ? -1 : 0;
+      if (direction) {
         event.preventDefault();
-        scrollToIndex(currentIndex() + 1);
-      } else if (["ArrowUp", "PageUp"].includes(event.key)) {
-        event.preventDefault();
-        scrollToIndex(currentIndex() - 1);
+        if (canScrollWithin(direction)) {
+          const section = sections[currentIndex()];
+          const step = event.key.startsWith("Arrow") ? 40 : container.clientHeight * 0.8;
+          container.scrollTo({
+            top: Math.max(section.offsetTop, Math.min(
+              container.scrollTop + direction * step,
+              section.offsetTop + section.offsetHeight - container.clientHeight,
+            )),
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+          });
+          return;
+        }
+        scrollToIndex(currentIndex() + direction);
       } else if (event.key === "Home") {
         event.preventDefault();
         scrollToIndex(0);

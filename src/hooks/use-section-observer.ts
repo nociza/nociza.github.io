@@ -1,91 +1,46 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import { visibleSectionIndex } from "@/lib/section-scroll";
 
-export type AttractorType = 'lorenz' | 'rossler' | 'chua' | 'lorenz-side';
+export type AttractorType = "lorenz" | "rossler" | "chua" | "lorenz-side";
 
-interface SectionConfig {
-    id: string;
-    attractorType: AttractorType;
-}
-
-const sectionConfigs: SectionConfig[] = [
-    { id: 'resume', attractorType: 'lorenz' },
-    { id: 'projects', attractorType: 'lorenz-side' },
-    { id: 'coffee', attractorType: 'rossler' },
-    { id: 'books', attractorType: 'chua' },
-    // { id: 'music', attractorType: 'lorenz-side' } // Temporarily hidden
-];
+const attractors: Record<string, AttractorType> = {
+  resume: "lorenz",
+  projects: "lorenz-side",
+  coffee: "rossler",
+  books: "chua",
+};
 
 export function useSectionObserver() {
-    const [currentAttractor, setCurrentAttractor] = useState<AttractorType>('lorenz');
-    const [currentSection, setCurrentSection] = useState<string>('resume');
+  const [currentSection, setCurrentSection] = useState("resume");
 
-    useEffect(() => {
-        const scrollContainer = document.querySelector<HTMLElement>('.scroll-container');
-        if (!scrollContainer) {
-            return;
-        }
+  useEffect(() => {
+    const container = document.querySelector<HTMLElement>(".scroll-container");
+    if (!container) return;
+    const sections = Array.from(container.querySelectorAll<HTMLElement>(".scroll-section"));
+    if (!sections.length) return;
+    let frame = 0;
 
-        const sectionRatios = new Map<string, number>();
-        const sections = Array.from(
-            scrollContainer.querySelectorAll<HTMLElement>('.scroll-section')
-        );
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const index = visibleSectionIndex(sections, container.scrollTop, container.clientHeight);
+        setCurrentSection(sections[index].id);
+      });
+    };
 
-        if (sections.length === 0) {
-            return;
-        }
+    // Gallery filters and deferred content can change section heights.
+    const resizeObserver = new ResizeObserver(update);
+    resizeObserver.observe(container);
+    sections.forEach((section) => resizeObserver.observe(section));
+    container.addEventListener("scroll", update, { passive: true });
+    update();
 
-        const updateCurrentSection = () => {
-            let nextSection = sectionConfigs[0].id;
-            let highestRatio = -1;
+    return () => {
+      cancelAnimationFrame(frame);
+      resizeObserver.disconnect();
+      container.removeEventListener("scroll", update);
+    };
+  }, []);
 
-            sectionConfigs.forEach((config) => {
-                const ratio = sectionRatios.get(config.id) ?? 0;
-                if (ratio > highestRatio) {
-                    highestRatio = ratio;
-                    nextSection = config.id;
-                }
-            });
-
-            const nextConfig =
-                sectionConfigs.find((config) => config.id === nextSection) ??
-                sectionConfigs[0];
-
-            setCurrentSection((previous) =>
-                previous === nextSection ? previous : nextSection
-            );
-            setCurrentAttractor((previous) =>
-                previous === nextConfig.attractorType
-                    ? previous
-                    : nextConfig.attractorType
-            );
-        };
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    sectionRatios.set(
-                        (entry.target as HTMLElement).id,
-                        entry.intersectionRatio
-                    );
-                });
-                updateCurrentSection();
-            },
-            {
-                root: scrollContainer,
-                threshold: [0.2, 0.4, 0.6, 0.8],
-            }
-        );
-
-        sections.forEach((section) => {
-            sectionRatios.set(section.id, section.id === 'resume' ? 1 : 0);
-            observer.observe(section);
-        });
-        updateCurrentSection();
-
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-
-    return { currentAttractor, currentSection };
+  return { currentSection, currentAttractor: attractors[currentSection] ?? "lorenz" };
 }

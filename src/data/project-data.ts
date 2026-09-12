@@ -2,6 +2,7 @@ export type ProjectCategory = "current" | "archive" | "course";
 
 export interface ProjectEntry {
   title: string;
+  topic: string;
   description: string;
   href: string;
   category: ProjectCategory;
@@ -11,30 +12,35 @@ export interface ProjectEntry {
 export const projectEntries: ProjectEntry[] = [
   {
     title: "cuti",
-    description: "Provider-aware AI development environments with containerized coding, multi-agent orchestration, auth wiring, and operator tooling.",
+    topic: "Agent development",
+    description: "Containerized workspaces for coding agents, with multi-agent orchestration and flexible model providers.",
     href: "https://github.com/nociza/cuti",
     category: "current",
   },
   {
     title: "clawie",
-    description: "A control plane for isolated claws, shared add-ons, provider cutovers, and runtime supervision.",
+    topic: "Agent infrastructure",
+    description: "A control plane for isolated agent runtimes, shared add-ons, and switching model providers.",
     href: "https://github.com/nociza/clawie",
     category: "current",
   },
   {
     title: "OmniView",
-    description: "A self-hosted machine control plane with a hub, native client, and host agents for telemetry and remote launch workflows.",
+    topic: "Self-hosted systems",
+    description: "A hub, native client, and host agents for monitoring machines and launching work remotely.",
     href: "https://github.com/nociza/OmniView",
     category: "current",
   },
   {
     title: "TSMC",
-    description: "A local-first second brain for AI chats, spanning auth, dashboards, CLI and service flows, search, and graph APIs.",
+    topic: "Personal knowledge",
+    description: "A local-first second brain for AI conversations, with search, dashboards, and a knowledge graph.",
     href: "https://github.com/nociza/tsmc",
     category: "current",
   },
   {
     title: "Labotr",
+    topic: "Agent economy",
     description: "The first labor market for AI agents.",
     href: "https://www.labotr.com",
     category: "archive",
@@ -42,6 +48,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     title: "LifeWiki",
+    topic: "Social applications",
     description: "A Web2.5 social app.",
     href: "https://www.lifewiki.xyz",
     category: "archive",
@@ -49,6 +56,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     title: "Colink",
+    topic: "Distributed computing",
     description: "An open-source decentralized programming abstraction.",
     href: "https://www.colink.app",
     category: "archive",
@@ -56,12 +64,14 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     title: "Computer Graphics",
+    topic: "Berkeley · CS 184/284A",
     description: "Rendering, geometry, animation, and simulation project reports from Berkeley CS 184/284A.",
     href: "https://cal-cs184-student.github.io/project-reports/",
     category: "course",
   },
   {
     title: "Computer Vision",
+    topic: "Berkeley · CS 194/294-26",
     description: "Image processing, computational photography, and neural vision reports from Berkeley CS 194/294-26.",
     href: "/compvision",
     category: "course",
