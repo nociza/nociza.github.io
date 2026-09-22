@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const destinations = [["/me", "Home"], ["/me#projects", "Projects"], ["/books", "Reading"], ["/sips", "Siplogue"], ["/navigation", "Index"]] as const;
+const destinations = [["/me", "Home"], ["/me#projects", "Projects"], ["/books", "Reading"], ["/sips", "Siplogue"], ["/writing", "Writing"], ["/navigation", "Index"]] as const;
 
 export default function SiteNavigation() {
   const pathname = usePathname();

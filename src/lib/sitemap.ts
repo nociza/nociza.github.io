@@ -25,6 +25,7 @@ ${urlEntries}
 }
 
 export const siteUrls: SitemapUrl[] = [
+    { url: 'https://www.nociza.com/writing/', changeFrequency: 'monthly', priority: 0.7 },
     {
         url: 'https://www.nociza.com/',
         lastModified: new Date(),
