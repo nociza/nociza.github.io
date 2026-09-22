@@ -1,6 +1,43 @@
 [
   {
     "activity": {
+      "expiresAt": "2026-10-06T20:19:25Z",
+      "refreshedAt": "2026-09-22T20:19:25Z",
+      "state": "current"
+    },
+    "body": "I measured out 10 grams of this Idido Yismashewa from Yirgacheffe, Ethiopia. The label identifies it as an anaerobic natural, roasted on September 1, 2026, with a suggested rest of two weeks.\n\nAt three weeks off roast, the coffee is past that resting window and ready to brew. I have not recorded tasting notes yet, so this is the starting point for the cup rather than a finished verdict.",
+    "brew": {
+      "dose_g": 10
+    },
+    "excerpt": "A measured 10-gram dose of Ethiopian Yirgacheffe, rested three weeks after roasting and ready for its first documented brew.",
+    "id": "20260922-763f6bd646b4",
+    "image": {
+      "alt": "Ten grams of roasted coffee beans in a pale green dish on a digital scale beside a gold bag labeled Ethiopia Yirgacheffe Idido Yismashewa, anaerobic natural.",
+      "src": "/images/sips/2026-09-22-a-10-gram-start-with-idido-yismashewa-6bd646b4.jpg"
+    },
+    "kind": "coffee",
+    "observedAt": "2026-09-22T20:18:05Z",
+    "publishedAt": "2026-09-22T20:20:11Z",
+    "rating": null,
+    "receivedAt": "2026-09-22T20:19:25Z",
+    "setupIds": [],
+    "slug": "2026-09-22-a-10-gram-start-with-idido-yismashewa",
+    "subject": {
+      "name": "Idido Yismashewa",
+      "origin": "Yirgacheffe, Ethiopia",
+      "process": "Anaerobic natural"
+    },
+    "tags": [
+      "coffee",
+      "Ethiopia",
+      "Yirgacheffe",
+      "anaerobic-natural"
+    ],
+    "tastingNotes": [],
+    "title": "A 10-Gram Start with Idido Yismashewa"
+  },
+  {
+    "activity": {
       "expiresAt": "2026-09-26T18:51:56Z",
       "refreshedAt": "2026-09-12T18:51:56Z",
       "state": "current"
