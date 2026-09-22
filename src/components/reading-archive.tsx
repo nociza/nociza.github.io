@@ -1,11 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useDeferredValue, useMemo, useState } from "react";
 import { ArrowLeft, Search } from "lucide-react";
 import BookShelfCard from "@/components/book-shelf-card";
 import ReadingEntryCard from "@/components/reading-entry-card";
 import { BookRead, ReadEntry } from "@/data/read-data";
+
+const AttractorCanvas = dynamic(() => import("@/components/lorenz-canvas"), {
+  ssr: false,
+});
 
 function searchableText(entry: ReadEntry): string {
   return [
@@ -49,8 +54,13 @@ export default function ReadingArchive({
   const finishedBooks = filteredBooks.filter((entry) => entry.status === "completed" && entry.favoriteRank == null);
 
   return (
-    <main className="min-h-screen bg-[#f4f4f1] text-neutral-950">
-      <div className={`mx-auto px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7 ${books ? "max-w-6xl" : "max-w-5xl"}`}>
+    <main className="relative isolate min-h-screen bg-[#f4f4f1] text-neutral-950">
+      {books && (
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 opacity-40">
+          <AttractorCanvas attractorType="rossler" />
+        </div>
+      )}
+      <div className={`relative z-10 mx-auto px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7 ${books ? "max-w-6xl" : "max-w-5xl"}`}>
         <nav className="flex items-center justify-between border-b border-black/10 pb-5 text-sm text-neutral-600">
           <Link href="/me" className="inline-flex min-h-10 items-center gap-2 transition hover:text-neutral-950">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
