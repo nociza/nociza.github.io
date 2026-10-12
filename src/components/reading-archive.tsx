@@ -12,6 +12,10 @@ const AttractorCanvas = dynamic(() => import("@/components/lorenz-canvas"), {
   ssr: false,
 });
 
+const AizawaCanvas = dynamic(() => import("@/components/aizawa-canvas"), {
+  ssr: false,
+});
+
 function searchableText(entry: ReadEntry): string {
   return [
     entry.title,
@@ -58,6 +62,11 @@ export default function ReadingArchive({
       {books && (
         <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 opacity-40">
           <AttractorCanvas attractorType="rossler" />
+        </div>
+      )}
+      {!books && (
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 opacity-40">
+          <AizawaCanvas />
         </div>
       )}
       <div className={`relative z-10 mx-auto px-5 pb-16 pt-5 sm:px-8 sm:pb-24 sm:pt-7 ${books ? "max-w-6xl" : "max-w-5xl"}`}>
